@@ -1,46 +1,96 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "cert-msc30-c"
+#pragma clang diagnostic ignored "-Wunused-parameter"
+
 #include "main.h"
 
 MPI_Datatype MPI_PAKIET_T;
 pthread_t threadCom, threadM;
 
-/* zamek do synchronizacji zmiennych współdzielonych */
-pthread_mutex_t konto_mut = PTHREAD_MUTEX_INITIALIZER;
-sem_t all_sem;
+pthread_mutex_t clock_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t permits_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t allow_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t on_lecture_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t on_pyrkon_mutex = PTHREAD_MUTEX_INITIALIZER;
 
-/* Ile każdy proces ma na początku pieniędzy */
-int konto=STARTING_MONEY;
-
-/* suma zbierana przez monitor */
-int sum = 0;
+volatile int state = BEFORE_PYRKON;
+volatile int lamport_clock;
+volatile int pyrkon_number = 0;
+volatile int people_on_pyrkon = 0;
+volatile int* desired_lectures;
+volatile int last_clock = 0;
+volatile int recieved_agreement = 0;
+volatile int allowed_lecture = 0;
+volatile int* permits;
+volatile int* exited_from_pyrkon;
 
 /* end == TRUE oznacza wyjście z main_loop */
 volatile char end = FALSE;
 void mainLoop(void);
 
-/* Deklaracje zapowiadające handlerów. */
-void myStateHandler(packet_t *pakiet);
-void finishHandler(packet_t *pakiet);
-void appMsgHandler(packet_t *pakiet);
-void giveHandler(packet_t *pakiet);
+/* Deklaracje zapowiadające handlery. */
+void want_enter_handler(packet_t *message);
+void entering_handler(packet_t *message);
+void alright_enter_handler(packet_t *message);
+void exit_handler(packet_t *message);
 
 /* typ wskaźnik na funkcję zwracającej void i z argumentem packet_t* */
 typedef void (*f_w)(packet_t *);
+
 /* Lista handlerów dla otrzymanych pakietów
-   Nowe typy wiadomości dodaj w main.h, a potem tutaj dodaj wskaźnik do 
-     handlera.
-   Funkcje handleróœ są na końcu pliku. Nie zapomnij dodać
-     deklaracji zapowiadającej funkcji!
+   Nowe typy wiadomości dodaj w main.h, a potem tutaj dodaj wskaźnik do handlera.
+   Funkcje handlerowe są na końcu pliku.
+   Nie zapomnij dodać deklaracji zapowiadającej funkcji!
 */
-f_w handlers[MAX_HANDLERS] = { [GIVE_YOUR_STATE]=giveHandler,
-            [FINISH] = finishHandler,
-            [MY_STATE_IS] = myStateHandler,
-            [APP_MSG] = appMsgHandler };
+f_w handlers[MAX_HANDLERS] = {
+        [WANT_TO_ENTER] = want_enter_handler,
+        [ENTERING_TO] = entering_handler,
+        [ALRIGHT_TO_ENTER] = alright_enter_handler,
+        [EXIT] = exit_handler
+};
 
 extern void inicjuj(int *argc, char ***argv);
 extern void finalizuj(void);
 
-int main(int argc, char **argv)
-{
+int get_clock(int to_increase) {
+    int result = 0;
+
+    pthread_mutex_lock( &clock_mutex );
+    if (to_increase) lamport_clock++;
+    result = lamport_clock;
+    pthread_mutex_unlock( &clock_mutex );
+
+    return result;
+}
+
+void pyrkon_broadcast(int type, int data, int additional_data) {
+
+    last_clock = get_clock(TRUE);
+
+    packet_t result;
+    result.ts = last_clock;
+    result.data = data;
+    result.additional_data = additional_data;
+
+    for (int i = 0; i < size; i++){
+        if (rank != i) sendPacket( &result, i, type );
+    }
+}
+
+void wait_for_agreement(){
+
+    pthread_mutex_lock(&allow_mutex);
+    // pthread_mutex_unlock(&allow_mutex);
+}
+
+int my_random_int(int min, int max) {
+
+    float tmp = (float)((float)rand() / (float)RAND_MAX);
+    return (int) tmp * (max - min + 1) + min;
+}
+
+int main ( int argc, char **argv ) {
+
     /* Tworzenie wątków, inicjalizacja itp */
     inicjuj(&argc,&argv);
 
@@ -52,129 +102,162 @@ int main(int argc, char **argv)
 
 
 /* Wątek główny - przesyłający innym pieniądze */
-void mainLoop(void)
-{
-    int prob_of_sending=PROB_OF_SENDING;
+void mainLoop ( void ) {
+
+    int prob_of_sending = PROB_OF_SENDING;
     int dst;
     packet_t pakiet;
+
     /* mały sleep, by procesy nie zaczynały w dokładnie tym samym czasie */
     struct timespec t = { 0, rank*50000 };
     struct timespec rem = { 1, 0 };
     nanosleep(&t,&rem); 
 
-    /* pętla główna: sen, wysyłanie przelewów innym bankom */
+    exited_from_pyrkon = malloc(size * sizeof(int));
+    permits = malloc((LECTURE_COUNT + 1) * sizeof(int));
+    desired_lectures = malloc(LECTURE_COUNT * sizeof(int));
+
     while (!end) {
-	int percent = rand()%2 + 1;
+	    int percent = rand()%2 + 1;
         struct timespec t = { percent, 0 };
         struct timespec rem = { 1, 0 };
         nanosleep(&t,&rem);
 
-	percent = rand()%100;
-        /* czy wysłać komuś przelew? */
-	if ((percent < prob_of_sending ) && (konto >0)) {
-            /* losujemy, komu wysłać przelew */
-	    do {
-		dst = rand()%(size);
-		//if (dst==size) MPI_Abort(MPI_COMM_WORLD,1); // strzeżonego :D
-	    } while (dst==rank);
+        switch(state){
 
-            /* losuję, ile kasy komuś wysłać */
-	    percent = rand()%konto;
-	    pakiet.kasa = percent;
-	    pthread_mutex_lock(&konto_mut);
-            konto-=percent;
-	    pthread_mutex_unlock(&konto_mut);
-	    sendPacket(&pakiet, dst, APP_MSG);
-            /* z biegiem czasu coraz rzadziej wysyłamy (przyda się do wykrywania zakończenia) */
-	    if (prob_of_sending > PROB_SENDING_LOWER_LIMIT)
-		prob_of_sending -= PROB_OF_SENDING_DECREASE;
+            case BEFORE_PYRKON: {
+                pyrkon_broadcast(WANT_TO_ENTER, 0, 0);
+                wait_for_agreement();
+                state = ON_PYRKON;
 
-	    println("-> wysłałem %d do %d\n", pakiet.kasa, dst);
-        }  
+                int lectures_number = my_random_int(1, LECTURE_COUNT - 1);
+                for(int i = 1; i < LECTURE_COUNT + 1; i++) {
+                    int lecture = my_random_int(1, lectures_number);
+                    desired_lectures[lecture] = 1;
+                }
+                for(int i = 1; i < LECTURE_COUNT + 1; i++) {
+                    if(desired_lectures[i] == 1) {
+                        pyrkon_broadcast(WANT_TO_ENTER, i, 0);
+                    }
+                }
+                break;
+            }
+
+            case ON_PYRKON: {
+                wait_for_agreement();
+                state = ON_LECTURE;
+                break;
+            }
+
+            case ON_LECTURE: {
+                println("Jestem na warsztacie")
+                sleep(5000);
+
+                desired_lectures[allowed_lecture] = 0;
+                for (int i = 0; i < LECTURE_COUNT + 1; i++) {
+                    if(desired_lectures[i] == 1) {
+                        state = ON_PYRKON;
+                        break;
+                    }
+                }
+                if (state != ON_PYRKON) state = AFTER_PYRKON;
+                break;
+            }
+
+            case AFTER_PYRKON: {
+                pyrkon_broadcast(EXIT, 0, 0);
+                wait_for_agreement();
+                state = BEFORE_PYRKON;
+                break;
+            }
+
+            default:
+                break;
+        }
+
     }
-}
-
-/* Wątek monitora - tylko u ROOTa */
-void *monitorFunc(void *ptr)
-{
-    packet_t data;
-	/* MONITOR; Jego zadaniem ma być wykrycie, ile kasy jest w systemie */
-
-	// 5 sekund, coby procesy zdążyły namieszać w stanie globalnym
-    sleep(5);
-	// TUTAJ WYKRYWANIE STANu        
-    int i;
-    sem_init(&all_sem,0,0);
-    println("MONITOR START \n");
-    for (i=0;i<size;i++)  {
-	sendPacket(&data, i, GIVE_YOUR_STATE);
-    }
-    sem_wait(&all_sem);
-
-    for (i=1;i<size;i++) {
-	sendPacket(&data, i, FINISH);
-    }
-    sendPacket(&data, 0, FINISH);
-    P_RED; printf("\n\tW systemie jest: [%d]\n\n", sum);P_CLR
-    return 0;
 }
 
 /* Wątek komunikacyjny - dla każdej otrzymanej wiadomości wywołuje jej handler */
-void *comFunc(void *ptr)
-{
+void *comFunc ( void *ptr ) {
 
     MPI_Status status;
     packet_t pakiet;
+
     /* odbieranie wiadomości */
     while ( !end ) {
-	println("[%d] czeka na recv\n", rank);
+	    println("[%d] czeka na recv\n", rank)
         MPI_Recv( &pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
         pakiet.src = status.MPI_SOURCE;
 
-        handlers[(int)status.MPI_TAG](&pakiet); // zamiast wielkiego switch status.MPI_TAG... case X: handler()
+        pthread_t new_thread;
+        pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], &pakiet);
+        // handlers[(int)status.MPI_TAG](&pakiet); // zamiast wielkiego switch status.MPI_TAG... case X: handler()
     }
-    println(" Koniec! ");
+
+    pthread_mutex_lock(&clock_mutex);
+
+    if(lamport_clock < pakiet.ts) {
+        lamport_clock = pakiet.ts + 1;
+    } else if(lamport_clock > pakiet.ts) {
+        lamport_clock ++;
+    }
+
+    pthread_mutex_unlock(&clock_mutex);
+
+    println(" Koniec! ")
     return 0;
 }
 
-/* Handlery */
-void myStateHandler(packet_t *pakiet)
-{
-    static int statePacketsCnt = 0;
 
-    statePacketsCnt++;
-    sum += pakiet->kasa;
-    println("Suma otrzymana: %d, total: %d\n", pakiet->kasa, sum);
-    //println( "%d statePackets from %d\n", statePacketsCnt, pakiet->src);
-    if (statePacketsCnt == size ) {
-        sem_post(&all_sem);
+void want_enter_handler ( packet_t *message ) {
+
+    int just_sent = FALSE;
+    switch ( message->data ) {
+        case 0: {
+            while ( !just_sent ) {
+
+                pthread_mutex_lock( &on_pyrkon_mutex );
+                int clock_allows = (message->ts < last_clock || (message->ts == last_clock && rank > message->src));
+                if ( clock_allows ) {
+
+                    packet_t tmp;
+                    tmp.data = message->data;
+                    tmp.ts = get_clock(TRUE);
+                    // TODO write sending packets
+                    // sendPacket(&tmp, message->src, POZWALAM);
+                    pthread_mutex_unlock( &on_pyrkon_mutex );
+                    just_sent = TRUE;
+                }
+                else {
+
+                    pthread_mutex_unlock( &on_pyrkon_mutex );
+                    if (end) break;
+                }
+            }
+            break;
+        }
+        default: break;
+
     }
-    
+    free(message);
 }
 
-void finishHandler( packet_t *pakiet)
-{
-    println("Otrzymałem FINISH" );
-    end = TRUE; 
+void entering_handler( packet_t * message ) {
+
+    // TODO write handler for message type ENTERING
+    free(message);
 }
 
-void giveHandler( packet_t *pakiet)
-{
-    /* monitor prosi, by mu podać stan kasy */
-    /* tutaj odpowiadamy monitorowi, ile mamy kasy. Pamiętać o muteksach! */
-    println("dostałem GIVE STATE");
-   
-    packet_t tmp;
-    tmp.kasa = konto; 
-    sendPacket(&tmp, ROOT, MY_STATE_IS);
+void alright_enter_handler ( packet_t * message ) {
+
+    // TODO write handler for message type ALRIGHT_TO_ENTER
+    free(message);
 }
 
-void appMsgHandler( packet_t *pakiet)
-{
-    /* ktoś przysłał mi przelew */
-    println("\tdostałem %d od %d\n", pakiet->kasa, pakiet->src);
-    pthread_mutex_lock(&konto_mut);
-	konto+=pakiet->kasa;
-    println("Stan obecny: %d\n", konto);
-    pthread_mutex_unlock(&konto_mut);
+void exit_handler ( packet_t * message ) {
+
+    // TODO write handler for message type EXIT
+    free(message);
 }
+#pragma clang diagnostic pop
