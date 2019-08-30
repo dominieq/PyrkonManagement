@@ -33,4 +33,6 @@
 
 .idea
 cmake-build-debug
+Makefile.bak
 PyrkonManagement.iml
+README.TXT
