@@ -11,6 +11,11 @@
 #define ALRIGHT_TO_ENTER 3
 #define EXIT 4
 
+/* types of packet's data */
+#define ENTER_PYRKON 0
+#define ENTER_FIRST_LECTURE 1
+#define ENTER_LAST_LECTURE 10
+
 /* MAX_HANDLERS musi się równać wartości ostatniego typu pakietu + 1 */
 #define MAX_HANDLERS 5
 
@@ -69,17 +74,14 @@ extern volatile int* permits;
 /* lecture's ids that were randomly selected */
 extern volatile int* desired_lectures;
 
-/* TODO description of received agreement */
-extern volatile int recieved_agreement;
+/* agreement for specific pyrkon */
+extern volatile int received_agreement;
 
 /* agreement for a specific lecture */
 extern volatile int allowed_lecture;
 
 /* do użytku wewnętrznego (implementacja opóźnień komunikacyjnych) */
 // extern GQueue *delayStack;
-
-/* synchro do zmiennej konto */
-extern pthread_mutex_t konto_mut;
 
 /* mutex for variable lamport_clock */
 extern pthread_mutex_t clock_mutex;

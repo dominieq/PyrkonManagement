@@ -144,7 +144,6 @@ void finalizuj(void)
 {
     // TODO Destroy new threads
 
-    pthread_mutex_destroy( &konto_mut);
     /* Czekamy, aż wątek potomny się zakończy */
     //println("czekam na wątek \"komunikacyjny\"\n" );
     pthread_join(threadCom,NULL);

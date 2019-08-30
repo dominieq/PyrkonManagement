@@ -19,7 +19,7 @@ volatile int pyrkon_number = 0;
 volatile int people_on_pyrkon = 0;
 volatile int* desired_lectures;
 volatile int last_clock = 0;
-volatile int recieved_agreement = 0;
+volatile int received_agreement = 0;
 volatile int allowed_lecture = 0;
 volatile int* permits;
 volatile int* exited_from_pyrkon;
@@ -92,7 +92,7 @@ int my_random_int(int min, int max) {
 int main ( int argc, char **argv ) {
 
     /* Tworzenie wątków, inicjalizacja itp */
-    inicjuj(&argc,&argv);
+    inicjuj( &argc, &argv);
 
     mainLoop();
 
@@ -117,24 +117,31 @@ void mainLoop ( void ) {
     permits = malloc((LECTURE_COUNT + 1) * sizeof(int));
     desired_lectures = malloc(LECTURE_COUNT * sizeof(int));
 
-    while (!end) {
+    while ( !end ) {
 	    int percent = rand()%2 + 1;
         struct timespec t = { percent, 0 };
         struct timespec rem = { 1, 0 };
         nanosleep(&t,&rem);
 
-        switch(state){
+
+        switch( state ){
 
             case BEFORE_PYRKON: {
+                println( "PROCESS [%d] is waiting for Pyrkon.\n", rank )
+                /* Process is waiting in line to enter Pyrkon. It broadcasts question and waits for agreement. */
                 pyrkon_broadcast(WANT_TO_ENTER, 0, 0);
-                wait_for_agreement();
-                state = ON_PYRKON;
+                wait_for_agreement(); // All processes must enter Pyrkon eventually,
+                state = ON_PYRKON; // so there is no "if" only mutex.
 
+                println( "PROCESS [%d] Enters Pyrkon.\n", rank )
+                /* Process entered Pyrkon and chooses lectures. */
                 int lectures_number = my_random_int(1, LECTURE_COUNT - 1);
                 for(int i = 1; i < LECTURE_COUNT + 1; i++) {
                     int lecture = my_random_int(1, lectures_number);
                     desired_lectures[lecture] = 1;
                 }
+
+                /* When it's chosen its desired lectures it broadcasts that information to others. */
                 for(int i = 1; i < LECTURE_COUNT + 1; i++) {
                     if(desired_lectures[i] == 1) {
                         pyrkon_broadcast(WANT_TO_ENTER, i, 0);
@@ -144,30 +151,36 @@ void mainLoop ( void ) {
             }
 
             case ON_PYRKON: {
+                println("PROCESS [%d] has chosen it's lectures and is on Pyrkon.\n", rank)
+                /* When on Pyrkon, process waits for agreement to enter one of its desired lectures. */
                 wait_for_agreement();
                 state = ON_LECTURE;
                 break;
             }
 
             case ON_LECTURE: {
-                println("Jestem na warsztacie")
+                println( "PROCESS [%d] is on lecture number %d.\n", rank, allowed_lecture )
+                /* When on lecture, process waits five seconds. */
                 sleep(5000);
-
-                desired_lectures[allowed_lecture] = 0;
+                /* Process checks if it wants to go to another lecture. */
+                desired_lectures[ allowed_lecture ] = 0;
                 for (int i = 0; i < LECTURE_COUNT + 1; i++) {
                     if(desired_lectures[i] == 1) {
-                        state = ON_PYRKON;
+                        state = ON_PYRKON; // When there are unvisited lectures, process goes back on Pyrkon.
                         break;
                     }
                 }
+                /* If there were no other lectures to visit, process exits Pyrkon. */
                 if (state != ON_PYRKON) state = AFTER_PYRKON;
                 break;
             }
 
             case AFTER_PYRKON: {
+                println( "PROCESS [%d] has left Pyrkon.\n", rank )
+                /* Process broadcasts information that it's left Pyrkon */
                 pyrkon_broadcast(EXIT, 0, 0);
-                wait_for_agreement();
-                state = BEFORE_PYRKON;
+                wait_for_agreement(); // Process waits for everyone
+                state = BEFORE_PYRKON; // and when everybody's ready new Pyrkon starts.
                 break;
             }
 
@@ -186,13 +199,12 @@ void *comFunc ( void *ptr ) {
 
     /* odbieranie wiadomości */
     while ( !end ) {
-	    println("[%d] czeka na recv\n", rank)
+	    println("PROCESS [%d] waits for messages.\n", rank)
         MPI_Recv( &pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
         pakiet.src = status.MPI_SOURCE;
 
         pthread_t new_thread;
         pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], &pakiet);
-        // handlers[(int)status.MPI_TAG](&pakiet); // zamiast wielkiego switch status.MPI_TAG... case X: handler()
     }
 
     pthread_mutex_lock(&clock_mutex);
@@ -205,18 +217,16 @@ void *comFunc ( void *ptr ) {
 
     pthread_mutex_unlock(&clock_mutex);
 
-    println(" Koniec! ")
+    println(" The End! ")
     return 0;
 }
 
 
 void want_enter_handler ( packet_t *message ) {
 
-    int just_sent = FALSE;
-    switch ( message->data ) {
-        case 0: {
-            while ( !just_sent ) {
-
+    switch ( state ) {
+        case BEFORE_PYRKON: {
+            if ( message->data == ENTER_PYRKON ) {
                 pthread_mutex_lock( &on_pyrkon_mutex );
                 int clock_allows = (message->ts < last_clock || (message->ts == last_clock && rank > message->src));
                 if ( clock_allows ) {
@@ -224,20 +234,34 @@ void want_enter_handler ( packet_t *message ) {
                     packet_t tmp;
                     tmp.data = message->data;
                     tmp.ts = get_clock(TRUE);
-                    // TODO write sending packets
-                    // sendPacket(&tmp, message->src, POZWALAM);
+                    sendPacket(&tmp, message->src, ALRIGHT_TO_ENTER);
                     pthread_mutex_unlock( &on_pyrkon_mutex );
-                    just_sent = TRUE;
                 }
                 else {
 
                     pthread_mutex_unlock( &on_pyrkon_mutex );
-                    if (end) break;
+                    if ( end ) break;
                 }
+            } else if ( message->data >= ENTER_FIRST_LECTURE && message->data <= ENTER_LAST_LECTURE ) {
+                // TODO process accepts this message
             }
             break;
         }
-        default: break;
+        case ON_PYRKON: {
+            // TODO process accepts messages that want to enter Pyrkon
+            //      and checks send message about lectures with changed clock.
+            break;
+        }
+        case ON_LECTURE: {
+            // TODO process accepts all messages.
+            break;
+        }
+        case AFTER_PYRKON: {
+            // TODO process accepts all messages.
+            break;
+        }
+        default:
+            break;
 
     }
     free(message);
@@ -245,19 +269,70 @@ void want_enter_handler ( packet_t *message ) {
 
 void entering_handler( packet_t * message ) {
 
-    // TODO write handler for message type ENTERING
+    switch ( state ) {
+        case BEFORE_PYRKON: {
+            // TODO Process increases numbers of People on Pyrkon.
+            break;
+        }
+        case ON_PYRKON: {
+            // TODO Does nothing. (?)
+            break;
+        }
+        case ON_LECTURE: {
+            // TODO Does nothing. (?)
+            break;
+        }
+        case AFTER_PYRKON:{
+            // TODO Does nothing.
+            break;
+        }
+    }
     free(message);
 }
 
 void alright_enter_handler ( packet_t * message ) {
 
-    // TODO write handler for message type ALRIGHT_TO_ENTER
+    switch ( state ) {
+        case BEFORE_PYRKON: {
+            // TODO Process marks that someone agreed to its message.
+            break;
+        }
+        case ON_PYRKON: {
+            // TODO Process marks that someone agreed to its message.
+            break;
+        }
+        case ON_LECTURE: {
+            // TODO Process marks that someone agreed to its message.
+            break;
+        }
+        case AFTER_PYRKON:{
+            // TODO Process does nothing.
+            break;
+        }
+    }
     free(message);
 }
 
 void exit_handler ( packet_t * message ) {
 
-    // TODO write handler for message type EXIT
+    switch ( state ) {
+        case BEFORE_PYRKON: {
+            // TODO Process increases number of other processes that exited Pyrkon.
+            break;
+        }
+        case ON_PYRKON: {
+            // TODO Process increases number of other processes that exited Pyrkon.
+            break;
+        }
+        case ON_LECTURE: {
+            // TODO Process increases number of other processes that exited Pyrkon.
+            break;
+        }
+        case AFTER_PYRKON:{
+            // TODO Process increases number of other processes that exited Pyrkon.
+            break;
+        }
+    }
     free(message);
 }
 #pragma clang diagnostic pop
