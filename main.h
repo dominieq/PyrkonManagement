@@ -5,6 +5,10 @@
 #define TRUE 1
 #define FALSE 0
 
+#define MAX_PEOPLE_ON_PYRKON 5
+#define MAX_PEOPLE_ON_LECTURE 5
+#define LECTURE_COUNT 10
+
 /* types of messages */
 #define WANT_TO_ENTER 1
 #define ENTERING_TO 2
@@ -13,13 +17,12 @@
 
 /* types of packet's data */
 #define ENTER_PYRKON 0
-#define ENTER_FIRST_LECTURE 1
-#define ENTER_LAST_LECTURE 10
+// and lectures from 1 to 10 but we don't need that information to be defined.
 
 /* MAX_HANDLERS musi się równać wartości ostatniego typu pakietu + 1 */
 #define MAX_HANDLERS 5
 
-#define LECTURE_COUNT 10
+
 
 /* states of processes */
 #define BEFORE_PYRKON 0
@@ -56,17 +59,20 @@ extern volatile char end;
 extern MPI_Datatype MPI_PAKIET_T;
 extern pthread_t threadCom, threadM, threadDelay;
 
+/* ! IMPORTANT !: value of lamport clock from last sending */
+extern volatile int last_message_clock;
+
 /* number of a pyrkon */
 extern volatile int pyrkon_number;
 
 /* number of people that entered pyrkon */
 extern volatile int people_on_pyrkon;
 
+/* number of people that entered specific lecture */
+extern volatile int* people_on_lecture;
+
 /* processes that exited pyrkon */
 extern volatile int* exited_from_pyrkon;
-
-/* value of lamport clock from last received message */
-extern volatile int last_clock;
 
 /* received agreements for: 0 - entering pyrkon, from 1 to 10 - lecture with that specific number */
 extern volatile int* permits;
