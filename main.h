@@ -22,8 +22,6 @@
 /* MAX_HANDLERS musi się równać wartości ostatniego typu pakietu + 1 */
 #define MAX_HANDLERS 5
 
-
-
 /* states of processes */
 #define BEFORE_PYRKON 0
 #define ON_PYRKON 1
@@ -81,7 +79,7 @@ extern volatile int* permits;
 extern volatile int* desired_lectures;
 
 /* agreement for specific pyrkon */
-extern volatile int received_agreement;
+// extern volatile int received_agreement;
 
 /* agreement for a specific lecture */
 extern volatile int allowed_lecture;
@@ -95,13 +93,13 @@ extern pthread_mutex_t clock_mutex;
 /* mutex for variable permits */
 extern pthread_mutex_t permits_mutex;
 
-/* TODO add allow_mutex description */
+/* mutex that waits for agreement */
 extern pthread_mutex_t allow_mutex;
 
-/* TODO add on_lecture_mutex description */
+/* mutex used when sending agreement to other process regarding lecture */
 extern pthread_mutex_t on_lecture_mutex;
 
-/* TODO add on_pyrkon_mutex description */
+/* mutex used when sending agreement to other process regarding Pyrkon */
 extern pthread_mutex_t on_pyrkon_mutex;
 
 /* argument musi być, bo wymaga tego pthreads. Wątek monitora, który po jakimś czasie ma wykryć stan */

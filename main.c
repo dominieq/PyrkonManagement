@@ -22,7 +22,7 @@ volatile int* people_on_lecture;
 volatile int* exited_from_pyrkon;
 volatile int* permits;
 volatile int* desired_lectures;
-volatile int received_agreement = 0;
+// volatile int received_agreement = 0;
 volatile int allowed_lecture = 0;
 
 
@@ -77,7 +77,7 @@ int get_clock( int to_increase ) {
  * @param data Further information regarding action.
  * @param additional_data Even further information regarding action.
  */
-void pyrkon_broadcast(int type, int data, int additional_data) {
+void pyrkon_broadcast( int type, int data, int additional_data ) {
 
     packet_t result;
     result.ts = get_clock( TRUE );
@@ -89,16 +89,25 @@ void pyrkon_broadcast(int type, int data, int additional_data) {
     }
 }
 
-void wait_for_agreement(){
+/**
+ * Function locks allow_mutex. Process waits till it gets enough agreements to do something.
+ */
+void wait_for_agreement() {
 
-    pthread_mutex_lock(&allow_mutex);
+    pthread_mutex_lock( &allow_mutex );
     // pthread_mutex_unlock(&allow_mutex);
 }
 
-int my_random_int(int min, int max) {
+/**
+ * Function draws int from interval.
+ * @param min left number in an interval.
+ * @param max right number in an interval.
+ * @return drawn int
+ */
+int my_random_int( int min, int max ) {
 
-    float tmp = (float)((float)rand() / (float)RAND_MAX);
-    return (int) tmp * (max - min + 1) + min;
+    float tmp = (float)( (float) rand() / (float)RAND_MAX);
+    return (int) tmp * ( max - min + 1 ) + min;
 }
 
 int main ( int argc, char **argv ) {
@@ -112,13 +121,14 @@ int main ( int argc, char **argv ) {
     return 0;
 }
 
-
-/* Wątek główny - przesyłający innym pieniądze */
+/**
+ * Main thread - process is participating in Pyrkon
+ */
 void mainLoop ( void ) {
 
-    int prob_of_sending = PROB_OF_SENDING;
-    int dst;
-    packet_t pakiet;
+    // int prob_of_sending = PROB_OF_SENDING;
+    // int dst;
+    // packet_t pakiet;
 
     /* mały sleep, by procesy nie zaczynały w dokładnie tym samym czasie */
     struct timespec t = { 0, rank*50000 };
@@ -193,6 +203,7 @@ void mainLoop ( void ) {
                 pyrkon_broadcast(EXIT, 0, 0);
                 wait_for_agreement(); // Process waits for everyone
                 state = BEFORE_PYRKON; // and when everybody's ready new Pyrkon starts.
+                pyrkon_number ++;
                 break;
             }
 
@@ -203,7 +214,11 @@ void mainLoop ( void ) {
     }
 }
 
-/* Wątek komunikacyjny - dla każdej otrzymanej wiadomości wywołuje jej handler */
+/**
+ * Communication thread - for every received message a handler is called.
+ * @param ptr
+ * @return 0
+ */
 void *comFunc ( void *ptr ) {
 
     MPI_Status status;
@@ -233,7 +248,10 @@ void *comFunc ( void *ptr ) {
     return 0;
 }
 
-
+/**
+ * Function received WANT_TO_ENTER message from other process and deals with it's content.
+ * @param message packet_t received from other process.
+ */
 void want_enter_handler ( packet_t *message ) {
 
     int just_sent = 0;
@@ -241,6 +259,7 @@ void want_enter_handler ( packet_t *message ) {
         case BEFORE_PYRKON: {
             /* Process is waiting in line and receives a message that
              * another process wants to enter either Pyrkon or lecture */
+
             if( message->data == ENTER_PYRKON ) {
                 println( "PROCESS [%d] (BEFORE_PYRKON) received info that [%d] wants to enter Pyrkon.\n",
                         rank, message->src )
@@ -281,6 +300,7 @@ void want_enter_handler ( packet_t *message ) {
         case ON_PYRKON: {
             /* Process is on Pyrkon and wants to participate in it's lectures.
              * It receives a message that another process wants to enter either Pyrkon or lecture */
+
             if( message->data == ENTER_PYRKON ) {
 
                 println( "PROCESS [%d] (BEFORE_PYRKON) received info that [%d] wants to enter Pyrkon.\n",
@@ -321,6 +341,7 @@ void want_enter_handler ( packet_t *message ) {
         case ON_LECTURE: {
             /* Process is participating in a lecture so it doesn't care
              * whether something wants to enter either Pyrkon or lecture. Process accepts that message. */
+
             packet_t tmp;
             tmp.data = message->data;
             tmp.ts = get_clock(TRUE);
@@ -330,6 +351,7 @@ void want_enter_handler ( packet_t *message ) {
         case AFTER_PYRKON: {
             /* Process has just exited Pyrkon and doesn't care
              * whether something wants to enter either Pyrkon or lecture. Process accepts that message. */
+
             packet_t tmp;
             tmp.data = message->data;
             tmp.ts = get_clock(TRUE);
@@ -343,6 +365,10 @@ void want_enter_handler ( packet_t *message ) {
     free(message);
 }
 
+/**
+ * Function receives ENTERING_TO message from other process and deals with it's content.
+ * @param message packet_t received from other process.
+ */
 void entering_handler( packet_t * message ) {
 
     /* Regardless of state process marks change. It increases number of people on specific activity. */
@@ -351,28 +377,40 @@ void entering_handler( packet_t * message ) {
     } else {
         people_on_lecture[message->data]++;
     }
+
+    // TODO display message about what happened.
+
     free(message);
 }
 
+/**
+ * Function receives ALRIGHT_TO_ENTER message from other process and deals with it's content.
+ * @param message packet_t received from other process.
+ */
 void alright_enter_handler ( packet_t * message ) {
 
     switch ( state ) {
         case BEFORE_PYRKON: {
 
             if( message->data == ENTER_PYRKON ){
+                /* Process is waiting to enter Pyrkon and it's received message that allows it to go in. */
 
                 println( "PROCESS [%d] (BEFORE_PYRKON) received agreement to enter Pyrkon from [%d].\n ",
                         rank, message->src )
                 pthread_mutex_lock( &permits_mutex );
-                int number_of_permits = ++ permits[ message->data ];
+                int number_of_permits = ++ permits[ message->data ]; // Process increases number of received permits.
                 pthread_mutex_unlock( &permits_mutex );
 
                 if( number_of_permits >= MAX_PEOPLE_ON_PYRKON / 2 ) {
+                    /* TODO Check if this statement is correct */
+                    /* Process broadcasts information that it's entering Pyrkon */
 
                     pyrkon_broadcast(ENTERING_TO, ENTER_PYRKON, 0);
                     pthread_mutex_unlock( &allow_mutex );
                 }
             } else {
+                /* Process is waiting to enter Pyrkon and it's received message that allows it to participate in lecture. */
+                /* Since process isn't on Pyrkon yet this is probably a bug. */
 
                 println( "PROCESS [%d] (BEFORE_PYRKON) received message to enter lecture [%d] from [%d].\n",
                         rank, message->data, message->src )
@@ -382,19 +420,26 @@ void alright_enter_handler ( packet_t * message ) {
         case ON_PYRKON: {
 
             if( message->data != ENTER_PYRKON ){
+                /* Process is on Pyrkon and receives a message allowing it to participate in one lecture. */
 
                 println( "PROCESS [%d] (ON_PYRKON) received agreement to enter lecture [%d] from [%d].\n",
                         rank, message->data, message->src )
                 pthread_mutex_lock( &permits_mutex );
-                int number_of_permits = ++ permits[ message->data ];
+                int number_of_permits = ++ permits[ message->data ]; // Process increases number of received permits.
                 pthread_mutex_unlock( &permits_mutex );
 
                 if( number_of_permits >= MAX_PEOPLE_ON_LECTURE / 2 ) {
+                    /* TODO Check if this statement is correct */
+                    /* Process broadcasts information that it's entering specific lecture */
 
+                    allowed_lecture = message->data; // Process remembers information about allowed lecture.
                     pyrkon_broadcast(ENTERING_TO, message->data, 0);
                     pthread_mutex_unlock( &allow_mutex );
                 }
             } else {
+                /* Process is on Pyrkon and receives a message allowing it to enter Pyrkon. */
+                /* Since process is already on Pyrkon no further action is taken. */
+
                 println( "PROCESS [%d] (ON_PYRKON) received agreement to enter Pyrkon from [%d].\n ",
                          rank, message->src )
             }
@@ -403,13 +448,19 @@ void alright_enter_handler ( packet_t * message ) {
         case ON_LECTURE: {
 
             if( message->data != ENTER_PYRKON ) {
+                /* Process is on lecture and receives message allowing it to participate in one lecture. */
+                /* Since process is currently participating in a lecture it only marks new agreement. */
 
                 println( "PROCESS [%d] (ON_LECTURE) received agreement to enter lecture [%d] from [%d].\n",
                         rank, message->data, message->src )
                 pthread_mutex_lock(&permits_mutex);
-                permits[message->data] ++;
+                permits[message->data] ++; // Process increases number of received permits.
                 pthread_mutex_unlock(&permits_mutex);
+
+                // TODO What will happen when there are enough agreements to enter another lecture.
             } else {
+                /* Process is on lecture and receives message allowing it to enter Pyrkon. */
+                /* Since process is already on Pyrkon, no further action is taken. */
 
                 println( "PROCESS [%d] (ON LECTURE) received agreement to enter Pyrkon from [%d].\n ",
                          rank, message->src )
@@ -419,10 +470,14 @@ void alright_enter_handler ( packet_t * message ) {
         case AFTER_PYRKON:{
 
             if( message->data == ENTER_PYRKON ) {
+                /* Process has just exited Pyrkon and receives message allowing it to enter old Pyrkon. */
+                /* Process doesn't care about that message anymore. */
 
                 println( "PROCESS [%d] received agreement to enter Pyrkon from [%d].\n",
                         rank, message->src )
             } else {
+                /* Process has just exited Pyrkon and receives message allowing it to participate in one lecture. */
+                /* Process doesn't care about that message anymore. */
 
                 println( "PROCESS [%d] received agreement to enter lecture [%d] from [%d].\n",
                         rank, message->data, message->src)
@@ -435,10 +490,17 @@ void alright_enter_handler ( packet_t * message ) {
     free(message);
 }
 
+/**
+ * Function receives EXIT message from other process and deals with it's content.
+ * @param message - packet_t received from other process.
+ */
 void exit_handler ( packet_t * message ) {
 
     switch ( state ) {
         case BEFORE_PYRKON: {
+            /* Process is waiting to enter Pyrkon and receives a message that other process has just  left.
+             * Process isn't interested in that information right now.
+             * Process increases number of processes that left Pyrkon */
 
             println( "PROCESS [%d] (BEFORE_PYRKON) received info that [%d] has left Pyrkon.\n",
                     rank, message->src )
@@ -446,18 +508,30 @@ void exit_handler ( packet_t * message ) {
             break;
         }
         case ON_PYRKON: {
+            /* Process is on Pyrkon and receives a message that other process has just left.
+             * Process isn't interested in that information right now.
+             * Process increases number of processes that left Pyrkon */
+
             println( "PROCESS [%d] (ON_PYRKON) received info that [%d] has left Pyrkon.\n",
                      rank, message->src )
             exited_from_pyrkon++;
             break;
         }
         case ON_LECTURE: {
+            /* Process is on lecture and receives a message that other has just left.
+             * Process isn't interested in that information right now.
+             * Process increases number of processes that left Pyrkon */
+
             println( "PROCESS [%d] (ON_LECTURE) received info that [%d] has left Pyrkon.\n",
                      rank, message->src )
             exited_from_pyrkon++;
             break;
         }
         case AFTER_PYRKON:{
+            /* Process has just exited Pyrkon and receives information that other has just left.
+             * Process wants to start new Pyrkon so he acknowledges that another process is after Pyrkon
+             * then it checks whether it's possible to start new Pyrkon. */
+
             println( "PROCESS [%d] (AFTER_PYRKON) received info that [%d] has left Pyrkon.\n",
                      rank, message->src )
             exited_from_pyrkon++;
