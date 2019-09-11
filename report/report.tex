@@ -1,0 +1,33 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\selectlanguage{polish}
+
+\title{Przetwarzanie Rozproszone -- Obsługa Pyrkonu}
+\author{Wojciech Kulig (115881), Dominik Szmyt (132326)}
+\date{11.09.2019}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+
+\begin{document}
+
+\maketitle
+
+\section{Opis problemu}
+
+Proces realizujący program obsługi Pyrkonu może znajdować się w czterech stanach (poniżej tylko krótki opis):
+\begin{enumerate}
+\item Przed Pyrkonem - Proces "czeka w kolejce, żeby uczestniczyć w aktywnościach na Pyrkonie.
+\item Na Pyrkonie - Proces "jest już na Pyrkonie, ale nie uczestniczy w warsztatach".
+\item Na warsztacie - Proces "jest na jednym ze swoich warsztatów przez jakiś czas".
+\item Po Pyrkonie - Proces "wyszedł z Pyrkonu i czeka na inne procesy żeby rozpocząć zabawę na nowo". 
+\end{enumerate}
+
+
+\end{document}
