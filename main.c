@@ -94,7 +94,7 @@ void pyrkon_broadcast( int type, int data, int additional_data ) {
  */
 int my_random_int( int min, int max ) {
 
-    float tmp = (float)( (float) rand() / (float)RAND_MAX);
+    float tmp = (float) ( (float) rand() / (float) RAND_MAX );
     return (int) tmp * ( max - min + 1 ) + min;
 }
 
@@ -124,7 +124,7 @@ void mainLoop ( void ) {
     nanosleep( &t, &rem);
 
     permits = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
-    desired_lectures = malloc( LECTURE_COUNT * sizeof( int ) );
+    desired_lectures = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
 
     while( !end ) {
 	    int percent = rand()%2 + 1;
@@ -136,33 +136,36 @@ void mainLoop ( void ) {
         switch( state ){
 
             case BEFORE_PYRKON: {
-                println( "PROCESS [%d] is BEFORE_PYRKON.\n", rank )
                 /* Process is waiting in line to enter Pyrkon. It broadcasts question and waits for agreement. */
+
+                println( "PROCESS [%d] is BEFORE_PYRKON.\n", rank )
+
                 pyrkon_broadcast(WANT_TO_ENTER, 0, 0);
                 pthread_mutex_lock( &wait_for_agreement_to_enter ); // All processes must enter Pyrkon eventually,
                 state = ON_PYRKON; // so there is no "if" only mutex.
                 pthread_mutex_lock( &on_pyrkon_mutex );
 
-                println( "PROCESS [%d] is ON_PYRKON and about to choose it's lectures.\n", rank )
                 /* Process entered Pyrkon and chooses lectures. */
-                int lectures_number = my_random_int(1, LECTURE_COUNT - 1);
-                for(int i = 1; i < LECTURE_COUNT + 1; i++) {
+                println( "PROCESS [%d] is ON_PYRKON and about to choose it's lectures.\n", rank )
+                int lectures_number = my_random_int(1, LECTURE_COUNT);
+                for(int i = 1; i <= LECTURE_COUNT; i++) {
+
                     int lecture = my_random_int(1, lectures_number);
                     desired_lectures[lecture] = 1;
                 }
 
                 /* When it's chosen its desired lectures it broadcasts that information to others. */
-                for(int i = 1; i < LECTURE_COUNT + 1; i++) {
-                    if(desired_lectures[i] == 1) {
-                        pyrkon_broadcast(WANT_TO_ENTER, i, 0);
-                    }
+                for(int i = 1; i <= LECTURE_COUNT; i++) {
+
+                    if(desired_lectures[i] == 1) pyrkon_broadcast(WANT_TO_ENTER, i, 0);
                 }
                 break;
             }
 
             case ON_PYRKON: {
-                println("PROCESS [%d] is ON_PYRKON and has chosen it's lectures.\n", rank)
                 /* When on Pyrkon, process waits for agreement to enter one of its desired lectures. */
+
+                println("PROCESS [%d] is ON_PYRKON and waits for lectures.\n", rank)
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
                 state = ON_LECTURE;
                 pthread_mutex_lock( &on_lecture_mutex );
@@ -170,12 +173,14 @@ void mainLoop ( void ) {
             }
 
             case ON_LECTURE: {
-                println( "PROCESS [%d] is ON_LECTURE number %d.\n", rank, allowed_lecture )
                 /* When on lecture, process waits five seconds. */
+
+                println( "PROCESS [%d] is ON_LECTURE number %d.\n", rank, allowed_lecture )
                 sleep(5000);
+
                 /* Process checks if it wants to go to another lecture. */
                 desired_lectures[ allowed_lecture ] = 0;
-                for (int i = 0; i < LECTURE_COUNT + 1; i++) {
+                for (int i = 0; i <= LECTURE_COUNT; i++) {
                     if(desired_lectures[i] == 1) {
                         state = ON_PYRKON; // When there are unvisited lectures, process goes back on Pyrkon.
                         pthread_mutex_unlock( &on_lecture_mutex );
@@ -192,8 +197,9 @@ void mainLoop ( void ) {
             }
 
             case AFTER_PYRKON: {
-                println( "PROCESS [%d] is AFTER_PYRKON.\n", rank )
                 /* Process broadcasts information that it's left Pyrkon */
+
+                println( "PROCESS [%d] is AFTER_PYRKON.\n", rank )
                 pyrkon_broadcast(EXIT, 0, 0);
                 pthread_mutex_lock( &wait_for_new_pyrkon ); // Process waits for everyone
                 state = BEFORE_PYRKON; // and when everybody's ready new Pyrkon starts.
@@ -216,28 +222,26 @@ void mainLoop ( void ) {
 void *comFunc ( void *ptr ) {
 
     MPI_Status status;
-    packet_t pakiet;
+    packet_t *pakiet = (packet_t *)malloc(sizeof(packet_t));
 
     /* odbieranie wiadomości */
     while ( !end ) {
+
 	    println("(COM_THREAD) PROCESS [%d] waits for messages.\n", rank)
         MPI_Recv( &pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
-        pakiet.src = status.MPI_SOURCE;
+        pakiet->src = status.MPI_SOURCE;
 
         pthread_t new_thread;
         pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], &pakiet);
+
+        pthread_mutex_lock( &clock_mutex );
+        if( lamport_clock < pakiet->ts ) {
+            lamport_clock = pakiet->ts + 1;
+        } else if( lamport_clock > pakiet->ts ) {
+            lamport_clock ++;
+        }
+        pthread_mutex_unlock( &clock_mutex );
     }
-
-    pthread_mutex_lock(&clock_mutex);
-
-    if(lamport_clock < pakiet.ts) {
-        lamport_clock = pakiet.ts + 1;
-    } else if(lamport_clock > pakiet.ts) {
-        lamport_clock ++;
-    }
-
-    pthread_mutex_unlock(&clock_mutex);
-
     println(" The End! ")
     return 0;
 }
@@ -310,8 +314,8 @@ void want_enter_handler ( packet_t *message ) {
                 if( desired_lectures[ lecture ] ) {
 
                     pthread_mutex_lock( &on_lecture_mutex );
-                    int clock_allows = ( message->ts < lamport_clock ||
-                            ( message->ts == lamport_clock && rank > message->src ) );
+                    int clock_allows = ( message->ts < last_message_clock ||
+                            ( message->ts == last_message_clock && rank > message->src ) );
                     pthread_mutex_unlock( &on_lecture_mutex );
 
                     if( clock_allows ) {
