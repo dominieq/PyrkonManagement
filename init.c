@@ -140,9 +140,15 @@ void inicjuj(int *argc, char ***argv)
     /* Deleted unnecessary if statement for ROOT process */
 }
 
-void finalizuj(void)
-{
-    // TODO Destroy new threads
+void finalizuj(void) {
+
+    pthread_mutex_destroy( &clock_mutex );
+    pthread_mutex_destroy( &modify_permits );
+    pthread_mutex_destroy( &modify_exited_from_pyrkon );
+    pthread_mutex_destroy( &wait_for_agreement_to_enter );
+    pthread_mutex_destroy( &wait_for_new_pyrkon );
+    pthread_mutex_destroy( &on_pyrkon_mutex );
+    pthread_mutex_destroy( &on_lecture_mutex );
 
     /* Czekamy, aż wątek potomny się zakończy */
     //println("czekam na wątek \"komunikacyjny\"\n" );

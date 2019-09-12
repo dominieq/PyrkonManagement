@@ -11,16 +11,15 @@
 
 /* types of messages */
 #define WANT_TO_ENTER 1
-#define ENTERING_TO 2
-#define ALRIGHT_TO_ENTER 3
-#define EXIT 4
+#define ALRIGHT_TO_ENTER 2
+#define EXIT 3
 
 /* types of packet's data */
 #define ENTER_PYRKON 0
 // and lectures from 1 to 10 but we don't need that information to be defined.
 
 /* MAX_HANDLERS musi się równać wartości ostatniego typu pakietu + 1 */
-#define MAX_HANDLERS 5
+#define MAX_HANDLERS 4
 
 /* states of processes */
 #define BEFORE_PYRKON 0
@@ -66,11 +65,11 @@ extern volatile int pyrkon_number;
 /* number of people that entered pyrkon */
 extern volatile int people_on_pyrkon;
 
+/*  */
+extern volatile int exited_from_pyrkon;
+
 /* number of people that entered specific lecture */
 extern volatile int* people_on_lecture;
-
-/* processes that exited pyrkon */
-extern volatile int* exited_from_pyrkon;
 
 /* received agreements for: 0 - entering pyrkon, from 1 to 10 - lecture with that specific number */
 extern volatile int* permits;
@@ -78,23 +77,19 @@ extern volatile int* permits;
 /* lecture's ids that were randomly selected */
 extern volatile int* desired_lectures;
 
-/* agreement for specific pyrkon */
-// extern volatile int received_agreement;
-
 /* agreement for a specific lecture */
 extern volatile int allowed_lecture;
 
 /* do użytku wewnętrznego (implementacja opóźnień komunikacyjnych) */
 // extern GQueue *delayStack;
 
-/* mutex for variable lamport_clock */
 extern pthread_mutex_t clock_mutex;
-
-/* mutex for variable permits */
-extern pthread_mutex_t permits_mutex;
+extern pthread_mutex_t modify_exited_from_pyrkon;
+extern pthread_mutex_t wait_for_new_pyrkon;
+extern pthread_mutex_t modify_permits;
 
 /* mutex that waits for agreement */
-extern pthread_mutex_t allow_mutex;
+extern pthread_mutex_t wait_for_agreement_to_enter;
 
 /* mutex used when sending agreement to other process regarding lecture */
 extern pthread_mutex_t on_lecture_mutex;
