@@ -51,6 +51,9 @@
 *.synctex.gz(busy)
 *.pdfsync
 
+## OpenMPI out
+bank
+
 .idea
 cmake-build-debug
 Makefile.bak

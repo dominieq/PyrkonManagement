@@ -9,7 +9,7 @@ pthread_t threadDelay;
 pthread_mutex_t packetMut = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t stackMut = PTHREAD_MUTEX_INITIALIZER;
 
-pthread_mutex_t clock_mutex = PTHREAD_MUTEX_INITIALIZER;
+//pthread_mutex_t clock_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t send_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 typedef struct stack_s {
