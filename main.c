@@ -74,12 +74,11 @@ int get_clock( int to_increase ) {
  * @param data Further information regarding action.
  * @param additional_data Even further information regarding action.
  */
-void pyrkon_broadcast( int type, int data, int additional_data ) {
+void pyrkon_broadcast( int type, int data ) {
 
     packet_t result;
     result.ts = get_clock( TRUE );
     result.data = data;
-    result.additional_data = additional_data;
 
     for (int i = 0; i < size; i++){
         if (rank != i) sendPacket( &result, i, type );
@@ -140,7 +139,7 @@ void mainLoop ( void ) {
 
                 println( "PROCESS [%d] is BEFORE_PYRKON.\n", rank )
 
-                pyrkon_broadcast(WANT_TO_ENTER, 0, 0);
+                pyrkon_broadcast(WANT_TO_ENTER, 0);
                 pthread_mutex_lock( &wait_for_agreement_to_enter ); // All processes must enter Pyrkon eventually,
                 state = ON_PYRKON; // so there is no "if" only mutex.
                 pthread_mutex_lock( &on_pyrkon_mutex );
@@ -157,7 +156,7 @@ void mainLoop ( void ) {
                 /* When it's chosen its desired lectures it broadcasts that information to others. */
                 for(int i = 1; i <= LECTURE_COUNT; i++) {
 
-                    if(desired_lectures[i] == 1) pyrkon_broadcast(WANT_TO_ENTER, i, 0);
+                    if(desired_lectures[i] == 1) pyrkon_broadcast(WANT_TO_ENTER, i);
                 }
                 break;
             }
@@ -200,7 +199,7 @@ void mainLoop ( void ) {
                 /* Process broadcasts information that it's left Pyrkon */
 
                 println( "PROCESS [%d] is AFTER_PYRKON.\n", rank )
-                pyrkon_broadcast(EXIT, 0, 0);
+                pyrkon_broadcast(EXIT, 0);
                 pthread_mutex_lock( &wait_for_new_pyrkon ); // Process waits for everyone
                 state = BEFORE_PYRKON; // and when everybody's ready new Pyrkon starts.
                 pyrkon_number ++;
@@ -228,11 +227,11 @@ void *comFunc ( void *ptr ) {
     while ( !end ) {
 
 	    println("(COM_THREAD) PROCESS [%d] waits for messages.\n", rank)
-        MPI_Recv( &pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+        MPI_Recv( pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
         pakiet->src = status.MPI_SOURCE;
 
         pthread_t new_thread;
-        pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], &pakiet);
+        pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], pakiet);
 
         pthread_mutex_lock( &clock_mutex );
         if( lamport_clock < pakiet->ts ) {

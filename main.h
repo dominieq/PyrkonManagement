@@ -36,15 +36,13 @@
 #include <string.h>
 
 /* FIELDNO: liczba pól w strukturze packet_t */
-#define FIELDNO 5
+#define FIELDNO 4
 typedef struct {
     int ts; /* zegar lamporta */
 
     /* przy dodaniu nowych pól zwiększy FIELDNO i zmodyfikuj
        plik init.c od linijki 98 (funkcja inicjuj, od linijki "const int nitems=FIELDNO;" ) */
     int data;
-    int additional_data;
-
     int dst; /* pole ustawiane w sendPacket */
     int src; /* pole ustawiane w wątku komunikacyjnym na rank nadawcy */
 
@@ -56,28 +54,12 @@ extern volatile char end;
 extern MPI_Datatype MPI_PAKIET_T;
 extern pthread_t threadCom, threadM, threadDelay;
 
-/* ! IMPORTANT !: value of lamport clock from last sending */
+
 extern volatile int last_message_clock;
-
-/* number of a pyrkon */
 extern volatile int pyrkon_number;
-
-/* number of people that entered pyrkon */
-extern volatile int people_on_pyrkon;
-
-/*  */
 extern volatile int exited_from_pyrkon;
-
-/* number of people that entered specific lecture */
-extern volatile int* people_on_lecture;
-
-/* received agreements for: 0 - entering pyrkon, from 1 to 10 - lecture with that specific number */
 extern volatile int* permits;
-
-/* lecture's ids that were randomly selected */
 extern volatile int* desired_lectures;
-
-/* agreement for a specific lecture */
 extern volatile int allowed_lecture;
 
 /* do użytku wewnętrznego (implementacja opóźnień komunikacyjnych) */
@@ -87,14 +69,8 @@ extern pthread_mutex_t clock_mutex;
 extern pthread_mutex_t modify_exited_from_pyrkon;
 extern pthread_mutex_t wait_for_new_pyrkon;
 extern pthread_mutex_t modify_permits;
-
-/* mutex that waits for agreement */
 extern pthread_mutex_t wait_for_agreement_to_enter;
-
-/* mutex used when sending agreement to other process regarding lecture */
 extern pthread_mutex_t on_lecture_mutex;
-
-/* mutex used when sending agreement to other process regarding Pyrkon */
 extern pthread_mutex_t on_pyrkon_mutex;
 
 /* argument musi być, bo wymaga tego pthreads. Wątek monitora, który po jakimś czasie ma wykryć stan */

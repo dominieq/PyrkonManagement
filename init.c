@@ -8,8 +8,6 @@ pthread_t threadDelay;
 //GQueue *delayStack;
 pthread_mutex_t packetMut = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t stackMut = PTHREAD_MUTEX_INITIALIZER;
-
-//pthread_mutex_t clock_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t send_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 typedef struct stack_s {
@@ -113,15 +111,14 @@ void inicjuj(int *argc, char ***argv)
     */
     /* sklejone z stackoverflow */
     const int nitems=FIELDNO; // Struktura ma FIELDNO elementów - przy dodaniu pola zwiększ FIELDNO w main.h !
-    int       blocklengths[FIELDNO] = {1, 1, 1, 1, 1}; /* tu zwiększyć na [4] = {1,1,1,1} gdy dodamy nowe pole */
-    MPI_Datatype typy[FIELDNO] = {MPI_INT, MPI_INT, MPI_INT, MPI_INT, MPI_INT}; /* tu dodać typ nowego pola (np MPI_BYTE, MPI_INT) */
+    int       blocklengths[FIELDNO] = {1, 1, 1, 1}; /* tu zwiększyć na [4] = {1,1,1,1} gdy dodamy nowe pole */
+    MPI_Datatype typy[FIELDNO] = {MPI_INT, MPI_INT, MPI_INT, MPI_INT}; /* tu dodać typ nowego pola (np MPI_BYTE, MPI_INT) */
     MPI_Aint     offsets[FIELDNO];
 
     offsets[0] = offsetof(packet_t, ts);
     offsets[1] = offsetof(packet_t, data);
-    offsets[2] = offsetof(packet_t, additional_data);
-    offsets[3] = offsetof(packet_t, dst);
-    offsets[4] = offsetof(packet_t, src);
+    offsets[2] = offsetof(packet_t, dst);
+    offsets[3] = offsetof(packet_t, src);
     /* tutaj dodać offset nowego pola (offsets[2] = ... */
 
     MPI_Type_create_struct(nitems, blocklengths, offsets, typy, &MPI_PAKIET_T);
