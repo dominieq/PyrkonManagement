@@ -5,9 +5,9 @@
 #define TRUE 1
 #define FALSE 0
 
-#define MAX_PEOPLE_ON_PYRKON 5
-#define MAX_PEOPLE_ON_LECTURE 5
-#define LECTURE_COUNT 10
+#define MAX_PEOPLE_ON_PYRKON 3
+#define MAX_PEOPLE_ON_LECTURE 2
+#define LECTURE_COUNT 1
 
 /* types of messages */
 #define WANT_TO_ENTER 1
@@ -36,7 +36,7 @@
 #include <string.h>
 
 /* FIELDNO: liczba pól w strukturze packet_t */
-#define FIELDNO 4
+#define FIELDNO 5
 typedef struct {
     int ts; /* zegar lamporta */
 
@@ -45,7 +45,7 @@ typedef struct {
     int data;
     int dst; /* pole ustawiane w sendPacket */
     int src; /* pole ustawiane w wątku komunikacyjnym na rank nadawcy */
-
+    int pyrkon_number;
 } packet_t;
 
 extern int rank,size; 
@@ -66,12 +66,17 @@ extern volatile int allowed_lecture;
 // extern GQueue *delayStack;
 
 extern pthread_mutex_t clock_mutex;
+extern pthread_mutex_t state_mutex;
+extern pthread_mutex_t gtfo_mutex;
 extern pthread_mutex_t modify_exited_from_pyrkon;
 extern pthread_mutex_t wait_for_new_pyrkon;
 extern pthread_mutex_t modify_permits;
 extern pthread_mutex_t wait_for_agreement_to_enter;
 extern pthread_mutex_t on_lecture_mutex;
 extern pthread_mutex_t on_pyrkon_mutex;
+extern pthread_mutex_t gtfo_mutex;
+extern pthread_mutex_t i_can_allow_pyrkon_entering_mutex;
+extern pthread_mutex_t i_can_allow_lecture_entering_mutex;
 
 /* argument musi być, bo wymaga tego pthreads. Wątek monitora, który po jakimś czasie ma wykryć stan */
 extern void *monitorFunc(void *);
