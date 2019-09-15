@@ -221,11 +221,12 @@ void mainLoop ( void ) {
 void *comFunc ( void *ptr ) {
 
     MPI_Status status;
-    packet_t *pakiet = (packet_t *)malloc(sizeof(packet_t));
+    packet_t *pakiet;
 
     /* odbieranie wiadomości */
     while ( !end ) {
 
+        pakiet = (packet_t *)malloc(sizeof(packet_t))
 	    println("(COM_THREAD) PROCESS [%d] waits for messages.\n", rank)
         MPI_Recv( pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
         pakiet->src = status.MPI_SOURCE;

@@ -2,7 +2,6 @@
 
 int rank;
 int size;
-volatile int lamport_clock;
 
 pthread_t threadDelay;
 //GQueue *delayStack;
