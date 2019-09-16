@@ -32,4 +32,49 @@
 
 \subsection{Długi Opis} 
 
+\section{Złożoność czasowa i komunikacyjna}
+\textbf{Złożoność czasowa} jest funkcją kosztu wykonania algorytmu rozproszonego, wyrażoną przez liczbę kroków algorytmu do jego zakończenia przy założeniu, że:
+\begin{itemize}
+\item czas wykonywania każdego kroku (operacji) jest stały
+\item kroki wykonywane są synchronicznie
+\item czas transmisji wiadomości jest stały
+\end{itemize}
+Przyjmuje się też na ogół, że:
+\begin{itemize}
+\item czas przetwarzania lokalnego (wykonania każdego kroku) jest pomijalny (zerowy)
+\item czas transmisji jest jednostkowy
+\end{itemize}
+\medskip 
+\textbf{Złożoność komunikacyjna} pakietowa jest funkcją kosztu wykonania algorytmu wyrażaną przez liczbę pakietów (wiadomości) przesyłanych w trakcie wykonywania algorytmu do jego zakończenia.
+
+\bigskip 
+
+Algorytm można podzielić na trzy części odpowiadające kolejnym zadaniom realizowanym przez zaproponowany algorytm:
+\begin{enumerate}
+\item wejście na Pyrkon - od podjęcia decyzji o wejściu na Pyrkon do faktycznego wejścia:
+\begin{enumerate}
+\item Proces wysyła do wszystkich informację, że chce się dostać na Pyrkon. (czas: 1; komunikatów: n-1)
+\item Otrzymujący informację proces może wyrazić zgodę lub nie odpowiadać jeszcze, lecz w końcu to zrobi. (czas: 1; komunikatów: n-1)
+\item Po otrzymaniu odpowiedniej liczby zgód (liczba zgód gwarantująca, że jego wejście nie przekroczy maksymalnej ilości uczestników na Pyrkonie) proces wchodzi.\\
+Pozostałe odpowiedzi otrzymuje, nie wpływają one na przetwarzanie.\\
+Pesymistycznie, proces próbujący się dostać na Pyrkon od samego początku (rozpocznie razem z innymi) wejdzie jako ostatni.
+\end{enumerate}
+% TODO ??
+Szacowana złożoność to:
+\begin{itemize}
+\item czasowa: 2
+\item komunikacyjna: n-1
+\end{itemize}
+\item wejście na Warsztat - analogiczne jak dla wejścia na Pyrkon
+\item nowy Pyrkon
+\begin{enumerate}
+\item Proces wychodzący z Pyrkonu informuje o tym wszystkie pozostałe procesu. Nowy Pyrkon rozpocznie się w momencie, kiedy liczba zebranych informacji o wyjściu z Pyrkonu będzie równa liczbie procesów.
+\end{enumerate}
+Szacowana złożoność to:
+\begin{itemize}
+\item czasowa: 1
+\item komunikacyjna: n-1
+\end{itemize}
+\end{enumerate}
+
 \end{document}
