@@ -1,7 +1,3 @@
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "cert-msc30-c"
-#pragma clang diagnostic ignored "-Wunused-parameter"
-
 #include "main.h"
 
 MPI_Datatype MPI_PAKIET_T;
@@ -151,7 +147,7 @@ void mainLoop ( void ) {
     permits = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
     desired_lectures = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
 
-    while( TRUE ) {
+    while( !end ) {
 	    int percent = rand()%2 + 1;
         struct timespec t2 = { percent, 0 };
         struct timespec rem2 = { 1, 0 };
@@ -250,7 +246,7 @@ void *comFunc ( void *ptr ) {
     packet_t *pakiet;
 
     /* odbieranie wiadomości */
-    while ( TRUE ) {
+    while ( !end ) {
 
         pakiet = (packet_t *)malloc(sizeof(packet_t));
 	    println("(COM_THREAD) PROCESS [%d] waits for messages.\n", rank)
@@ -408,4 +404,3 @@ void exit_handler ( packet_t * message ) {
     }
     free(message);
 }
-#pragma clang diagnostic pop

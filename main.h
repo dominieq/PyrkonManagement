@@ -16,7 +16,6 @@
 
 /* types of packet's data */
 #define ENTER_PYRKON 0
-// and lectures from 1 to 10 but we don't need that information to be defined.
 
 /* MAX_HANDLERS musi się równać wartości ostatniego typu pakietu + 1 */
 #define MAX_HANDLERS 4

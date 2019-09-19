@@ -1,5 +1,5 @@
 #include "main.h"
-#import <stddef.h>
+#include <stddef.h>
 
 int rank;
 int size;
