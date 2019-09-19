@@ -11,3 +11,6 @@ main.o: main.c main.h
 
 clear: 
 	rm *.o bank
+
+b:
+	mpirun -n 2 ./bank
