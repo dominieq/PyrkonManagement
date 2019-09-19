@@ -23,7 +23,6 @@
 /* states of processes */
 #define BEFORE_PYRKON 0
 #define ON_PYRKON 1
-#define ON_LECTURE 2
 #define AFTER_PYRKON 3
 
 #include <mpi.h>
