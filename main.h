@@ -5,6 +5,7 @@
 #define TRUE 1
 #define FALSE 0
 
+/* important values to run Pyrkon */
 #define MAX_PEOPLE_ON_PYRKON 3
 #define MAX_PEOPLE_ON_LECTURE 2
 #define LECTURE_COUNT 1
@@ -14,16 +15,13 @@
 #define ALRIGHT_TO_ENTER 2
 #define EXIT 3
 
-/* types of packet's data */
-#define ENTER_PYRKON 0
-
-/* MAX_HANDLERS musi się równać wartości ostatniego typu pakietu + 1 */
-#define MAX_HANDLERS 4
-
 /* states of processes */
 #define BEFORE_PYRKON 0
 #define ON_PYRKON 1
-#define AFTER_PYRKON 3
+#define AFTER_PYRKON 2
+
+/* MAX_HANDLERS musi się równać wartości ostatniego typu pakietu + 1 */
+#define MAX_HANDLERS 4
 
 #include <mpi.h>
 #include <stdlib.h>
@@ -73,8 +71,8 @@ extern pthread_mutex_t wait_for_agreement_to_enter;
 extern pthread_mutex_t on_lecture_mutex;
 extern pthread_mutex_t on_pyrkon_mutex;
 extern pthread_mutex_t gtfo_mutex;
-extern pthread_mutex_t i_can_allow_pyrkon_entering_mutex;
-extern pthread_mutex_t i_can_allow_lecture_entering_mutex;
+extern pthread_mutex_t allowing_pyrkon;
+extern pthread_mutex_t allowing_lecture;
 
 /* argument musi być, bo wymaga tego pthreads. Wątek monitora, który po jakimś czasie ma wykryć stan */
 extern void *monitorFunc(void *);

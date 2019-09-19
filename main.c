@@ -12,8 +12,8 @@ pthread_mutex_t on_lecture_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t on_pyrkon_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t state_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t gtfo_mutex = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t i_can_allow_pyrkon_entering_mutex = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t i_can_allow_lecture_entering_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t allowing_pyrkon = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t allowing_lecture = PTHREAD_MUTEX_INITIALIZER;
 
 volatile int state = BEFORE_PYRKON;
 volatile int lamport_clock;
@@ -65,14 +65,24 @@ int get_clock( int to_increase ) {
     return last_message_clock;
 }
 
+/**
+ * Function returns state using state_mutex.
+ * State can accessed by multiple threads so there is a need to protect it.
+ * @return The value of current state of a process.
+ */
 int get_state(){
     pthread_mutex_lock( &state_mutex );
-    int a = state;
+    int current_state = state;
     pthread_mutex_unlock( &state_mutex );
-    return a;
+    return current_state;
 }   
 
-void change_state(int new_state){
+/**
+ * Function changes state using state_mutex.
+ * State can accessed by multiple threads so there is a need to protect it.
+ * @param new_state New state of a process that is going to be changed
+ */
+void set_state(int new_state){
     pthread_mutex_lock( &state_mutex );
     state = new_state;
     pthread_mutex_unlock( &state_mutex );
@@ -84,18 +94,41 @@ void change_state(int new_state){
  * @param data Further information regarding
  * @param additional_data Even further information regarding action.
  */
-void pyrkon_broadcast( int type, int data ) {
-
+void pyrkon_broadcast( int type, int data, char state_c ) {
     packet_t newMessage;
     newMessage.ts = get_clock( TRUE );
     newMessage.data = data;
     newMessage.pyrkon_number = pyrkon_number;
 
-    for (int i = 0; i < size; i++){
-        if (rank != i) {
-            println("Sending %d %d do %d\n", type, newMessage.data, i);
+    char type_c;
+    char data_c;
+    switch( type ) {
+        case WANT_TO_ENTER: {
+            type_c = (char) "WANT_TO_ENTER";
+            break;
+        }
+        case ALRIGHT_TO_ENTER: {
+            type_c = (char) "ALRIGHT_TO_ENTER";
+            break;
+        }
+        case EXIT: {
+            type_c = (char) "EXIT";
+            break;
+        }
+        default:
+            type_c = (char) "";
+    }
+    if( data == 0 ) {
+        data_c = (char) "PYRKON";
+    } else {
+        data_c = (char) "LECTURE";
+    }
+
+    for ( int i = 0; i < size; i++ ){
+        if ( rank != i ) {
+            println( "Is %c and sends %c %c[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
             sendPacket( &newMessage, i, type );
-            println("Sending %d %d do %d\n", type, newMessage.data, i);
+            println( "Is %c and just sent %c %c[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
         }
     }
 }
@@ -112,10 +145,11 @@ int my_random_int( int min, int max ) {
 }
 
 int main ( int argc, char **argv ) {
-
-    /* Tworzenie wątków, inicjalizacja itp */
     inicjuj( &argc, &argv);
-    pthread_mutex_lock( &i_can_allow_lecture_entering_mutex );
+
+    /* Process locks mutex two times to wait for another thread to allow it to proceed (line: 169). */
+    pthread_mutex_lock( &allowing_lecture );
+
     mainLoop();
     finalizuj();
     return 0;
@@ -125,12 +159,10 @@ int main ( int argc, char **argv ) {
  * Main thread - process is participating in Pyrkon
  */
 void mainLoop ( void ) {
-
      int prob_of_sending = PROB_OF_SENDING;
      int dst;
      packet_t pakiet;
 
-    /* mały sleep, by procesy nie zaczynały w dokładnie tym samym czasie */
     struct timespec t = { 0, rank*50000 };
     struct timespec rem = { 1, 0 };
     nanosleep( &t, &rem);
@@ -146,53 +178,47 @@ void mainLoop ( void ) {
 
         int current_state = get_state();
         switch( current_state ){
-
             case BEFORE_PYRKON: {
                 /* Process is waiting in line to enter Pyrkon. It broadcasts question and waits for agreement. */
-                println( "Is waiting in line to enter Pyrkon\n" )
-
-                pyrkon_broadcast(WANT_TO_ENTER, 0);
-
+                pyrkon_broadcast(WANT_TO_ENTER, 0, BEFORE_PYRKON);
+                /* Process locks mutex two times to wait for another thread to allow it to proceed */
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
-                pthread_mutex_lock( &wait_for_agreement_to_enter );
+                pthread_mutex_lock( &wait_for_agreement_to_enter ); // Waiting on closed mutex.
                 pthread_mutex_unlock( &wait_for_agreement_to_enter );
-                change_state(ON_PYRKON);
+                /* Process was allowed to enter to so it changes it's state. */
+                set_state(ON_PYRKON);
+                /* Process locks on_pyrkon_mutex to prevent itself from granting access to another process. */
                 pthread_mutex_lock( &on_pyrkon_mutex );
-                pthread_mutex_lock( &i_can_allow_pyrkon_entering_mutex );
-                pthread_mutex_unlock( &i_can_allow_lecture_entering_mutex );
 
+                pthread_mutex_lock( &allowing_pyrkon ); // Waiting on closed mutex
+                pthread_mutex_unlock( &allowing_lecture );
                 break;
             }
-
             case ON_PYRKON: {
                 /* Process entered Pyrkon and chooses lectures. */
-                println( "Is choosing it's lectures.\n" )
-
                 for(int i = 1; i <= LECTURE_COUNT; i++) {
                     desired_lectures[i]=my_random_int(0,1);
                 }
-
                 /* When it's chosen its desired lectures it broadcasts that information to others. */
                 for(int i = 1; i <= LECTURE_COUNT; i++) {
-                    if(desired_lectures[i]) pyrkon_broadcast(WANT_TO_ENTER, i);
+                    if(desired_lectures[i]) pyrkon_broadcast(WANT_TO_ENTER, i, ON_PYRKON);
                 }
 
-                println( "Is waiting for lectures.\n" )
                 pthread_mutex_lock( &gtfo_mutex ); //blokada
                 pthread_mutex_lock( &gtfo_mutex ); //czekanko
                 pthread_mutex_unlock( &gtfo_mutex ); //odblokowanie, żeby w następnym obiegu dało się odblokować
-                pthread_mutex_lock( &i_can_allow_lecture_entering_mutex );
+                pthread_mutex_lock( &allowing_lecture );
                 break;
             }
             case AFTER_PYRKON: {
                 /* Process broadcasts information that it's left Pyrkon */
                 println( "PROCESS [%d] is AFTER_PYRKON.\n", rank )
 
-                pyrkon_broadcast(EXIT, 0);
+                pyrkon_broadcast(EXIT, 0, AFTER_PYRKON);
 
                 pthread_mutex_lock( &wait_for_new_pyrkon ); // Process waits for everyone
-                change_state(BEFORE_PYRKON); // and when everybody's ready new Pyrkon starts.
-                pthread_mutex_unlock( &i_can_allow_pyrkon_entering_mutex );
+                set_state(BEFORE_PYRKON); // and when everybody's ready new Pyrkon starts.
+                pthread_mutex_unlock( &allowing_pyrkon );
 
                 pyrkon_number ++;
                 break;
@@ -219,7 +245,7 @@ void *comFunc ( void *ptr ) {
 	    println("Waiting for messages.\n")
         MPI_Recv( pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status );
         pakiet->src = status.MPI_SOURCE;
-        println( "Received a message from [%d] \n", pakiet->src );
+        println( "Received a message from [%d] \n", pakiet->src )
 
         pthread_mutex_lock( &clock_mutex );
         if( lamport_clock < pakiet->ts ) {
@@ -230,7 +256,7 @@ void *comFunc ( void *ptr ) {
         pthread_mutex_unlock( &clock_mutex );
 
         if ( pyrkon_number == pakiet -> pyrkon_number ){
-            println( "Pyrkon number [%d] is valid\n", pyrkon_number )
+            println( "Pyrkon number: %d is valid\n", pyrkon_number )
             pthread_t new_thread;
             pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], pakiet);
         }
@@ -243,7 +269,7 @@ void allow_pyrkon ( packet_t *message ) {
 
     while( TRUE ) {
 
-        pthread_mutex_lock( &i_can_allow_pyrkon_entering_mutex );
+        pthread_mutex_lock( &allowing_pyrkon );
 
         int clock_allows = ( message->ts < last_message_clock ||
                 ( message->ts == last_message_clock && rank > message->src ) );
@@ -254,9 +280,9 @@ void allow_pyrkon ( packet_t *message ) {
             sendPacket( message, message->src, ALRIGHT_TO_ENTER );
             break;
         }
-        pthread_mutex_unlock( &i_can_allow_pyrkon_entering_mutex );
+        pthread_mutex_unlock( &allowing_pyrkon );
     }
-    pthread_mutex_unlock( &i_can_allow_pyrkon_entering_mutex );
+    pthread_mutex_unlock( &allowing_pyrkon );
 }
 
 void allow_lecture ( packet_t *message ) {
@@ -266,7 +292,7 @@ void allow_lecture ( packet_t *message ) {
     int lecture = message->data;
     while( TRUE ){
 
-        pthread_mutex_lock( &i_can_allow_lecture_entering_mutex );
+        pthread_mutex_lock( &allowing_lecture );
         int clock_allows;
         if ( desired_lectures[lecture] ){
              clock_allows = ( message->ts < last_message_clock ||
@@ -284,9 +310,9 @@ void allow_lecture ( packet_t *message ) {
             sendPacket( message, message->src, ALRIGHT_TO_ENTER );
             break;
         }
-        pthread_mutex_unlock( &i_can_allow_lecture_entering_mutex );    
+        pthread_mutex_unlock( &allowing_lecture );
     }
-    pthread_mutex_unlock( &i_can_allow_lecture_entering_mutex );
+    pthread_mutex_unlock( &allowing_lecture );
 }
 
 /**
@@ -294,7 +320,7 @@ void allow_lecture ( packet_t *message ) {
  * @param message packet_t received from other process.
  */
 void want_enter_handler ( packet_t *message ) {
-    if( message->data == ENTER_PYRKON ) {
+    if( message->data == 0 ) {
         allow_pyrkon(message);
     } else {
         allow_lecture(message);
@@ -352,7 +378,7 @@ void alright_enter_lecture_extension(packet_t *message ) {
  * @param message packet_t received from other process.
  */
 void alright_enter_handler ( packet_t * message ) {
-    if( message->data == ENTER_PYRKON ){
+    if( message->data == 0 ){
         alright_enter_pyrkon_extension(message);
     } else {
         alright_enter_lecture_extension(message);
@@ -374,7 +400,7 @@ void exit_handler ( packet_t * message ) {
 
     /* If everyone exited Pyrkon process can start another one. */
     if( exited_from_pyrkon == MAX_PEOPLE_ON_PYRKON ) {
-        change_state(BEFORE_PYRKON);
+        set_state(BEFORE_PYRKON);
         pthread_mutex_unlock( &wait_for_new_pyrkon );
     }
     free(message);
