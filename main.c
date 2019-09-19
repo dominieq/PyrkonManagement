@@ -1,4 +1,5 @@
 #include "main.h"
+#include "string.h"
 
 MPI_Datatype MPI_PAKIET_T;
 pthread_t threadCom, threadM;
@@ -94,41 +95,41 @@ void set_state(int new_state){
  * @param data Further information regarding
  * @param additional_data Even further information regarding action.
  */
-void pyrkon_broadcast( int type, int data, char state_c ) {
+void pyrkon_broadcast( int type, int data, char state_c[100] ) {
     packet_t newMessage;
     newMessage.ts = get_clock( TRUE );
     newMessage.data = data;
     newMessage.pyrkon_number = pyrkon_number;
 
-    char type_c;
-    char data_c;
+    char type_c[100];
+    char data_c[100];
     switch( type ) {
         case WANT_TO_ENTER: {
-            type_c = (char) "WANT_TO_ENTER";
+            strcpy( type_c, "WANT_TO_ENTER" );
             break;
         }
         case ALRIGHT_TO_ENTER: {
-            type_c = (char) "ALRIGHT_TO_ENTER";
+            strcpy( type_c, "ALRIGHT_TO_ENTER" );
             break;
         }
         case EXIT: {
-            type_c = (char) "EXIT";
+            strcpy( type_c, "EXIT" );
             break;
         }
         default:
-            type_c = (char) "";
+            break;
     }
     if( data == 0 ) {
-        data_c = (char) "PYRKON";
+        strcpy(data_c, "PYRKON");
     } else {
-        data_c = (char) "LECTURE";
+        strcpy(data_c, "LECTURE");
     }
 
     for ( int i = 0; i < size; i++ ){
         if ( rank != i ) {
-            println( "Is %c and sends %c %c[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
+            println( "Is %s and sends %s %s[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
             sendPacket( &newMessage, i, type );
-            println( "Is %c and just sent %c %c[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
+            println( "Is %s and just sent %s %s[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
         }
     }
 }
@@ -180,7 +181,7 @@ void mainLoop ( void ) {
         switch( current_state ){
             case BEFORE_PYRKON: {
                 /* Process is waiting in line to enter Pyrkon. It broadcasts question and waits for agreement. */
-                pyrkon_broadcast(WANT_TO_ENTER, 0, BEFORE_PYRKON);
+                pyrkon_broadcast(WANT_TO_ENTER, 0, "BEFORE_PYRKON");
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
                 pthread_mutex_lock( &wait_for_agreement_to_enter ); // Waiting on closed mutex.
@@ -201,20 +202,18 @@ void mainLoop ( void ) {
                 }
                 /* When it's chosen its desired lectures it broadcasts that information to others. */
                 for(int i = 1; i <= LECTURE_COUNT; i++) {
-                    if(desired_lectures[i]) pyrkon_broadcast(WANT_TO_ENTER, i, ON_PYRKON);
+                    if(desired_lectures[i]) pyrkon_broadcast(WANT_TO_ENTER, i, "ON_PYRKON");
                 }
-
-                pthread_mutex_lock( &gtfo_mutex ); //blokada
-                pthread_mutex_lock( &gtfo_mutex ); //czekanko
-                pthread_mutex_unlock( &gtfo_mutex ); //odblokowanie, żeby w następnym obiegu dało się odblokować
+                /* Process locks mutex two times to wait for another thread to allow it to proceed */
+                pthread_mutex_lock( &gtfo_mutex );
+                pthread_mutex_lock( &gtfo_mutex ); //Waiting on closed mutex
+                pthread_mutex_unlock( &gtfo_mutex );
                 pthread_mutex_lock( &allowing_lecture );
                 break;
             }
             case AFTER_PYRKON: {
                 /* Process broadcasts information that it's left Pyrkon */
-                println( "PROCESS [%d] is AFTER_PYRKON.\n", rank )
-
-                pyrkon_broadcast(EXIT, 0, AFTER_PYRKON);
+                pyrkon_broadcast( EXIT, 0, "AFTER_PYRKON" );
 
                 pthread_mutex_lock( &wait_for_new_pyrkon ); // Process waits for everyone
                 set_state(BEFORE_PYRKON); // and when everybody's ready new Pyrkon starts.
