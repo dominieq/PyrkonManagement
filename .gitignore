@@ -51,11 +51,13 @@
 *.synctex.gz(busy)
 *.pdfsync
 
-## OpenMPI out
-bank
-
-.idea
+## Out files
+others/projects/project_lab
 cmake-build-debug
-Makefile.bak
+
+# IDE files
+.idea
 PyrkonManagement.iml
-README.TXT
+
+# Other helpful files
+others/projects
