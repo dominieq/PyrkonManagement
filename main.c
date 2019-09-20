@@ -165,8 +165,9 @@ void mainLoop ( void ) {
     nanosleep( &t, &rem);
 
     permits = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
+    memset( permits, 0, sizeof(int*)*(LECTURE_COUNT + 1));
     desired_lectures = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
-
+    memset( desired_lectures, 0, sizeof(int*)*(LECTURE_COUNT + 1));
     /* Process won't respond to anyone who wants to enter lecture. */
     println("Closing semaphore allowing_lecture.\n")
     pthread_mutex_lock( &allowing_lecture );
