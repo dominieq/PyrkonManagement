@@ -10,4 +10,7 @@ main.o: main.c main.h
 	mpicc main.c -c -Wall
 
 clear: 
-	rm *.o bank
+	rm *.o pyrkon.out
+
+run:
+	mpirun -n 2 ./pyrkon.out
