@@ -147,10 +147,6 @@ int my_random_int( int min, int max ) {
 
 int main ( int argc, char **argv ) {
     inicjuj( &argc, &argv);
-
-    /* Process won't respond to anyone who wants to enter lecture. */
-    // pthread_mutex_lock( &allowing_lecture );
-
     mainLoop();
     finalizuj();
     return 0;
@@ -170,6 +166,9 @@ void mainLoop ( void ) {
 
     permits = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
     desired_lectures = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
+
+    /* Process won't respond to anyone who wants to enter lecture. */
+    pthread_mutex_lock( &allowing_lecture );
 
     while( !end ) {
 	    int percent = rand()%2 + 1;
@@ -231,6 +230,7 @@ void mainLoop ( void ) {
                 /* Process waits for everyone, mutex will be unlocked in function "exit_handler" */
                 pthread_mutex_lock( &wait_for_new_pyrkon );
                 set_state(BEFORE_PYRKON);
+                pthread_mutex_unlock( &on_pyrkon_mutex );
 
                 /* Access granted to anyone who wants to enter Pyrkon. */
                 pthread_mutex_unlock( &allowing_pyrkon );
@@ -252,14 +252,11 @@ void *comFunc ( void *ptr ) {
     MPI_Status status;
     packet_t *pakiet;
 
-    /* odbieranie wiadomości */
     while ( !end ) {
-
         pakiet = (packet_t *)malloc(sizeof(packet_t));
 	    println("Waiting for messages.\n")
         MPI_Recv( pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status );
         pakiet->src = status.MPI_SOURCE;
-        // println( "Received a message from [%d] \n", pakiet->src )
 
         pthread_mutex_lock( &clock_mutex );
         if( lamport_clock < pakiet->ts ) {
@@ -281,10 +278,11 @@ void *comFunc ( void *ptr ) {
 }
 
 void allow_pyrkon ( packet_t *message ) {
+    /* Other process wanted to enter Pyrkon. */
     println( "Received info that [%d] wants to enter Pyrkon.\n", message->src )
 
     while( TRUE ) {
-        /* Process will proceed only if it's before Pyrkon */
+        /* Process will proceed only if it's before Pyrkon. */
         pthread_mutex_lock( &allowing_pyrkon );
 
         int clock_allows = ( message->ts < last_message_clock ||
@@ -302,11 +300,12 @@ void allow_pyrkon ( packet_t *message ) {
 }
 
 void allow_lecture ( packet_t *message ) {
-
+    /* Other process wanted to enter lecture.*/
     println( "Received info that [%d] wants to enter lecture [%d].\n", message->src, message->data )
 
     int lecture = message->data;
     while( TRUE ){
+        /* Process will proceed only if it's on Pyrkon */
         pthread_mutex_lock( &allowing_lecture );
 
         int clock_allows;
@@ -317,7 +316,6 @@ void allow_lecture ( packet_t *message ) {
             clock_allows = TRUE;
         }
         if( clock_allows ){
-
             pthread_mutex_lock( &on_lecture_mutex );
             pthread_mutex_unlock( &on_lecture_mutex );
 
@@ -326,8 +324,10 @@ void allow_lecture ( packet_t *message ) {
             sendPacket( message, message->src, ALRIGHT_TO_ENTER );
             break;
         }
+        /* Access granted to everyone who wants to enter lecture. */
         pthread_mutex_unlock( &allowing_lecture );
     }
+    /* Access granted to everyone who wants to enter lecture. */
     pthread_mutex_unlock( &allowing_lecture );
 }
 
@@ -336,6 +336,7 @@ void allow_lecture ( packet_t *message ) {
  * @param message packet_t received from other process.
  */
 void want_enter_handler ( packet_t *message ) {
+    /* Process has just received a message that other process wants to enter. */
     if( message->data == 0 ) {
         allow_pyrkon(message);
     } else {
@@ -349,9 +350,9 @@ void alright_enter_pyrkon_extension (packet_t *message ) {
         /* Process is waiting to enter Pyrkon and it's received message that allows it to go in. */
         println( "Received agreement to enter Pyrkon from [%d].\n ", message->src)
 
-        pthread_mutex_lock( &modify_permits ); // To access permits we are locking modify_permits.
-        int number_of_permits = ++ permits[ message->data ]; // Process increases number of received permits.
-        pthread_mutex_unlock( &modify_permits ); // Permits are no longer needed -> unlocking modify_permits.
+        pthread_mutex_lock( &modify_permits );
+        int number_of_permits = ++ permits[ message->data ];
+        pthread_mutex_unlock( &modify_permits );
 
         if( number_of_permits >= size - MAX_PEOPLE_ON_PYRKON ) {
             pthread_mutex_unlock( &wait_for_agreement_to_enter );
@@ -364,27 +365,29 @@ void alright_enter_lecture_extension(packet_t *message ) {
         /* Process is on Pyrkon and receives a message allowing it to participate in one lecture. */
         println( "Received agreement to enter lecture [%d] from [%d].\n", message->data, message->src )
 
-        pthread_mutex_lock( &modify_permits ); // To access permits we are locking modify_permits.
-        int number_of_permits = ++ permits[ message->data ]; // Process increases number of received permits.
+        pthread_mutex_lock( &modify_permits );
+        int number_of_permits = ++ permits[ message->data ];
 
         if( desired_lectures[message->data] && number_of_permits >= size - MAX_PEOPLE_ON_LECTURE ) {
 
             pthread_mutex_lock( &on_lecture_mutex ); // Process is on lecture -> locks on_lecture_mutex.
-            pthread_mutex_unlock( &modify_permits ); // Permits are no longer needed -> unlocking modify_permits.
+            pthread_mutex_unlock( &modify_permits );
 
             desired_lectures[message->data] = 0;
             sleep(5000);
-            pthread_mutex_unlock( &on_lecture_mutex );
+            pthread_mutex_unlock( &on_lecture_mutex ); // Process is after lecture -> unlocks on_lecture_mutex.
 
             int lectures_left = 0; // Process will be counting how many lecture it has to visit.
             for ( int i = 1 ; i <= LECTURE_COUNT ; i++ ) {
                 lectures_left += desired_lectures[i];
             }
-            if ( !lectures_left ) { // If there are no lectures left
-                pthread_mutex_unlock( &ready_to_exit_mutex ); // unlocking from function "mainLoop" cas "ON_PYRKON".
+
+            /* If there are no lectures left process is ready to exit. */
+            if ( !lectures_left ) {
+                pthread_mutex_unlock( &ready_to_exit_mutex );
             }
         } else {
-            pthread_mutex_unlock( &modify_permits ); // Permits are no longer needed -> unlocking modify_permits.
+            pthread_mutex_unlock( &modify_permits );
         }
     }
 }
