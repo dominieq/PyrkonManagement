@@ -185,8 +185,6 @@ void mainLoop ( void ) {
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
                 println("Waiting for Pyrkon.\n") // display some info
-                /* Access granted to anyone who wants to enter lectures. */
-                pthread_mutex_unlock( &allowing_lecture );
                 /* Waiting on closed mutex that will be unlocked in function "alright_enter_pyrkon_extension" */
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
                 pthread_mutex_unlock( &wait_for_agreement_to_enter );
@@ -199,6 +197,9 @@ void mainLoop ( void ) {
 
                 /* Process won't respond to anyone who wants to enter pyrkon. */
                 pthread_mutex_lock( &allowing_pyrkon );
+
+                /* Access granted to anyone who wants to enter lectures. */
+                pthread_mutex_unlock( &allowing_lecture );
                 break;
             }
             case ON_PYRKON: {
