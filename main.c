@@ -165,19 +165,22 @@ void mainLoop ( void ) {
     nanosleep( &t, &rem);
 
     permits = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
+    memset( permits, 0, sizeof(int*)*(LECTURE_COUNT + 1));
     desired_lectures = malloc( ( LECTURE_COUNT + 1 ) * sizeof( int ) );
+    memset( desired_lectures, 0, sizeof(int*)*(LECTURE_COUNT + 1));
 
-	for(int i = 0; i <= LECTURE_COUNT; i++) {
+/*	for(int i = 0; i <= LECTURE_COUNT; i++) {
 		pthread_mutex_lock( &modify_permits );
 		permits[i] = 0;
 		desired_lectures[i] = 0;
 		pthread_mutex_unlock( &modify_permits );
-	}
+	}*/
+
 
     /* Process won't respond to anyone who wants to enter lecture. */
     println("Closing semaphore allowing_lecture ML before while.\n")
     pthread_mutex_lock( &allowing_lecture );
-
+    int pierwszy_przejazd = TRUE;
     while( !end ) {
 	    int percent = rand()%2 + 1;
         struct timespec t2 = { percent, 0 };
@@ -245,7 +248,8 @@ void mainLoop ( void ) {
                 }
 
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
-                pthread_mutex_lock( &ready_to_exit_mutex );
+                if (!pierwszy_przejazd)( &ready_to_exit_mutex );
+                pierwszy_przejazd = FALSE;
                 println("Participating in Pyrkon.\n") // display some info
                 /* Waiting on closed mutex that will be unlocked in function "alright_enter_lecture_extension" */
                 pthread_mutex_lock( &ready_to_exit_mutex );
@@ -339,7 +343,7 @@ void allow_pyrkon ( packet_t *message ) {
         /* Process will proceed only if it's before Pyrkon. */
         println("Closing semaphore allowing_pyrkon {allow_pyrkon}.\n")
         pthread_mutex_lock( &allowing_pyrkon );
-	sleep(1);
+	    sleep(5);
         int clock_allows = ( message->ts < last_message_clock ||
                 ( message->ts == last_message_clock && rank > message->src ) );
 
@@ -352,6 +356,7 @@ void allow_pyrkon ( packet_t *message ) {
         pthread_mutex_unlock( &allowing_pyrkon );
         println("Opening semaphore allowing_pyrkon {allow_pyrkon}.\n")
 	sleep(1);
+
     }
     pthread_mutex_unlock( &allowing_pyrkon );
     println("Opening semaphore allowing_pyrkon.\n")
@@ -437,7 +442,7 @@ void alright_enter_lecture_extension(packet_t *message ) {
 
         pthread_mutex_lock( &modify_permits );
         int number_of_permits = ++ permits[ message->data ];
-	println( "AELE %d uuuuu %d\n", number_of_permits, message->data );
+	println( "AELE %d uuuuu %d\n", number_of_permits, message->data );//jak AELE jest większe niż liczba procesów, to na pewno jest błąd; chyba powinno być <=10
 
 
         if( desired_lectures[message->data] && number_of_permits >= size - MAX_PEOPLE_ON_LECTURE ) {
