@@ -63,14 +63,13 @@ extern volatile int allowed_lecture;
 
 extern pthread_mutex_t clock_mutex;
 extern pthread_mutex_t state_mutex;
-extern pthread_mutex_t gtfo_mutex;
+extern pthread_mutex_t ready_to_exit_mutex;
 extern pthread_mutex_t modify_exited_from_pyrkon;
 extern pthread_mutex_t wait_for_new_pyrkon;
 extern pthread_mutex_t modify_permits;
 extern pthread_mutex_t wait_for_agreement_to_enter;
 extern pthread_mutex_t on_lecture_mutex;
 extern pthread_mutex_t on_pyrkon_mutex;
-extern pthread_mutex_t gtfo_mutex;
 extern pthread_mutex_t allowing_pyrkon;
 extern pthread_mutex_t allowing_lecture;
 
