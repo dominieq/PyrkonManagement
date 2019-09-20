@@ -40,8 +40,8 @@ void check_thread_support(int provided)
         case MPI_THREAD_SERIALIZED: {
             /* Potrzebne zamki wokół wywołań bibglioteki MPI */
             printf("tylko jeden watek naraz możeg wykonać wołania do biblioteki MPI\n");
-            break;g
-        }g
+            break;
+        }
 
         case MPI_THREAD_MULTIPLE: {
             printf("Pełne wsparcie dla wątków\n");

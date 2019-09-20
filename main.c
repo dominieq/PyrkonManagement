@@ -437,8 +437,9 @@ void alright_enter_pyrkon_extension (packet_t *message ) {
 
 void alright_enter_lecture_extension(packet_t *message ) {
     if ( get_state() == ON_PYRKON ) {
+//	println( " AELE \n" );
         /* Process is on Pyrkon and receives a message allowing it to participate in one lecture. */
-        println( "Received agreement to enter lecture [%d] from [%d].\n", message->data, message->src )
+        println( "Received agreement to enter lecture [%d] from [%d].\n", message->data, message->src );
 
         pthread_mutex_lock( &modify_permits );
         int number_of_permits = ++ permits[ message->data ];
