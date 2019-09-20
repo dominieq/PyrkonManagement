@@ -127,9 +127,9 @@ void pyrkon_broadcast( int type, int data, char state_c[100] ) {
 
     for ( int i = 0; i < size; i++ ){
         if ( rank != i ) {
-            println( "Is %s and sends %s %s[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
+            // println( "Is %s and sends %s %s[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
             sendPacket( &newMessage, i, type );
-            println( "Is %s and just sent %s %s[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
+            println( "Is %s and sent %s %s[%d] to %d\n", state_c, type_c, data_c, newMessage.data, i )
         }
     }
 }
@@ -184,6 +184,7 @@ void mainLoop ( void ) {
                 pyrkon_broadcast(WANT_TO_ENTER, 0, "BEFORE_PYRKON");
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
+                println("Waiting for Pyrkon.\n") // display some info
                 pthread_mutex_lock( &wait_for_agreement_to_enter ); // Waiting on closed mutex.
                 pthread_mutex_unlock( &wait_for_agreement_to_enter );
                 /* Process was allowed to enter to so it changes it's state. */
@@ -206,6 +207,7 @@ void mainLoop ( void ) {
                 }
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
                 pthread_mutex_lock( &gtfo_mutex );
+                println("Participating in Pyrkon.\n") // display some info
                 pthread_mutex_lock( &gtfo_mutex ); //Waiting on closed mutex
                 pthread_mutex_unlock( &gtfo_mutex );
                 pthread_mutex_lock( &allowing_lecture );
@@ -244,7 +246,7 @@ void *comFunc ( void *ptr ) {
 	    println("Waiting for messages.\n")
         MPI_Recv( pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status );
         pakiet->src = status.MPI_SOURCE;
-        println( "Received a message from [%d] \n", pakiet->src )
+        // println( "Received a message from [%d] \n", pakiet->src )
 
         pthread_mutex_lock( &clock_mutex );
         if( lamport_clock < pakiet->ts ) {
@@ -255,9 +257,11 @@ void *comFunc ( void *ptr ) {
         pthread_mutex_unlock( &clock_mutex );
 
         if ( pyrkon_number == pakiet -> pyrkon_number ){
-            println( "Pyrkon number: %d is valid\n", pyrkon_number )
+            println( "Received a valid message from  [%d]\n", pakiet->src )
             pthread_t new_thread;
             pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], pakiet);
+        } else {
+            println( "Received outdated message from [%d]\n", pakiet->src)
         }
     }
     return 0;
