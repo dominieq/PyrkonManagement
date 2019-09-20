@@ -83,15 +83,15 @@ void *delayFunc(void *ptr)
 
     //stackEl_t *tmp;
     //int i;
-    /* 
+    /*
     if (rank == 0)
     for (i=0;i<size;i++) {
-	do { tmp = pop_pkt(i); 
-             if (tmp) { 
-		if (tmp->type == FINISH) 
+	do { tmp = pop_pkt(i);
+             if (tmp) {
+		if (tmp->type == FINISH)
 		MPI_Send( tmp->newP, 1, MPI_PAKIET_T, tmp->dst, tmp->type, MPI_COMM_WORLD);
                 free(tmp);
-            } 
+            }
         } while(tmp);
     }
     */
@@ -160,10 +160,10 @@ void finalizuj(void) {
     stackEl_t *tmp=0;
     int i;
     for (i=0;i<size;i++) {
-	do { tmp = pop_pkt(i); 
-             if (tmp) { 
+	do { tmp = pop_pkt(i);
+             if (tmp) {
                 free(tmp);
-            } 
+            }
         } while(tmp);
     }
     free(stack);
@@ -180,8 +180,8 @@ void push_pkt( stackEl_t *pakiet, int n)
     if (!stack[n]) stack[n] = tmp;
     else {
 	stack_t *head = stack[n];
-        while (head->next) head = head->next; 
-	tmp->prev = head; 
+        while (head->next) head = head->next;
+	tmp->prev = head;
         head->next = tmp;
     }
     pthread_mutex_unlock(&stackMut);
@@ -202,7 +202,7 @@ stackEl_t *pop_pkt(int n)
         free(stack[n]);
         stack[n] = next;
 	pthread_mutex_unlock(&stackMut);
-        return tmp; 
+        return tmp;
     }
 }
 
@@ -215,7 +215,7 @@ void sendPacket(packet_t *data, int dst, int type) {
     stackEl->type = type;
     stackEl->newP = newP;
     push_pkt(stackEl, 0);
-    
+
     /*
     pthread_mutex_lock( &packetMut );
     g_queue_push_head( delayStack, stackEl );

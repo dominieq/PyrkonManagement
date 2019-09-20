@@ -25,7 +25,7 @@
 
 #include <mpi.h>
 #include <stdlib.h>
-#include <stdio.h> 
+#include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
@@ -44,7 +44,7 @@ typedef struct {
     int pyrkon_number;
 } packet_t;
 
-extern int rank,size; 
+extern int rank,size;
 extern volatile int lamport_clock;
 extern volatile char end;
 extern MPI_Datatype MPI_PAKIET_T;
@@ -101,8 +101,8 @@ extern void sendPacket(packet_t *, int, int);
 #define println(FORMAT, ...) printf("%c[%d;%dm [%d][%d]: " FORMAT "%c[%d;%dm\n",  27, (1+(rank/7))%2, 31+(6+rank)%7, rank, lamport_clock, ##__VA_ARGS__, 27,0,37);
 
 /* macro debug - działa jak printf, kiedy zdefiniowano
-   DEBUG, kiedy DEBUG niezdefiniowane działa jak instrukcja pusta 
-   
+   DEBUG, kiedy DEBUG niezdefiniowane działa jak instrukcja pusta
+
    używa się dokładnie jak printfa, tyle, że dodaje kolorków i automatycznie
    wyświetla rank
 
@@ -126,8 +126,8 @@ typedef struct {
    stos w zmiennej stack
 */
 void push_pkt( stackEl_t *, int);
-/* zdejmuje ze stosu o danym numerze pakiet  
-   przykład użycia: packet_t *pakiet = pop_pkt(0); 
+/* zdejmuje ze stosu o danym numerze pakiet
+   przykład użycia: packet_t *pakiet = pop_pkt(0);
 */
 stackEl_t *pop_pkt(int);
 #endif
