@@ -394,7 +394,7 @@ void alright_enter_lecture_extension(packet_t *message ) {
             pthread_mutex_unlock( &modify_permits );
 
             desired_lectures[message->data] = 0;
-            sleep(5000);
+            sleep(5);
             pthread_mutex_unlock( &on_lecture_mutex ); // Process is after lecture -> unlocks on_lecture_mutex.
             println("Opening semaphore on_lecture_mutex.\n")
 
@@ -443,7 +443,7 @@ void exit_handler ( packet_t * message ) {
 
     /* If everyone exited Pyrkon process can start another one. */
     if( exited_from_pyrkon == MAX_PEOPLE_ON_PYRKON ) {
-        set_state(BEFORE_PYRKON);
+        set_state(AFTER_PYRKON);
         pthread_mutex_unlock( &wait_for_new_pyrkon );
         println("Opening semaphore wait_for_new_Pyrkon")
     }
