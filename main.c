@@ -295,7 +295,7 @@ void allow_pyrkon ( packet_t *message ) {
         /* Process will proceed only if it's before Pyrkon. */
         println("Closing semaphore allowing_pyrkon.\n")
         pthread_mutex_lock( &allowing_pyrkon );
-
+	sleep(1);
         int clock_allows = ( message->ts < last_message_clock ||
                 ( message->ts == last_message_clock && rank > message->src ) );
 
@@ -307,6 +307,7 @@ void allow_pyrkon ( packet_t *message ) {
         }
         pthread_mutex_unlock( &allowing_pyrkon );
         println("Opening semaphore allowing_pyrkon.\n")
+	sleep(1);
     }
     pthread_mutex_unlock( &allowing_pyrkon );
     println("Opening semaphore allowing_pyrkon.\n")
