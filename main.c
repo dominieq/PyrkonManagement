@@ -171,7 +171,7 @@ void mainLoop ( void ) {
     /* Process won't respond to anyone who wants to enter lecture. */
     println("Closing semaphore allowing_lecture.\n")
     pthread_mutex_lock( &allowing_lecture );
-
+    int pierwszy_przejazd = TRUE;
     while( !end ) {
 	    int percent = rand()%2 + 1;
         struct timespec t2 = { percent, 0 };
@@ -220,7 +220,8 @@ void mainLoop ( void ) {
                 }
 
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
-                pthread_mutex_lock( &ready_to_exit_mutex );
+                if (!pierwszy_przejazd)( &ready_to_exit_mutex );
+                pierwszy_przejazd = FALSE;
                 println("Participating in Pyrkon.\n") // display some info
                 /* Waiting on closed mutex that will be unlocked in function "alright_enter_lecture_extension" */
                 pthread_mutex_lock( &ready_to_exit_mutex );
