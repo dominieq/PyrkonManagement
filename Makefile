@@ -1,4 +1,4 @@
-all: clear pyrkon
+all: pyrkon
 
 pyrkon: main.o init.o
 	mpicc main.o init.o -o pyrkon.out
