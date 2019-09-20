@@ -8,7 +8,6 @@
 
 \title{Przetwarzanie Rozproszone -- Obsługa Pyrkonu}
 \author{Wojciech Kulig (115881), Dominik Szmyt (132326)}
-\date{11.09.2019}
 
 \usepackage{natbib}
 \usepackage{graphicx}
@@ -22,24 +21,26 @@
 \section{Opis problemu}
 
 \subsection{Krótki opis}
-~~~~Proces realizujący program obsługi Pyrkonu może znajdować się w czterech stanach (poniżej tylko krótki opis):
+~~~~Proces realizujący program obsługi Pyrkonu może znajdować się w trzech stanach (poniżej tylko krótki opis):
 \begin{enumerate}
 \item Przed Pyrkonem (BEFORE\_PYRKON) - Proces ,,czeka w kolejce, żeby uczestniczyć w aktywnościach na Pyrkonie''.
 \item Na Pyrkonie (ON\_PYRKON) - Proces ,,jest już na Pyrkonie, może uczestniczyć w warsztatach''.
 \item Po Pyrkonie (AFTER\_PYRKON) - Proces ,,wyszedł z Pyrkonu i czeka na inne procesy żeby rozpocząć zabawę na nowo''.
 \end{enumerate}
-~~~~Procesy wymieniją między sobą następujące rodzaje komunikatów:
+~~~~Procesy wymieniają między sobą następujące rodzaje komunikatów:
 \begin{enumerate}
 \item WANT\_TO\_ENTER - Proces informuje, że chce dostać się na Pyrkon (komunikat z argumentem 0) lub na któryś z ,,n'' warsztatów (liczby od 1 do n).
 \item ALRIGHT\_TO\_ENTER - Proces pozwala innemu procesowi na wejście na Pyrkon lub któryś z warsztatów.
 \item EXIT - Proces informuje inne procesy, że wyszedł już z Pyrkonu.
 \end{enumerate}
 
+\newpage
+
 \subsection{Długi Opis} 
-Proces chcąc dostać się na Pyrkon informuje o tym wszystkie pozostałe procesy, stając w ten sposób w kolejce. Otrzymujący zapytanie o zgodę na wejście na Pyrkon proces może wyrazić zgodę (jeśli sam się właśnie nie ubiega i nie uczestniczy lub znajduje się w kolejce za pytającym procesem) lub póki co nie odpowiadać. Kiedy proces uzyska odpowiednią liczbę zgód, gwarantującyh istnienie dla niego miejsca na Pyrkonie, wchodzi (warunek: liczba\_otrzymanych\_zgód >= liczba\_procesów - maksymalna\_liczba\_procesów\_na\_Pyrkonie).\\
+Proces chcąc dostać się na Pyrkon informuje o tym wszystkie pozostałe procesy, stając w ten sposób w kolejce. Otrzymujący zapytanie o zgodę na wejście na Pyrkon proces może wyrazić zgodę (jeśli sam się właśnie nie ubiega i nie uczestniczy lub znajduje się w kolejce za pytającym procesem) lub póki co nie odpowiadać. Kiedy proces uzyska odpowiednią liczbę zgód, gwarantującyh istnienie dla niego miejsca na Pyrkonie, wchodzi (warunek: liczba otrzymanych zgód >= liczba procesów - maksymalna liczba procesów na Pyrkonie).\\
 Kiedy proces wychodzi z Pyrkonu zwalnia miejsce, odpowiadając na wcześniejsze zapytania, na które nie udzielił jeszcze odpowiedzi.\\
 Sytacja jest analogiczna dla warsztatów.\\
-Wychodząc z Pyrkonu proces informuje o tym wszystkie pozostałe. Kiedy proces będzie po Pyrkonie i otrzyma łącznie n-1 (gdzie n to liczba procesów) informacji o wyjściu procesów z Pyrkonu, rozpoczał się nowy.\\
+Wychodząc z Pyrkonu proces informuje o tym wszystkie pozostałe. Kiedy proces będzie po Pyrkonie i otrzyma łącznie n-1 (gdzie n to liczba procesów) informacji o wyjściu procesów z Pyrkonu, rozpoczyna się nowy festiwal.\\
 
 \section{Złożoność czasowa i komunikacyjna}
 \textbf{Złożoność czasowa} jest funkcją kosztu wykonania algorytmu rozproszonego, wyrażoną przez liczbę kroków algorytmu do jego zakończenia przy założeniu, że:
@@ -56,7 +57,7 @@ Przyjmuje się też na ogół, że:
 \medskip 
 \textbf{Złożoność komunikacyjna} pakietowa jest funkcją kosztu wykonania algorytmu wyrażaną przez liczbę pakietów (wiadomości) przesyłanych w trakcie wykonywania algorytmu do jego zakończenia.
 
-\bigskip 
+\newpage
 
 Algorytm można podzielić na trzy części odpowiadające kolejnym zadaniom realizowanym przez zaproponowany algorytm:
 \begin{enumerate}
