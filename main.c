@@ -15,6 +15,7 @@ pthread_mutex_t state_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t ready_to_exit_mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t allowing_pyrkon = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t allowing_lecture = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t pyrkon_test = PTHREAD_MUTEX_INITIALIZER;
 
 volatile int state = BEFORE_PYRKON;
 volatile int lamport_clock;
@@ -99,7 +100,7 @@ void pyrkon_broadcast( int type, int data, char state_c[100] ) {
     packet_t newMessage;
     newMessage.ts = get_clock( TRUE );
     newMessage.data = data;
-    newMessage.pyrkon_number = pyrkon_number;
+    newMessage.pyrkon_number = get_pyrkon_number();
 
 	    char type_c[100];
     char data_c[100];
@@ -190,6 +191,8 @@ void mainLoop ( void ) {
         int current_state = get_state();
         switch( current_state ){
             case BEFORE_PYRKON: {
+		println( "BEFORE-S\n" );
+		println( "SSS: PRZED (%d)\n", get_pyrkon_number() );
                 /* Process is waiting in line to enter Pyrkon. It broadcasts question and waits for agreement. */
                 pyrkon_broadcast(WANT_TO_ENTER, 0, "BEFORE_PYRKON");
 
@@ -215,9 +218,13 @@ void mainLoop ( void ) {
                 /* Access granted to anyone who wants to enter lectures. */
                 pthread_mutex_unlock( &allowing_lecture );
                 println("Opening semaphore allowing_lecture BP.\n")
+		println( "BEFORE-E\n" );
                 break;
             }
             case ON_PYRKON: {
+		println( "ON-S\n" );
+		println( "SSS: W TRAKCIE (%d)\n", get_pyrkon_number() );
+
                 /* Process entered Pyrkon and chooses lectures. */
 //                for(int i = 1; i <= LECTURE_COUNT; i++) {
 //                   desired_lectures[i]=my_random_int(0,1);
@@ -248,25 +255,37 @@ void mainLoop ( void ) {
                 }
 
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
-                if (!pierwszy_przejazd)( &ready_to_exit_mutex );
-                pierwszy_przejazd = FALSE;
+//                if (!pierwszy_przejazd)( &ready_to_exit_mutex );
+//                pierwszy_przejazd = FALSE;
+		pthread_mutex_lock( &ready_to_exit_mutex );
                 println("Participating in Pyrkon.\n") // display some info
                 /* Waiting on closed mutex that will be unlocked in function "alright_enter_lecture_extension" */
                 pthread_mutex_lock( &ready_to_exit_mutex );
                 pthread_mutex_unlock( &ready_to_exit_mutex );
 
+		pthread_mutex_lock( &modify_exited_from_pyrkon );
+                exited_from_pyrkon++;
+                pthread_mutex_unlock( &modify_exited_from_pyrkon );
+		set_state(AFTER_PYRKON);
+
+
                 /* Process won't respond to anyone who wants to enter lecture. */
                 println("Closing semaphore allowing_lecture OP.\n")
 //                pthread_mutex_lock( &allowing_lecture );
+		println( "ON-E\n" );
                 break;
             }
             case AFTER_PYRKON: {
+		println ( "END-S\n" );
+		println( "SSS: PO (%d)\n", get_pyrkon_number() );
+
                 /* Process broadcasts information that it's left Pyrkon */
                 pyrkon_broadcast( EXIT, 0, "AFTER_PYRKON" );
 
-		pthread_mutex_lock( &modify_exited_from_pyrkon );
+/*		pthread_mutex_lock( &modify_exited_from_pyrkon );
 		exited_from_pyrkon++;
 		pthread_mutex_unlock( &modify_exited_from_pyrkon );
+*/
 
 
                 /* Process waits for everyone, mutex will be unlocked in function "exit_handler" */
@@ -276,6 +295,10 @@ void mainLoop ( void ) {
                 pthread_mutex_unlock( &on_pyrkon_mutex );
                 println("Opening semaphore on_pyrkon_mutex AP.\n")
 
+		pthread_mutex_lock( &modify_exited_from_pyrkon );
+                exited_from_pyrkon++;
+                pthread_mutex_unlock( &modify_exited_from_pyrkon );
+
 
                 for(int i = 0; i <= LECTURE_COUNT; i++) {
                         pthread_mutex_lock( &modify_permits );
@@ -283,16 +306,14 @@ void mainLoop ( void ) {
                         desired_lectures[i] = 0;
                         pthread_mutex_unlock( &modify_permits );
                 }
-		pthread_mutex_lock( &modify_exited_from_pyrkon );
-		exited_from_pyrkon++;
-		pthread_mutex_unlock( &modify_exited_from_pyrkon );
 
 		sleep(10);
 
                 /* Access granted to anyone who wants to enter Pyrkon. */
                 pthread_mutex_unlock( &allowing_pyrkon );
                 println("Opening semaphore allowing_pyrkon AP.\n")
-                pyrkon_number ++;
+                increase_pyrkon_number();
+		println("END-E\n");
                 break;
             }
             default:
@@ -324,7 +345,7 @@ void *comFunc ( void *ptr ) {
         }
         pthread_mutex_unlock( &clock_mutex );
 
-        if ( pyrkon_number == pakiet -> pyrkon_number ){
+        if ( get_pyrkon_number() == pakiet -> pyrkon_number ){
             println( "Received a valid message from  [%d]\n", pakiet->src )
             pthread_t new_thread;
             pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], pakiet);
@@ -373,6 +394,7 @@ void allow_lecture ( packet_t *message ) {
         pthread_mutex_lock( &allowing_lecture );
 
 	println( "AL 1\n" );
+	sleep(1);
 
         int clock_allows;
         if ( desired_lectures[lecture] ){
@@ -429,6 +451,7 @@ void alright_enter_pyrkon_extension (packet_t *message ) {
         pthread_mutex_unlock( &modify_permits );
 
         if( number_of_permits >= size - MAX_PEOPLE_ON_PYRKON ) {
+		println( "SSSR: WCHODZI NA PYRKON  (%d)\n", get_pyrkon_number() );
             pthread_mutex_unlock( &wait_for_agreement_to_enter );
             println("Opening semaphore wait_for_agreement_to_enter {AEPE}\n")
         }
@@ -445,8 +468,10 @@ void alright_enter_lecture_extension(packet_t *message ) {
         int number_of_permits = ++ permits[ message->data ];
 	println( "AELE %d uuuuu %d\n", number_of_permits, message->data );//jak AELE jest większe niż liczba procesów, to na pewno jest błąd; chyba powinno być <=10
 
-
-        if( desired_lectures[message->data] && number_of_permits >= size - MAX_PEOPLE_ON_LECTURE ) {
+	println( "FFF-1\n" );
+        if( desired_lectures[message->data] && ( number_of_permits >= ( size - MAX_PEOPLE_ON_LECTURE )) ) {
+	    println( "FFF-2\n" );
+	    println( "SSSRR: WCHODZI NA WARSZTAT (%d)\n", get_pyrkon_number() );
 
             println("Closing semaphore on_lecture_mutex {AELE}.\n")
             pthread_mutex_lock( &on_lecture_mutex ); // Process is on lecture -> locks on_lecture_mutex.
@@ -461,17 +486,27 @@ void alright_enter_lecture_extension(packet_t *message ) {
             for ( int i = 1 ; i <= LECTURE_COUNT ; i++ ) {
                 lectures_left += desired_lectures[i];
             }
-
+	    println( "FFF-2\n" );
             /* If there are no lectures left process is ready to exit. */
             if ( !lectures_left ) {
+		println( "FFF-3\n" );
                 pthread_mutex_unlock( &ready_to_exit_mutex );
                 println("Opening semaphore ready_to_exit.\n")
+		println( "SSSRRR: PO WARSZTATACH (%d)\n", get_pyrkon_number() );
+
             }
+	    println( "FFF-4\n" );
         } else {
+	    println( "FFF-5\n" );
             pthread_mutex_unlock( &modify_permits );
 		println( "unlock &modify_permits\n" );
+
+		println( "QQQ %d && %d >= %d - %d ||| %d \n", desired_lectures[message->data], number_of_permits, size, MAX_PEOPLE_ON_LECTURE, get_pyrkon_number() );
+
         }
+	println( "FFF-6\n" );
     }
+    println( "FFF-7\n" );
 }
 
 /**
@@ -503,9 +538,28 @@ void exit_handler ( packet_t * message ) {
 
     /* If everyone exited Pyrkon process can start another one. */
     if( exited_from_pyrkon == size ) {
-        set_state(AFTER_PYRKON);
+//        set_state(AFTER_PYRKON);	//TODO
         pthread_mutex_unlock( &wait_for_new_pyrkon );
-        println("Opening semaphore wait_for_new_Pyrkon {EH}\n")
+        println("Opening semaphore wait_for_new_Pyrkon {EH}\n");
+/*	pthread_mutex_lock( &modify_exited_from_pyrkon );
+        exited_from_pyrkon++;
+        pthread_mutex_unlock( &modify_exited_from_pyrkon );*/
+	println( "SSSZ: NOWY (%d)\n", get_pyrkon_number() );
+
     }
     free(message);
 }
+
+int get_pyrkon_number() {
+	pthread_mutex_lock( &pyrkon_test );
+	int test = pyrkon_number;
+	pthread_mutex_unlock( &pyrkon_test );
+	return test;
+}
+
+void increase_pyrkon_number() {
+        pthread_mutex_lock( &pyrkon_test );
+        pyrkon_number  ++;
+        pthread_mutex_unlock( &pyrkon_test );
+}
+
