@@ -198,10 +198,13 @@ void mainLoop ( void ) {
 
                 /* Process locks mutex two times to wait for another thread to allow it to proceed */
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
+		println( "SS 1\n" );
                 println("Waiting for Pyrkon.\n") // display some info
                 /* Waiting on closed mutex that will be unlocked in function "alright_enter_pyrkon_extension" */
                 pthread_mutex_lock( &wait_for_agreement_to_enter );
+		println( "SS 2\n" );
                 pthread_mutex_unlock( &wait_for_agreement_to_enter );
+		println( "SS 3\n" );
 
                 /* Process was allowed to enter to so it changes it's state. */
                 set_state(ON_PYRKON);
@@ -210,13 +213,16 @@ void mainLoop ( void ) {
                 /* Process locks on_pyrkon_mutex to prevent itself from granting access to another process. */
                 println("Closing semaphore on_pyrkon_mutex BP1.\n")
                 pthread_mutex_lock( &on_pyrkon_mutex );
+		println( "SS 4\n" );
 
                 /* Process won't respond to anyone who wants to enter pyrkon. */
                 println("Closing semaphore allowing_pyrkon BP2.\n")
                 pthread_mutex_lock( &allowing_pyrkon );
+		println( "SS 5\n" );
 
                 /* Access granted to anyone who wants to enter lectures. */
                 pthread_mutex_unlock( &allowing_lecture );
+		println( "SS 6\n" );
                 println("Opening semaphore allowing_lecture BP.\n")
 		println( "BEFORE-E\n" );
                 break;
