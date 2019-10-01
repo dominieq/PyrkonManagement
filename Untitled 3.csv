@@ -1,0 +1,2171 @@
+0;0;Closing semaphore allowing_lecture ML before while.
+0;0;Waiting for messages.
+0;2;Received a valid message from [2]
+0;2;Waiting for messages.
+0;2;Received info that [2] wants to enter Pyrkon.
+0;2;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;2;Sends agreement to enter Pyrkon to [2].
+0;3;S-FOR ZGODA [2].
+0;3;Opening semaphore allowing_pyrkon.
+0;3;STATUS: WIADOMOSC-S '2(0)' do 2
+0;4;Received a valid message from [8]
+0;4;Waiting for messages.
+0;4;Received info that [8] wants to enter Pyrkon.
+0;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;4;Sends agreement to enter Pyrkon to [8].
+0;5;S-FOR ZGODA [8].
+0;5;Opening semaphore allowing_pyrkon.
+0;5;STATUS: WIADOMOSC-S '2(0)' do 8
+0;5;STATUS: BEFORE_PYRKON: (0)
+0;5;SS 1
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+0;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+0;6;Waiting for Pyrkon.
+0;6;STATUS: WIADOMOSC-S '1(0)' do 1
+0;6;STATUS: WIADOMOSC-S '1(0)' do 2
+0;6;STATUS: WIADOMOSC-S '1(0)' do 3
+0;6;STATUS: WIADOMOSC-S '1(0)' do 4
+0;6;STATUS: WIADOMOSC-S '1(0)' do 5
+0;6;STATUS: WIADOMOSC-S '1(0)' do 6
+0;6;STATUS: WIADOMOSC-S '1(0)' do 7
+0;6;STATUS: WIADOMOSC-S '1(0)' do 8
+0;6;STATUS: WIADOMOSC-S '1(0)' do 9
+0;7;Received a valid message from [3]
+0;7;Waiting for messages.
+0;8;Received a valid message from [7]
+0;8;Waiting for messages.
+0;8;Received info that [7] wants to enter Pyrkon.
+0;8;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;8;S-FOR CZEKA [7].
+0;8;Opening semaphore allowing_pyrkon.
+0;8;Received info that [3] wants to enter Pyrkon.
+0;8;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;8;S-FOR CZEKA [3].
+0;8;Opening semaphore allowing_pyrkon.
+0;9;Received a valid message from [6]
+0;9;Waiting for messages.
+0;9;Received info that [6] wants to enter Pyrkon.
+0;9;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;9;S-FOR CZEKA [6].
+0;9;Opening semaphore allowing_pyrkon.
+0;10;Received a valid message from [9]
+0;10;Waiting for messages.
+0;11;Received a valid message from [5]
+0;11;Waiting for messages.
+0;11;Received info that [5] wants to enter Pyrkon.
+0;11;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;11;S-FOR CZEKA [5].
+0;11;Opening semaphore allowing_pyrkon.
+0;11;Received info that [9] wants to enter Pyrkon.
+0;11;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;11;S-FOR CZEKA [9].
+0;11;Opening semaphore allowing_pyrkon.
+0;12;Received a valid message from [1]
+0;12;Waiting for messages.
+0;13;Received a valid message from [4]
+0;13;Waiting for messages.
+0;13;Received info that [1] wants to enter Pyrkon.
+0;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;13;S-FOR CZEKA [1].
+0;13;Opening semaphore allowing_pyrkon.
+0;13;Received info that [4] wants to enter Pyrkon.
+0;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+0;13;S-FOR CZEKA [4].
+0;13;Opening semaphore allowing_pyrkon.
+0;14;Received a valid message from [6]
+0;14;Waiting for messages.
+0;15;Received a valid message from [5]
+0;15;Waiting for messages.
+0;15;Received agreement to enter Pyrkon from [6].
+0;15;AEPE 1
+0;16;Received a valid message from [7]
+0;16;Waiting for messages.
+0;16;Received agreement to enter Pyrkon from [5].
+0;16;AEPE 2
+0;16;Received agreement to enter Pyrkon from [7].
+0;16;AEPE 3
+0;17;Received a valid message from [4]
+0;17;Waiting for messages.
+0;18;Received a valid message from [3]
+0;18;Waiting for messages.
+0;18;Received agreement to enter Pyrkon from [4].
+0;18;AEPE 4
+0;18;Received agreement to enter Pyrkon from [3].
+0;18;AEPE 5
+0;19;Received a valid message from [9]
+0;19;Waiting for messages.
+0;19;Received agreement to enter Pyrkon from [9].
+0;19;AEPE 6
+0;20;Received a valid message from [1]
+0;20;Waiting for messages.
+0;20;Received agreement to enter Pyrkon from [1].
+0;20;AEPE 7
+0;20;SSSR: WCHODZI NA PYRKON (0)
+0;20;SS 2
+0;20;SS 3
+0;20;Opening semaphore wait_for_agreement_to_enter {AEPE}
+0;20;STATUS: ENTERING_PYRKON: (0)
+0;20;Entering Pyrkon.
+0;20;Closing semaphore on_pyrkon_mutex BP1.
+0;20;SS 4
+0;20;Closing semaphore allowing_pyrkon BP2.
+0;20;SS 5
+0;20;SS 6
+0;20;Opening semaphore allowing_lecture BP.
+0;20;BEFORE-E
+0;20;STATUS: ON_PYRKON: (0)
+0;25;Received a valid message from [8]
+0;25;Waiting for messages.
+0;27;Received a valid message from [2]
+0;27;Waiting for messages.
+0;27;Received info that [8] has left Pyrkon.
+0;27;WYSZLO LACZNIE: 1
+0;27;Received info that [2] has left Pyrkon.
+0;27;WYSZLO LACZNIE: 2
+0;27;ON-S
+0;27;SSS: W TRAKCIE (0)
+0;27;STATUS: EXITING_PYRKON: (0)
+0;27;Closing semaphore allowing_lecture OP.
+0;27;ON-E
+0;28;Received a valid message from [2]
+0;28;Waiting for messages.
+0;29;Received a valid message from [8]
+0;29;Waiting for messages.
+0;29;STATUS: AFTER_PYRKON: (0)
+0;29;END-S
+0;29;SSS: PO (0)
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+0;30;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+0;30;STATUS: CLEANING
+0;30;RR5.
+0;30;RR6.
+0;30;RR7.
+0;30;RRx
+0;30;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+0;30;STATUS: WIADOMOSC-S '3(0)' do 1
+0;30;STATUS: WIADOMOSC-S '3(0)' do 2
+0;30;STATUS: WIADOMOSC-S '3(0)' do 3
+0;30;STATUS: WIADOMOSC-S '3(0)' do 4
+0;30;FFF.
+0;30;STATUS: WIADOMOSC-S '3(0)' do 5
+0;31;SEGMENTATION.
+0;31;FOR PO [7].
+0;31;KKK: 6, 0, 1859288870, 7, 0 
+0;31;SEGMENTATION-S
+0;32;SEGMENTATION.
+0;32;FOR PO [3].
+0;32;KKK: 6, 0, 1643216678, 3, 0 
+0;32;SEGMENTATION-S
+0;33;SEGMENTATION.
+0;33;FOR PO [6].
+0;33;KKK: 6, 0, 1899159334, 6, 0 
+0;33;SEGMENTATION-S
+0;34;SEGMENTATION.
+0;34;FOR PO [5].
+0;34;KKK: 6, 0, 39976742, 5, 0 
+0;34;SEGMENTATION-S
+0;35;SEGMENTATION.
+0;35;FOR PO [9].
+0;35;KKK: 6, 0, -383037658, 9, 0 
+0;35;SEGMENTATION-S
+0;36;SEGMENTATION.
+0;36;FOR PO [1].
+0;36;KKK: 6, 0, 455835430, 1, 0 
+0;36;SEGMENTATION-S
+0;37;SEGMENTATION.
+0;37;FOR PO [4].
+0;37;KKK: 6, 0, -1053384922, 4, 0 
+0;37;SEGMENTATION-S
+0;37;SEGMENTATION??.
+0;37;SEGMENTATION!!.
+0;37;STATUS: SKONCZYLEM ODPOWIADAC
+0;37;Closing semaphore wait_for_new_pyrkon AP.
+0;37;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+0;37;T1_0
+0;37;T1_1
+0;37;T1_2 3
+0;37;T1_3
+0;37;czy_moge_wyjsc
+0;37;STATUS: WIADOMOSC-S '3(0)' do 6
+0;37;STATUS: WIADOMOSC-S '3(0)' do 7
+0;37;STATUS: WIADOMOSC-S '3(0)' do 8
+0;37;STATUS: WIADOMOSC-S '3(0)' do 9
+0;37;STATUS: WIADOMOSC-S '2(0)' do 7
+0;37;STATUS: WIADOMOSC-S '2(0)' do 3
+0;37;STATUS: WIADOMOSC-S '2(0)' do 6
+0;37;STATUS: WIADOMOSC-S '2(0)' do 5
+0;37;STATUS: WIADOMOSC-S '2(0)' do 9
+0;37;STATUS: WIADOMOSC-S '2(0)' do 1
+0;37;STATUS: WIADOMOSC-S '2(0)' do 4
+1;0;Closing semaphore allowing_lecture ML before while.
+1;0;Waiting for messages.
+1;2;Received a valid message from [2]
+1;2;Waiting for messages.
+1;3;Received a valid message from [8]
+1;3;Waiting for messages.
+1;3;Received info that [8] wants to enter Pyrkon.
+1;3;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;3;Sends agreement to enter Pyrkon to [8].
+1;4;S-FOR ZGODA [8].
+1;4;Opening semaphore allowing_pyrkon.
+1;4;Received info that [2] wants to enter Pyrkon.
+1;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;4;Sends agreement to enter Pyrkon to [2].
+1;5;S-FOR ZGODA [2].
+1;5;Opening semaphore allowing_pyrkon.
+1;5;STATUS: WIADOMOSC-S '2(0)' do 8
+1;5;STATUS: WIADOMOSC-S '2(0)' do 2
+1;5;STATUS: BEFORE_PYRKON: (0)
+1;5;SS 1
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+1;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+1;6;Waiting for Pyrkon.
+1;7;Received a valid message from [0]
+1;7;Waiting for messages.
+1;7;Received info that [0] wants to enter Pyrkon.
+1;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;7;Sends agreement to enter Pyrkon to [0].
+1;8;S-FOR ZGODA [0].
+1;8;Opening semaphore allowing_pyrkon.
+1;8;STATUS: WIADOMOSC-S '1(0)' do 0
+1;9;Received a valid message from [3]
+1;9;Waiting for messages.
+1;10;Received a valid message from [7]
+1;10;Waiting for messages.
+1;10;Received info that [7] wants to enter Pyrkon.
+1;10;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;10;S-FOR CZEKA [7].
+1;10;Opening semaphore allowing_pyrkon.
+1;10;Received info that [3] wants to enter Pyrkon.
+1;10;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;10;S-FOR CZEKA [3].
+1;10;Opening semaphore allowing_pyrkon.
+1;11;Received a valid message from [6]
+1;11;Waiting for messages.
+1;11;Received info that [6] wants to enter Pyrkon.
+1;11;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;11;S-FOR CZEKA [6].
+1;11;Opening semaphore allowing_pyrkon.
+1;12;Received a valid message from [9]
+1;12;Waiting for messages.
+1;13;Received a valid message from [5]
+1;13;Waiting for messages.
+1;13;Received info that [9] wants to enter Pyrkon.
+1;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;13;S-FOR CZEKA [9].
+1;13;Opening semaphore allowing_pyrkon.
+1;13;STATUS: WIADOMOSC-S '1(0)' do 2
+1;13;Received info that [5] wants to enter Pyrkon.
+1;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;13;S-FOR CZEKA [5].
+1;13;Opening semaphore allowing_pyrkon.
+1;14;Received a valid message from [4]
+1;14;Waiting for messages.
+1;14;Received info that [4] wants to enter Pyrkon.
+1;14;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+1;14;S-FOR CZEKA [4].
+1;14;Opening semaphore allowing_pyrkon.
+1;14;STATUS: WIADOMOSC-S '1(0)' do 3
+1;14;STATUS: WIADOMOSC-S '1(0)' do 4
+1;14;STATUS: WIADOMOSC-S '1(0)' do 5
+1;14;STATUS: WIADOMOSC-S '1(0)' do 6
+1;14;STATUS: WIADOMOSC-S '1(0)' do 7
+1;14;STATUS: WIADOMOSC-S '1(0)' do 8
+1;14;STATUS: WIADOMOSC-S '1(0)' do 9
+1;15;Received a valid message from [3]
+1;15;Waiting for messages.
+1;15;Received agreement to enter Pyrkon from [3].
+1;15;AEPE 1
+1;16;Received a valid message from [4]
+1;16;Waiting for messages.
+1;16;Received agreement to enter Pyrkon from [4].
+1;16;AEPE 2
+1;16;STATUS: WIADOMOSC-S '2(0)' do 0
+1;17;Received a valid message from [5]
+1;17;Waiting for messages.
+1;17;Received agreement to enter Pyrkon from [5].
+1;17;AEPE 3
+1;18;Received a valid message from [6]
+1;18;Waiting for messages.
+1;18;Received agreement to enter Pyrkon from [6].
+1;18;AEPE 4
+1;19;Received a valid message from [7]
+1;19;Waiting for messages.
+1;19;Received agreement to enter Pyrkon from [7].
+1;19;AEPE 5
+1;21;Received a valid message from [9]
+1;21;Waiting for messages.
+1;21;Received agreement to enter Pyrkon from [9].
+1;21;AEPE 6
+1;25;Received a valid message from [8]
+1;25;Waiting for messages.
+1;25;Received info that [8] has left Pyrkon.
+1;25;WYSZLO LACZNIE: 1
+1;27;Received a valid message from [2]
+1;27;Waiting for messages.
+1;27;Received info that [2] has left Pyrkon.
+1;27;WYSZLO LACZNIE: 2
+1;28;Received a valid message from [2]
+1;28;Waiting for messages.
+1;28;Received agreement to enter Pyrkon from [2].
+1;28;AEPE 7
+1;28;SSSR: WCHODZI NA PYRKON (0)
+1;28;Opening semaphore wait_for_agreement_to_enter {AEPE}
+1;28;SS 2
+1;28;SS 3
+1;28;STATUS: ENTERING_PYRKON: (0)
+1;28;Entering Pyrkon.
+1;28;Closing semaphore on_pyrkon_mutex BP1.
+1;28;SS 4
+1;28;Closing semaphore allowing_pyrkon BP2.
+1;28;SS 5
+1;28;SS 6
+1;28;Opening semaphore allowing_lecture BP.
+1;28;BEFORE-E
+1;29;Received a valid message from [8]
+1;29;Waiting for messages.
+1;29;STATUS: ON_PYRKON: (0)
+1;31;Received a valid message from [0]
+1;31;Waiting for messages.
+1;32;Received a valid message from [0]
+1;32;Waiting for messages.
+1;32;Received info that [0] has left Pyrkon.
+1;32;WYSZLO LACZNIE: 3
+1;32;ON-S
+1;32;SSS: W TRAKCIE (0)
+1;32;STATUS: EXITING_PYRKON: (0)
+1;32;Closing semaphore allowing_lecture OP.
+1;32;ON-E
+1;32;STATUS: AFTER_PYRKON: (0)
+1;32;END-S
+1;32;SSS: PO (0)
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+1;33;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+1;33;STATUS: CLEANING
+1;33;RR5.
+1;33;RR6.
+1;33;RR7.
+1;33;RRx
+1;33;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+1;33;FFF.
+1;34;SEGMENTATION.
+1;34;FOR PO [7].
+1;34;KKK: 6, 0, 1859288870, 7, 0 
+1;34;SEGMENTATION-S
+1;35;SEGMENTATION.
+1;35;FOR PO [3].
+1;35;KKK: 6, 0, 1643216678, 3, 0 
+1;35;SEGMENTATION-S
+1;36;SEGMENTATION.
+1;36;FOR PO [6].
+1;36;KKK: 6, 0, 1899159334, 6, 0 
+1;36;SEGMENTATION-S
+1;37;SEGMENTATION.
+1;37;FOR PO [9].
+1;37;KKK: 6, 0, -383037658, 9, 0 
+1;37;SEGMENTATION-S
+1;38;SEGMENTATION.
+1;38;FOR PO [5].
+1;38;KKK: 6, 0, 39976742, 5, 0 
+1;38;SEGMENTATION-S
+1;39;SEGMENTATION.
+1;39;FOR PO [4].
+1;39;KKK: 6, 0, -1053384922, 4, 0 
+1;39;SEGMENTATION-S
+1;39;SEGMENTATION??.
+1;39;SEGMENTATION!!.
+1;39;STATUS: SKONCZYLEM ODPOWIADAC
+1;39;Closing semaphore wait_for_new_pyrkon AP.
+1;39;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+1;39;T1_0
+1;39;T1_1
+1;39;T1_2 4
+1;39;T1_3
+1;39;czy_moge_wyjsc
+1;39;STATUS: WIADOMOSC-S '3(0)' do 0
+1;39;STATUS: WIADOMOSC-S '3(0)' do 2
+1;39;STATUS: WIADOMOSC-S '3(0)' do 3
+1;39;STATUS: WIADOMOSC-S '3(0)' do 4
+1;39;STATUS: WIADOMOSC-S '3(0)' do 5
+1;39;STATUS: WIADOMOSC-S '3(0)' do 6
+1;39;STATUS: WIADOMOSC-S '3(0)' do 7
+1;39;STATUS: WIADOMOSC-S '3(0)' do 8
+1;39;STATUS: WIADOMOSC-S '3(0)' do 9
+1;39;STATUS: WIADOMOSC-S '2(0)' do 7
+1;39;STATUS: WIADOMOSC-S '2(0)' do 3
+1;39;STATUS: WIADOMOSC-S '2(0)' do 6
+1;39;STATUS: WIADOMOSC-S '2(0)' do 9
+1;39;STATUS: WIADOMOSC-S '2(0)' do 5
+1;39;STATUS: WIADOMOSC-S '2(0)' do 4
+2;0;Waiting for messages.
+2;0;Closing semaphore allowing_lecture ML before while.
+2;0;STATUS: BEFORE_PYRKON: (0)
+2;0;SS 1
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+2;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+2;1;Waiting for Pyrkon.
+2;1;STATUS: WIADOMOSC-S '1(0)' do 0
+2;4;Received a valid message from [0]
+2;4;Waiting for messages.
+2;4;Received agreement to enter Pyrkon from [0].
+2;4;AEPE 1
+2;4;STATUS: WIADOMOSC-S '1(0)' do 1
+2;4;STATUS: WIADOMOSC-S '1(0)' do 3
+2;5;Received a valid message from [3]
+2;5;Waiting for messages.
+2;6;Received a valid message from [8]
+2;6;Waiting for messages.
+2;7;Received a valid message from [1]
+2;7;Waiting for messages.
+2;7;Received agreement to enter Pyrkon from [3].
+2;7;AEPE 2
+2;7;Received info that [8] wants to enter Pyrkon.
+2;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;7;S-FOR CZEKA [8].
+2;7;Opening semaphore allowing_pyrkon.
+2;7;Received agreement to enter Pyrkon from [1].
+2;7;AEPE 3
+2;7;STATUS: WIADOMOSC-S '1(0)' do 4
+2;8;Received a valid message from [4]
+2;8;Waiting for messages.
+2;8;Received agreement to enter Pyrkon from [4].
+2;8;AEPE 4
+2;8;STATUS: WIADOMOSC-S '1(0)' do 5
+2;9;Received a valid message from [5]
+2;9;Waiting for messages.
+2;9;Received agreement to enter Pyrkon from [5].
+2;9;AEPE 5
+2;9;STATUS: WIADOMOSC-S '1(0)' do 6
+2;9;STATUS: WIADOMOSC-S '1(0)' do 7
+2;9;STATUS: WIADOMOSC-S '1(0)' do 8
+2;10;Received a valid message from [6]
+2;10;Waiting for messages.
+2;10;Received agreement to enter Pyrkon from [6].
+2;10;AEPE 6
+2;15;Received a valid message from [8]
+2;15;Waiting for messages.
+2;15;Received agreement to enter Pyrkon from [8].
+2;15;AEPE 7
+2;15;SSSR: WCHODZI NA PYRKON (0)
+2;15;Opening semaphore wait_for_agreement_to_enter {AEPE}
+2;15;SS 2
+2;15;SS 3
+2;15;STATUS: ENTERING_PYRKON: (0)
+2;15;Entering Pyrkon.
+2;15;Closing semaphore on_pyrkon_mutex BP1.
+2;15;SS 4
+2;15;Closing semaphore allowing_pyrkon BP2.
+2;15;SS 5
+2;15;SS 6
+2;15;Opening semaphore allowing_lecture BP.
+2;15;BEFORE-E
+2;15;STATUS: WIADOMOSC-S '1(0)' do 9
+2;16;Received a valid message from [7]
+2;16;Waiting for messages.
+2;17;Received a valid message from [9]
+2;17;Waiting for messages.
+2;18;Received a valid message from [0]
+2;18;Waiting for messages.
+2;18;Received info that [0] wants to enter Pyrkon.
+2;18;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;18;S-FOR CZEKA [0].
+2;18;Opening semaphore allowing_pyrkon.
+2;19;Received a valid message from [1]
+2;19;Waiting for messages.
+2;20;Received a valid message from [6]
+2;20;Waiting for messages.
+2;20;Received info that [1] wants to enter Pyrkon.
+2;20;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;20;S-FOR CZEKA [1].
+2;20;Opening semaphore allowing_pyrkon.
+2;20;Received info that [6] wants to enter Pyrkon.
+2;20;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;20;S-FOR CZEKA [6].
+2;20;Opening semaphore allowing_pyrkon.
+2;21;Received a valid message from [3]
+2;21;Waiting for messages.
+2;22;Received a valid message from [7]
+2;22;Waiting for messages.
+2;22;Received info that [7] wants to enter Pyrkon.
+2;22;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;22;S-FOR CZEKA [7].
+2;22;Opening semaphore allowing_pyrkon.
+2;22;Received info that [3] wants to enter Pyrkon.
+2;22;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;22;S-FOR CZEKA [3].
+2;22;Opening semaphore allowing_pyrkon.
+2;23;Received a valid message from [5]
+2;23;Waiting for messages.
+2;24;Received a valid message from [9]
+2;24;Waiting for messages.
+2;24;Received info that [5] wants to enter Pyrkon.
+2;24;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;24;S-FOR CZEKA [5].
+2;24;Opening semaphore allowing_pyrkon.
+2;24;Received info that [9] wants to enter Pyrkon.
+2;24;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;24;S-FOR CZEKA [9].
+2;24;Opening semaphore allowing_pyrkon.
+2;25;Received a valid message from [4]
+2;25;Waiting for messages.
+2;25;Received info that [4] wants to enter Pyrkon.
+2;25;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+2;25;S-FOR CZEKA [4].
+2;25;Opening semaphore allowing_pyrkon.
+2;25;STATUS: ON_PYRKON: (0)
+2;25;ON-S
+2;25;SSS: W TRAKCIE (0)
+2;25;STATUS: EXITING_PYRKON: (0)
+2;25;Closing semaphore allowing_lecture OP.
+2;25;ON-E
+2;25;STATUS: AFTER_PYRKON: (0)
+2;25;END-S
+2;25;SSS: PO (0)
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+2;26;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+2;26;STATUS: CLEANING
+2;26;RR5.
+2;26;RR6.
+2;26;RR7.
+2;26;RRx
+2;26;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+2;26;FFF.
+2;27;SEGMENTATION.
+2;27;FOR PO [8].
+2;27;KKK: 1, 0, -2099355866, 8, 0 
+2;27;SEGMENTATION-S
+2;28;SEGMENTATION.
+2;28;FOR PO [0].
+2;28;KKK: 6, 0, -1688113370, 0, 0 
+2;28;SEGMENTATION-S
+2;29;SEGMENTATION.
+2;29;FOR PO [1].
+2;29;KKK: 6, 0, 455835430, 1, 0 
+2;29;SEGMENTATION-S
+2;30;SEGMENTATION.
+2;30;FOR PO [6].
+2;30;KKK: 6, 0, 1899159334, 6, 0 
+2;30;SEGMENTATION-S
+2;31;SEGMENTATION.
+2;31;FOR PO [7].
+2;31;KKK: 6, 0, 1859288870, 7, 0 
+2;31;SEGMENTATION-S
+2;32;SEGMENTATION.
+2;32;FOR PO [3].
+2;32;KKK: 6, 0, 1643216678, 3, 0 
+2;32;SEGMENTATION-S
+2;33;SEGMENTATION.
+2;33;FOR PO [5].
+2;33;KKK: 6, 0, 39976742, 5, 0 
+2;33;SEGMENTATION-S
+2;34;SEGMENTATION.
+2;34;FOR PO [9].
+2;34;KKK: 6, 0, -383037658, 9, 0 
+2;34;SEGMENTATION-S
+2;35;SEGMENTATION.
+2;35;FOR PO [4].
+2;35;KKK: 6, 0, -1053384922, 4, 0 
+2;35;SEGMENTATION-S
+2;35;SEGMENTATION??.
+2;35;SEGMENTATION!!.
+2;35;STATUS: SKONCZYLEM ODPOWIADAC
+2;35;Closing semaphore wait_for_new_pyrkon AP.
+2;35;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+2;35;T1_0
+2;35;T1_1
+2;35;T1_2 1
+2;35;T1_3
+2;35;czy_moge_wyjsc
+2;35;STATUS: WIADOMOSC-S '3(0)' do 0
+2;35;STATUS: WIADOMOSC-S '3(0)' do 1
+2;36;STATUS: WIADOMOSC-S '3(0)' do 3
+2;36;STATUS: WIADOMOSC-S '3(0)' do 4
+2;36;STATUS: WIADOMOSC-S '3(0)' do 5
+2;36;STATUS: WIADOMOSC-S '3(0)' do 6
+2;36;STATUS: WIADOMOSC-S '3(0)' do 7
+2;36;STATUS: WIADOMOSC-S '3(0)' do 8
+2;36;STATUS: WIADOMOSC-S '3(0)' do 9
+2;36;STATUS: WIADOMOSC-S '2(0)' do 8
+2;36;STATUS: WIADOMOSC-S '2(0)' do 0
+2;36;STATUS: WIADOMOSC-S '2(0)' do 1
+2;36;STATUS: WIADOMOSC-S '2(0)' do 6
+2;36;STATUS: WIADOMOSC-S '2(0)' do 7
+2;36;STATUS: WIADOMOSC-S '2(0)' do 3
+2;36;STATUS: WIADOMOSC-S '2(0)' do 5
+2;36;STATUS: WIADOMOSC-S '2(0)' do 9
+2;36;STATUS: WIADOMOSC-S '2(0)' do 4
+3;0;Closing semaphore allowing_lecture ML before while.
+3;0;Waiting for messages.
+3;2;Received a valid message from [2]
+3;2;Waiting for messages.
+3;2;Received info that [2] wants to enter Pyrkon.
+3;2;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;2;Sends agreement to enter Pyrkon to [2].
+3;3;S-FOR ZGODA [2].
+3;3;Opening semaphore allowing_pyrkon.
+3;3;STATUS: WIADOMOSC-S '2(0)' do 2
+3;4;Received a valid message from [8]
+3;4;Waiting for messages.
+3;4;Received info that [8] wants to enter Pyrkon.
+3;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;4;Sends agreement to enter Pyrkon to [8].
+3;5;S-FOR ZGODA [8].
+3;5;Opening semaphore allowing_pyrkon.
+3;5;STATUS: WIADOMOSC-S '2(0)' do 8
+3;5;STATUS: BEFORE_PYRKON: (0)
+3;5;SS 1
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+3;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+3;6;Waiting for Pyrkon.
+3;7;Received a valid message from [0]
+3;7;Waiting for messages.
+3;7;STATUS: WIADOMOSC-S '1(0)' do 0
+3;7;Received info that [0] wants to enter Pyrkon.
+3;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;7;Sends agreement to enter Pyrkon to [0].
+3;8;S-FOR ZGODA [0].
+3;8;Opening semaphore allowing_pyrkon.
+3;8;STATUS: WIADOMOSC-S '1(0)' do 1
+3;8;STATUS: WIADOMOSC-S '1(0)' do 2
+3;9;Received a valid message from [6]
+3;9;Waiting for messages.
+3;9;Received info that [6] wants to enter Pyrkon.
+3;9;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;9;S-FOR CZEKA [6].
+3;9;Opening semaphore allowing_pyrkon.
+3;10;Received a valid message from [1]
+3;10;Waiting for messages.
+3;11;Received a valid message from [7]
+3;11;Waiting for messages.
+3;11;Received info that [1] wants to enter Pyrkon.
+3;11;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;11;Sends agreement to enter Pyrkon to [1].
+3;12;S-FOR ZGODA [1].
+3;12;Opening semaphore allowing_pyrkon.
+3;12;Received info that [7] wants to enter Pyrkon.
+3;12;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;12;S-FOR CZEKA [7].
+3;12;Opening semaphore allowing_pyrkon.
+3;13;Received a valid message from [9]
+3;13;Waiting for messages.
+3;13;Received info that [9] wants to enter Pyrkon.
+3;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;13;S-FOR CZEKA [9].
+3;13;Opening semaphore allowing_pyrkon.
+3;13;STATUS: WIADOMOSC-S '1(0)' do 4
+3;14;Received a valid message from [4]
+3;14;Waiting for messages.
+3;14;Received info that [4] wants to enter Pyrkon.
+3;14;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;14;S-FOR CZEKA [4].
+3;14;Opening semaphore allowing_pyrkon.
+3;15;Received a valid message from [5]
+3;15;Waiting for messages.
+3;15;STATUS: WIADOMOSC-S '1(0)' do 5
+3;15;Received info that [5] wants to enter Pyrkon.
+3;15;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+3;15;S-FOR CZEKA [5].
+3;15;Opening semaphore allowing_pyrkon.
+3;15;STATUS: WIADOMOSC-S '1(0)' do 6
+3;15;STATUS: WIADOMOSC-S '1(0)' do 7
+3;15;STATUS: WIADOMOSC-S '1(0)' do 8
+3;15;STATUS: WIADOMOSC-S '1(0)' do 9
+3;15;STATUS: WIADOMOSC-S '2(0)' do 0
+3;16;Received a valid message from [5]
+3;16;Waiting for messages.
+3;16;STATUS: WIADOMOSC-S '2(0)' do 1
+3;16;Received agreement to enter Pyrkon from [5].
+3;16;AEPE 1
+3;17;Received a valid message from [4]
+3;17;Waiting for messages.
+3;17;Received agreement to enter Pyrkon from [4].
+3;17;AEPE 2
+3;18;Received a valid message from [6]
+3;18;Waiting for messages.
+3;18;Received agreement to enter Pyrkon from [6].
+3;18;AEPE 3
+3;19;Received a valid message from [7]
+3;19;Waiting for messages.
+3;19;Received agreement to enter Pyrkon from [7].
+3;19;AEPE 4
+3;20;Received a valid message from [9]
+3;20;Waiting for messages.
+3;20;Received agreement to enter Pyrkon from [9].
+3;20;AEPE 5
+3;27;Received a valid message from [2]
+3;27;Waiting for messages.
+3;27;Received info that [2] has left Pyrkon.
+3;27;WYSZLO LACZNIE: 1
+3;28;Received a valid message from [8]
+3;28;Waiting for messages.
+3;28;Received info that [8] has left Pyrkon.
+3;28;WYSZLO LACZNIE: 2
+3;29;Received a valid message from [2]
+3;29;Waiting for messages.
+3;29;Received agreement to enter Pyrkon from [2].
+3;29;AEPE 6
+3;30;Received a valid message from [8]
+3;30;Waiting for messages.
+3;30;Received agreement to enter Pyrkon from [8].
+3;30;AEPE 7
+3;30;SSSR: WCHODZI NA PYRKON (0)
+3;30;SS 2
+3;30;SS 3
+3;30;Opening semaphore wait_for_agreement_to_enter {AEPE}
+3;30;STATUS: ENTERING_PYRKON: (0)
+3;30;Entering Pyrkon.
+3;30;Closing semaphore on_pyrkon_mutex BP1.
+3;30;SS 4
+3;30;Closing semaphore allowing_pyrkon BP2.
+3;30;SS 5
+3;30;SS 6
+3;30;Opening semaphore allowing_lecture BP.
+3;30;BEFORE-E
+3;31;Received a valid message from [0]
+3;31;Waiting for messages.
+3;31;Received info that [0] has left Pyrkon.
+3;32;WYSZLO LACZNIE: 3
+3;32;Received a valid message from [0]
+3;32;Waiting for messages.
+3;32;STATUS: ON_PYRKON: (0)
+3;32;ON-S
+3;32;SSS: W TRAKCIE (0)
+3;32;STATUS: EXITING_PYRKON: (0)
+3;32;Closing semaphore allowing_lecture OP.
+3;32;ON-E
+3;34;Received a valid message from [1]
+3;34;Waiting for messages.
+3;34;Received info that [1] has left Pyrkon.
+3;34;WYSZLO LACZNIE: 4
+3;35;Received a valid message from [1]
+3;35;Waiting for messages.
+3;35;STATUS: AFTER_PYRKON: (0)
+3;35;END-S
+3;35;SSS: PO (0)
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+3;36;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+3;36;STATUS: CLEANING
+3;36;RR5.
+3;36;RR6.
+3;36;RR7.
+3;36;RRx
+3;36;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+3;36;FFF.
+3;37;SEGMENTATION.
+3;37;FOR PO [6].
+3;37;KKK: 6, 0, 1899159334, 6, 0 
+3;37;SEGMENTATION-S
+3;38;SEGMENTATION.
+3;38;FOR PO [7].
+3;38;KKK: 6, 0, 1859288870, 7, 0 
+3;38;SEGMENTATION-S
+3;39;SEGMENTATION.
+3;39;FOR PO [9].
+3;39;KKK: 6, 0, -383037658, 9, 0 
+3;39;SEGMENTATION-S
+3;40;SEGMENTATION.
+3;40;FOR PO [4].
+3;40;KKK: 6, 0, -1053384922, 4, 0 
+3;40;SEGMENTATION-S
+3;41;SEGMENTATION.
+3;41;FOR PO [5].
+3;41;KKK: 6, 0, 39976742, 5, 0 
+3;41;SEGMENTATION-S
+3;41;SEGMENTATION??.
+3;41;SEGMENTATION!!.
+3;41;STATUS: SKONCZYLEM ODPOWIADAC
+3;41;Closing semaphore wait_for_new_pyrkon AP.
+3;41;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+3;41;T1_0
+3;41;T1_1
+3;41;T1_2 5
+3;41;T1_3
+3;41;czy_moge_wyjsc
+3;41;STATUS: WIADOMOSC-S '3(0)' do 0
+3;41;STATUS: WIADOMOSC-S '3(0)' do 1
+3;41;STATUS: WIADOMOSC-S '3(0)' do 2
+3;41;STATUS: WIADOMOSC-S '3(0)' do 4
+3;42;STATUS: WIADOMOSC-S '3(0)' do 5
+3;42;STATUS: WIADOMOSC-S '3(0)' do 6
+3;42;STATUS: WIADOMOSC-S '3(0)' do 7
+3;42;STATUS: WIADOMOSC-S '3(0)' do 8
+3;42;STATUS: WIADOMOSC-S '3(0)' do 9
+3;42;STATUS: WIADOMOSC-S '2(0)' do 6
+3;42;STATUS: WIADOMOSC-S '2(0)' do 7
+3;42;STATUS: WIADOMOSC-S '2(0)' do 9
+3;42;STATUS: WIADOMOSC-S '2(0)' do 4
+3;42;STATUS: WIADOMOSC-S '2(0)' do 5
+4;0;Closing semaphore allowing_lecture ML before while.
+4;0;Waiting for messages.
+4;2;Received a valid message from [2]
+4;2;Waiting for messages.
+4;3;Received a valid message from [8]
+4;3;Waiting for messages.
+4;3;Received info that [2] wants to enter Pyrkon.
+4;3;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;3;Sends agreement to enter Pyrkon to [2].
+4;4;S-FOR ZGODA [2].
+4;4;Opening semaphore allowing_pyrkon.
+4;4;Received info that [8] wants to enter Pyrkon.
+4;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;4;Sends agreement to enter Pyrkon to [8].
+4;5;S-FOR ZGODA [8].
+4;5;Opening semaphore allowing_pyrkon.
+4;5;STATUS: WIADOMOSC-S '2(0)' do 2
+4;5;STATUS: WIADOMOSC-S '2(0)' do 8
+4;5;STATUS: BEFORE_PYRKON: (0)
+4;5;SS 1
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+4;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+4;6;Waiting for Pyrkon.
+4;7;Received a valid message from [0]
+4;7;Waiting for messages.
+4;7;Received info that [0] wants to enter Pyrkon.
+4;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;7;Sends agreement to enter Pyrkon to [0].
+4;8;S-FOR ZGODA [0].
+4;8;Opening semaphore allowing_pyrkon.
+4;8;STATUS: WIADOMOSC-S '1(0)' do 0
+4;8;STATUS: WIADOMOSC-S '1(0)' do 1
+4;9;Received a valid message from [6]
+4;9;Waiting for messages.
+4;9;Received info that [6] wants to enter Pyrkon.
+4;9;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;9;S-FOR CZEKA [6].
+4;9;Opening semaphore allowing_pyrkon.
+4;9;STATUS: WIADOMOSC-S '1(0)' do 2
+4;10;Received a valid message from [7]
+4;10;Waiting for messages.
+4;10;Received info that [7] wants to enter Pyrkon.
+4;10;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;10;S-FOR CZEKA [7].
+4;10;Opening semaphore allowing_pyrkon.
+4;11;Received a valid message from [1]
+4;11;Waiting for messages.
+4;12;Received a valid message from [3]
+4;12;Waiting for messages.
+4;12;Received info that [1] wants to enter Pyrkon.
+4;12;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;12;Sends agreement to enter Pyrkon to [1].
+4;13;S-FOR ZGODA [1].
+4;13;Opening semaphore allowing_pyrkon.
+4;13;Received info that [3] wants to enter Pyrkon.
+4;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;13;Sends agreement to enter Pyrkon to [3].
+4;14;S-FOR ZGODA [3].
+4;14;Opening semaphore allowing_pyrkon.
+4;14;STATUS: WIADOMOSC-S '1(0)' do 3
+4;15;Received a valid message from [9]
+4;15;Waiting for messages.
+4;16;Received a valid message from [5]
+4;16;Waiting for messages.
+4;16;Received info that [5] wants to enter Pyrkon.
+4;16;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;16;S-FOR CZEKA [5].
+4;16;Opening semaphore allowing_pyrkon.
+4;16;STATUS: WIADOMOSC-S '1(0)' do 5
+4;16;Received info that [9] wants to enter Pyrkon.
+4;16;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+4;16;S-FOR CZEKA [9].
+4;16;Opening semaphore allowing_pyrkon.
+4;16;STATUS: WIADOMOSC-S '1(0)' do 6
+4;16;STATUS: WIADOMOSC-S '1(0)' do 7
+4;16;STATUS: WIADOMOSC-S '1(0)' do 8
+4;16;STATUS: WIADOMOSC-S '1(0)' do 9
+4;16;STATUS: WIADOMOSC-S '2(0)' do 0
+4;16;STATUS: WIADOMOSC-S '2(0)' do 1
+4;17;Received a valid message from [6]
+4;17;Waiting for messages.
+4;17;Received agreement to enter Pyrkon from [6].
+4;17;AEPE 1
+4;18;Received a valid message from [5]
+4;18;Waiting for messages.
+4;18;Received agreement to enter Pyrkon from [5].
+4;18;AEPE 2
+4;19;Received a valid message from [7]
+4;19;Waiting for messages.
+4;19;Received agreement to enter Pyrkon from [7].
+4;19;AEPE 3
+4;19;STATUS: WIADOMOSC-S '2(0)' do 3
+4;20;Received a valid message from [9]
+4;20;Waiting for messages.
+4;20;Received agreement to enter Pyrkon from [9].
+4;20;AEPE 4
+4;27;Received a valid message from [2]
+4;27;Waiting for messages.
+4;27;Received info that [2] has left Pyrkon.
+4;27;WYSZLO LACZNIE: 1
+4;28;Received a valid message from [8]
+4;28;Waiting for messages.
+4;28;Received info that [8] has left Pyrkon.
+4;28;WYSZLO LACZNIE: 2
+4;29;Received a valid message from [8]
+4;29;Waiting for messages.
+4;29;Received agreement to enter Pyrkon from [8].
+4;29;AEPE 5
+4;30;Received a valid message from [2]
+4;30;Waiting for messages.
+4;30;Received agreement to enter Pyrkon from [2].
+4;30;AEPE 6
+4;31;Received a valid message from [0]
+4;31;Waiting for messages.
+4;32;Received a valid message from [0]
+4;32;Waiting for messages.
+4;32;Received agreement to enter Pyrkon from [0].
+4;32;AEPE 7
+4;32;SSSR: WCHODZI NA PYRKON (0)
+4;32;SS 2
+4;32;SS 3
+4;32;Opening semaphore wait_for_agreement_to_enter {AEPE}
+4;32;STATUS: ENTERING_PYRKON: (0)
+4;32;Entering Pyrkon.
+4;32;Closing semaphore on_pyrkon_mutex BP1.
+4;32;SS 4
+4;32;Closing semaphore allowing_pyrkon BP2.
+4;32;SS 5
+4;32;SS 6
+4;32;Opening semaphore allowing_lecture BP.
+4;32;BEFORE-E
+4;32;Received info that [0] has left Pyrkon.
+4;32;WYSZLO LACZNIE: 3
+4;32;STATUS: ON_PYRKON: (0)
+4;32;ON-S
+4;32;SSS: W TRAKCIE (0)
+4;32;STATUS: EXITING_PYRKON: (0)
+4;32;Closing semaphore allowing_lecture OP.
+4;32;ON-E
+4;34;Received a valid message from [1]
+4;34;Waiting for messages.
+4;34;Received info that [1] has left Pyrkon.
+4;34;WYSZLO LACZNIE: 4
+4;34;STATUS: AFTER_PYRKON: (0)
+4;34;END-S
+4;34;SSS: PO (0)
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+4;35;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+4;35;STATUS: CLEANING
+4;35;RR5.
+4;35;RR6.
+4;35;RR7.
+4;35;RRx
+4;35;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+4;35;FFF.
+4;36;SEGMENTATION.
+4;36;FOR PO [6].
+4;36;KKK: 6, 0, 1899159334, 6, 0 
+4;36;SEGMENTATION-S
+4;37;SEGMENTATION.
+4;37;FOR PO [7].
+4;37;KKK: 6, 0, 1859288870, 7, 0 
+4;37;SEGMENTATION-S
+4;38;SEGMENTATION.
+4;38;FOR PO [5].
+4;38;KKK: 6, 0, 39976742, 5, 0 
+4;38;SEGMENTATION-S
+4;39;SEGMENTATION.
+4;39;FOR PO [9].
+4;39;KKK: 6, 0, -383037658, 9, 0 
+4;39;SEGMENTATION-S
+4;39;SEGMENTATION??.
+4;39;SEGMENTATION!!.
+4;39;STATUS: SKONCZYLEM ODPOWIADAC
+4;39;Closing semaphore wait_for_new_pyrkon AP.
+4;39;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+4;39;T1_0
+4;39;T1_1
+4;39;T1_2 5
+4;39;T1_3
+4;39;czy_moge_wyjsc
+4;39;STATUS: WIADOMOSC-S '3(0)' do 0
+4;40;STATUS: WIADOMOSC-S '3(0)' do 1
+4;40;STATUS: WIADOMOSC-S '3(0)' do 2
+4;40;STATUS: WIADOMOSC-S '3(0)' do 3
+4;40;STATUS: WIADOMOSC-S '3(0)' do 5
+4;40;STATUS: WIADOMOSC-S '3(0)' do 6
+4;40;STATUS: WIADOMOSC-S '3(0)' do 7
+4;40;STATUS: WIADOMOSC-S '3(0)' do 8
+4;40;STATUS: WIADOMOSC-S '3(0)' do 9
+4;40;STATUS: WIADOMOSC-S '2(0)' do 6
+4;40;STATUS: WIADOMOSC-S '2(0)' do 7
+4;40;STATUS: WIADOMOSC-S '2(0)' do 5
+4;40;STATUS: WIADOMOSC-S '2(0)' do 9
+5;0;Closing semaphore allowing_lecture ML before while.
+5;0;Waiting for messages.
+5;2;Received a valid message from [8]
+5;2;Waiting for messages.
+5;2;Received info that [8] wants to enter Pyrkon.
+5;2;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;2;Sends agreement to enter Pyrkon to [8].
+5;3;S-FOR ZGODA [8].
+5;3;Opening semaphore allowing_pyrkon.
+5;3;STATUS: WIADOMOSC-S '2(0)' do 8
+5;4;Received a valid message from [2]
+5;4;Waiting for messages.
+5;4;Received info that [2] wants to enter Pyrkon.
+5;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;4;Sends agreement to enter Pyrkon to [2].
+5;5;S-FOR ZGODA [2].
+5;5;Opening semaphore allowing_pyrkon.
+5;5;STATUS: WIADOMOSC-S '2(0)' do 2
+5;5;STATUS: BEFORE_PYRKON: (0)
+5;5;SS 1
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+5;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+5;6;Waiting for Pyrkon.
+5;7;Received a valid message from [0]
+5;7;Waiting for messages.
+5;7;Received info that [0] wants to enter Pyrkon.
+5;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;7;Sends agreement to enter Pyrkon to [0].
+5;8;S-FOR ZGODA [0].
+5;8;Opening semaphore allowing_pyrkon.
+5;8;STATUS: WIADOMOSC-S '1(0)' do 0
+5;8;STATUS: WIADOMOSC-S '1(0)' do 1
+5;8;STATUS: WIADOMOSC-S '1(0)' do 2
+5;9;Received a valid message from [7]
+5;9;Waiting for messages.
+5;9;Received info that [7] wants to enter Pyrkon.
+5;9;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;9;S-FOR CZEKA [7].
+5;9;Opening semaphore allowing_pyrkon.
+5;9;STATUS: WIADOMOSC-S '1(0)' do 3
+5;10;Received a valid message from [3]
+5;10;Waiting for messages.
+5;11;Received a valid message from [6]
+5;11;Waiting for messages.
+5;11;Received info that [3] wants to enter Pyrkon.
+5;11;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;11;Sends agreement to enter Pyrkon to [3].
+5;12;S-FOR ZGODA [3].
+5;12;Opening semaphore allowing_pyrkon.
+5;12;Received info that [6] wants to enter Pyrkon.
+5;12;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;12;S-FOR CZEKA [6].
+5;12;Opening semaphore allowing_pyrkon.
+5;12;STATUS: WIADOMOSC-S '1(0)' do 4
+5;13;Received a valid message from [4]
+5;13;Waiting for messages.
+5;13;Received info that [4] wants to enter Pyrkon.
+5;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;13;Sends agreement to enter Pyrkon to [4].
+5;14;S-FOR ZGODA [4].
+5;14;Opening semaphore allowing_pyrkon.
+5;15;Received a valid message from [1]
+5;15;Waiting for messages.
+5;15;STATUS: WIADOMOSC-S '1(0)' do 6
+5;15;Received info that [1] wants to enter Pyrkon.
+5;15;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;15;Sends agreement to enter Pyrkon to [1].
+5;16;S-FOR ZGODA [1].
+5;16;Opening semaphore allowing_pyrkon.
+5;17;Received a valid message from [9]
+5;17;Waiting for messages.
+5;17;STATUS: WIADOMOSC-S '1(0)' do 7
+5;17;Received info that [9] wants to enter Pyrkon.
+5;17;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+5;17;S-FOR CZEKA [9].
+5;17;Opening semaphore allowing_pyrkon.
+5;17;STATUS: WIADOMOSC-S '1(0)' do 8
+5;17;STATUS: WIADOMOSC-S '1(0)' do 9
+5;17;STATUS: WIADOMOSC-S '2(0)' do 0
+5;17;STATUS: WIADOMOSC-S '2(0)' do 3
+5;18;Received a valid message from [9]
+5;18;Waiting for messages.
+5;18;Received agreement to enter Pyrkon from [9].
+5;18;AEPE 1
+5;18;STATUS: WIADOMOSC-S '2(0)' do 4
+5;19;Received a valid message from [6]
+5;19;Waiting for messages.
+5;19;STATUS: WIADOMOSC-S '2(0)' do 1
+5;19;Received agreement to enter Pyrkon from [6].
+5;19;AEPE 2
+5;20;Received a valid message from [7]
+5;20;Waiting for messages.
+5;20;Received agreement to enter Pyrkon from [7].
+5;20;AEPE 3
+5;27;Received a valid message from [2]
+5;27;Waiting for messages.
+5;27;Received info that [2] has left Pyrkon.
+5;27;WYSZLO LACZNIE: 1
+5;28;Received a valid message from [8]
+5;28;Waiting for messages.
+5;28;Received info that [8] has left Pyrkon.
+5;28;WYSZLO LACZNIE: 2
+5;29;Received a valid message from [8]
+5;29;Waiting for messages.
+5;29;Received agreement to enter Pyrkon from [8].
+5;29;AEPE 4
+5;30;Received a valid message from [2]
+5;30;Waiting for messages.
+5;30;Received agreement to enter Pyrkon from [2].
+5;30;AEPE 5
+5;31;Received a valid message from [0]
+5;31;Waiting for messages.
+5;31;Received info that [0] has left Pyrkon.
+5;31;WYSZLO LACZNIE: 3
+5;32;Received a valid message from [0]
+5;32;Waiting for messages.
+5;32;Received agreement to enter Pyrkon from [0].
+5;32;AEPE 6
+5;34;Received a valid message from [1]
+5;34;Waiting for messages.
+5;34;Received info that [1] has left Pyrkon.
+5;34;WYSZLO LACZNIE: 4
+5;35;Received a valid message from [1]
+5;35;Waiting for messages.
+5;35;Received agreement to enter Pyrkon from [1].
+5;35;AEPE 7
+5;35;SSSR: WCHODZI NA PYRKON (0)
+5;35;Opening semaphore wait_for_agreement_to_enter {AEPE}
+5;35;SS 2
+5;35;SS 3
+5;35;STATUS: ENTERING_PYRKON: (0)
+5;35;Entering Pyrkon.
+5;35;Closing semaphore on_pyrkon_mutex BP1.
+5;35;SS 4
+5;35;Closing semaphore allowing_pyrkon BP2.
+5;35;SS 5
+5;35;SS 6
+5;35;Opening semaphore allowing_lecture BP.
+5;35;BEFORE-E
+5;37;Received a valid message from [3]
+5;37;Waiting for messages.
+5;37;Received info that [3] has left Pyrkon.
+5;37;WYSZLO LACZNIE: 5
+5;38;Received a valid message from [4]
+5;38;Waiting for messages.
+5;38;Received info that [4] has left Pyrkon.
+5;38;WYSZLO LACZNIE: 6
+5;39;Received a valid message from [4]
+5;39;Waiting for messages.
+5;40;Received a valid message from [3]
+5;40;Waiting for messages.
+5;40;STATUS: ON_PYRKON: (0)
+5;40;ON-S
+5;40;SSS: W TRAKCIE (0)
+5;40;STATUS: EXITING_PYRKON: (0)
+5;40;Closing semaphore allowing_lecture OP.
+5;40;ON-E
+5;40;STATUS: AFTER_PYRKON: (0)
+5;40;END-S
+5;40;SSS: PO (0)
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+5;41;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+5;41;STATUS: CLEANING
+5;41;RR5.
+5;41;RR6.
+5;41;RR7.
+5;41;RRx
+5;41;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+5;41;FFF.
+5;42;SEGMENTATION.
+5;42;FOR PO [7].
+5;42;KKK: 6, 0, 1859288870, 7, 0 
+5;42;SEGMENTATION-S
+5;43;SEGMENTATION.
+5;43;FOR PO [6].
+5;43;KKK: 6, 0, 1899159334, 6, 0 
+5;43;SEGMENTATION-S
+5;44;SEGMENTATION.
+5;44;FOR PO [9].
+5;44;KKK: 6, 0, -383037658, 9, 0 
+5;44;SEGMENTATION-S
+5;44;SEGMENTATION??.
+5;44;SEGMENTATION!!.
+5;44;STATUS: SKONCZYLEM ODPOWIADAC
+5;44;Closing semaphore wait_for_new_pyrkon AP.
+5;44;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+5;44;T1_0
+5;44;T1_1
+5;44;T1_2 7
+5;44;T1_3
+5;44;czy_moge_wyjsc
+5;44;STATUS: WIADOMOSC-S '3(0)' do 0
+5;44;STATUS: WIADOMOSC-S '3(0)' do 1
+5;44;STATUS: WIADOMOSC-S '3(0)' do 2
+5;44;STATUS: WIADOMOSC-S '3(0)' do 3
+5;44;STATUS: WIADOMOSC-S '3(0)' do 4
+5;44;STATUS: WIADOMOSC-S '3(0)' do 6
+5;44;STATUS: WIADOMOSC-S '3(0)' do 7
+5;44;STATUS: WIADOMOSC-S '3(0)' do 8
+5;44;STATUS: WIADOMOSC-S '3(0)' do 9
+5;44;STATUS: WIADOMOSC-S '2(0)' do 7
+5;44;STATUS: WIADOMOSC-S '2(0)' do 6
+5;44;STATUS: WIADOMOSC-S '2(0)' do 9
+6;0;Waiting for messages.
+6;0;Closing semaphore allowing_lecture ML before while.
+6;2;Received a valid message from [8]
+6;2;Waiting for messages.
+6;2;Received info that [8] wants to enter Pyrkon.
+6;2;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;2;Sends agreement to enter Pyrkon to [8].
+6;3;S-FOR ZGODA [8].
+6;3;Opening semaphore allowing_pyrkon.
+6;4;Received a valid message from [2]
+6;4;Waiting for messages.
+6;4;Received info that [2] wants to enter Pyrkon.
+6;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;4;Sends agreement to enter Pyrkon to [2].
+6;5;S-FOR ZGODA [2].
+6;5;Opening semaphore allowing_pyrkon.
+6;5;STATUS: WIADOMOSC-S '2(0)' do 8
+6;5;STATUS: WIADOMOSC-S '2(0)' do 2
+6;5;STATUS: BEFORE_PYRKON: (0)
+6;5;SS 1
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+6;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+6;6;Waiting for Pyrkon.
+6;7;Received a valid message from [0]
+6;7;Waiting for messages.
+6;7;STATUS: WIADOMOSC-S '1(0)' do 0
+6;7;Received info that [0] wants to enter Pyrkon.
+6;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;7;Sends agreement to enter Pyrkon to [0].
+6;8;S-FOR ZGODA [0].
+6;8;Opening semaphore allowing_pyrkon.
+6;8;STATUS: WIADOMOSC-S '1(0)' do 1
+6;8;STATUS: WIADOMOSC-S '1(0)' do 2
+6;8;STATUS: WIADOMOSC-S '1(0)' do 3
+6;8;STATUS: WIADOMOSC-S '1(0)' do 4
+6;9;Received a valid message from [7]
+6;9;STATUS: WIADOMOSC-S '1(0)' do 5
+6;9;Waiting for messages.
+6;9;Received info that [7] wants to enter Pyrkon.
+6;9;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;9;S-FOR CZEKA [7].
+6;9;Opening semaphore allowing_pyrkon.
+6;9;STATUS: WIADOMOSC-S '1(0)' do 7
+6;10;Received a valid message from [4]
+6;10;Waiting for messages.
+6;11;Received a valid message from [5]
+6;11;Waiting for messages.
+6;11;Received info that [4] wants to enter Pyrkon.
+6;11;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;11;Sends agreement to enter Pyrkon to [4].
+6;12;S-FOR ZGODA [4].
+6;12;Opening semaphore allowing_pyrkon.
+6;12;Received info that [5] wants to enter Pyrkon.
+6;12;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;12;Sends agreement to enter Pyrkon to [5].
+6;13;S-FOR ZGODA [5].
+6;13;Opening semaphore allowing_pyrkon.
+6;14;Received a valid message from [3]
+6;14;Waiting for messages.
+6;15;Received a valid message from [1]
+6;15;Waiting for messages.
+6;15;Received info that [3] wants to enter Pyrkon.
+6;15;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;15;Sends agreement to enter Pyrkon to [3].
+6;16;S-FOR ZGODA [3].
+6;16;Opening semaphore allowing_pyrkon.
+6;16;Received info that [1] wants to enter Pyrkon.
+6;16;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;16;Sends agreement to enter Pyrkon to [1].
+6;17;S-FOR ZGODA [1].
+6;17;Opening semaphore allowing_pyrkon.
+6;17;STATUS: WIADOMOSC-S '1(0)' do 8
+6;17;STATUS: WIADOMOSC-S '1(0)' do 9
+6;18;Received a valid message from [9]
+6;18;Waiting for messages.
+6;18;Received info that [9] wants to enter Pyrkon.
+6;18;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+6;18;S-FOR CZEKA [9].
+6;18;Opening semaphore allowing_pyrkon.
+6;18;STATUS: WIADOMOSC-S '2(0)' do 0
+6;19;Received a valid message from [7]
+6;19;Waiting for messages.
+6;19;STATUS: WIADOMOSC-S '2(0)' do 4
+6;19;Received agreement to enter Pyrkon from [7].
+6;19;AEPE 1
+6;19;STATUS: WIADOMOSC-S '2(0)' do 5
+6;19;STATUS: WIADOMOSC-S '2(0)' do 3
+6;20;Received a valid message from [9]
+6;20;Waiting for messages.
+6;20;Received agreement to enter Pyrkon from [9].
+6;20;AEPE 2
+6;20;STATUS: WIADOMOSC-S '2(0)' do 1
+6;27;Received a valid message from [2]
+6;27;Waiting for messages.
+6;27;Received info that [2] has left Pyrkon.
+6;27;WYSZLO LACZNIE: 1
+6;28;Received a valid message from [8]
+6;28;Waiting for messages.
+6;28;Received info that [8] has left Pyrkon.
+6;28;WYSZLO LACZNIE: 2
+6;29;Received a valid message from [2]
+6;29;Waiting for messages.
+6;29;Received agreement to enter Pyrkon from [2].
+6;29;AEPE 3
+6;30;Received a valid message from [8]
+6;30;Waiting for messages.
+6;30;Received agreement to enter Pyrkon from [8].
+6;30;AEPE 4
+6;31;Received a valid message from [0]
+6;31;Waiting for messages.
+6;32;Received a valid message from [0]
+6;32;Waiting for messages.
+6;32;Received info that [0] has left Pyrkon.
+6;32;WYSZLO LACZNIE: 3
+6;32;Received agreement to enter Pyrkon from [0].
+6;32;AEPE 5
+6;34;Received a valid message from [1]
+6;34;Waiting for messages.
+6;34;Received info that [1] has left Pyrkon.
+6;34;WYSZLO LACZNIE: 4
+6;35;Received a valid message from [1]
+6;35;Waiting for messages.
+6;35;Received agreement to enter Pyrkon from [1].
+6;35;AEPE 6
+6;37;Received a valid message from [3]
+6;37;Waiting for messages.
+6;37;Received info that [3] has left Pyrkon.
+6;37;WYSZLO LACZNIE: 5
+6;38;Received a valid message from [4]
+6;38;Waiting for messages.
+6;38;Received info that [4] has left Pyrkon.
+6;38;WYSZLO LACZNIE: 6
+6;39;Received a valid message from [3]
+6;39;Waiting for messages.
+6;39;Received agreement to enter Pyrkon from [3].
+6;39;AEPE 7
+6;39;SSSR: WCHODZI NA PYRKON (0)
+6;39;SS 2
+6;39;SS 3
+6;39;Opening semaphore wait_for_agreement_to_enter {AEPE}
+6;39;STATUS: ENTERING_PYRKON: (0)
+6;39;Entering Pyrkon.
+6;39;Closing semaphore on_pyrkon_mutex BP1.
+6;39;SS 4
+6;39;Closing semaphore allowing_pyrkon BP2.
+6;39;SS 5
+6;39;SS 6
+6;39;Opening semaphore allowing_lecture BP.
+6;39;BEFORE-E
+6;40;Received a valid message from [4]
+6;40;Waiting for messages.
+6;40;STATUS: ON_PYRKON: (0)
+6;40;ON-S
+6;40;SSS: W TRAKCIE (0)
+6;40;STATUS: EXITING_PYRKON: (0)
+6;40;Closing semaphore allowing_lecture OP.
+6;40;ON-E
+6;42;Received a valid message from [5]
+6;42;Waiting for messages.
+6;42;Received info that [5] has left Pyrkon.
+6;42;WYSZLO LACZNIE: 7
+6;43;Received a valid message from [5]
+6;43;Waiting for messages.
+6;43;STATUS: AFTER_PYRKON: (0)
+6;43;END-S
+6;43;SSS: PO (0)
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+6;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+6;44;STATUS: CLEANING
+6;44;RR5.
+6;44;RR6.
+6;44;RR7.
+6;44;RRx
+6;44;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+6;44;FFF.
+6;45;SEGMENTATION.
+6;45;FOR PO [7].
+6;45;KKK: 6, 0, 1859288870, 7, 0 
+6;45;SEGMENTATION-S
+6;46;SEGMENTATION.
+6;46;FOR PO [9].
+6;46;KKK: 6, 0, -383037658, 9, 0 
+6;46;SEGMENTATION-S
+6;46;SEGMENTATION??.
+6;46;SEGMENTATION!!.
+6;46;STATUS: SKONCZYLEM ODPOWIADAC
+6;46;Closing semaphore wait_for_new_pyrkon AP.
+6;46;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+6;46;T1_0
+6;46;T1_1
+6;46;T1_2 8
+6;46;T1_3
+6;46;czy_moge_wyjsc
+6;46;STATUS: WIADOMOSC-S '3(0)' do 0
+6;46;STATUS: WIADOMOSC-S '3(0)' do 1
+6;46;STATUS: WIADOMOSC-S '3(0)' do 2
+6;46;STATUS: WIADOMOSC-S '3(0)' do 3
+6;46;STATUS: WIADOMOSC-S '3(0)' do 4
+6;46;STATUS: WIADOMOSC-S '3(0)' do 5
+6;46;STATUS: WIADOMOSC-S '3(0)' do 7
+6;46;STATUS: WIADOMOSC-S '3(0)' do 8
+6;46;STATUS: WIADOMOSC-S '3(0)' do 9
+6;47;STATUS: WIADOMOSC-S '2(0)' do 7
+6;47;STATUS: WIADOMOSC-S '2(0)' do 9
+7;0;Closing semaphore allowing_lecture ML before while.
+7;0;Waiting for messages.
+7;2;Received a valid message from [8]
+7;2;Waiting for messages.
+7;2;Received info that [8] wants to enter Pyrkon.
+7;2;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;2;Sends agreement to enter Pyrkon to [8].
+7;3;S-FOR ZGODA [8].
+7;3;Opening semaphore allowing_pyrkon.
+7;4;Received a valid message from [2]
+7;4;Waiting for messages.
+7;4;Received info that [2] wants to enter Pyrkon.
+7;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;4;Sends agreement to enter Pyrkon to [2].
+7;5;S-FOR ZGODA [2].
+7;5;Opening semaphore allowing_pyrkon.
+7;5;STATUS: WIADOMOSC-S '2(0)' do 8
+7;5;STATUS: WIADOMOSC-S '2(0)' do 2
+7;5;STATUS: BEFORE_PYRKON: (0)
+7;5;SS 1
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+7;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+7;6;Waiting for Pyrkon.
+7;7;Received a valid message from [0]
+7;7;Waiting for messages.
+7;7;STATUS: WIADOMOSC-S '1(0)' do 0
+7;7;Received info that [0] wants to enter Pyrkon.
+7;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;7;Sends agreement to enter Pyrkon to [0].
+7;8;S-FOR ZGODA [0].
+7;8;Opening semaphore allowing_pyrkon.
+7;8;STATUS: WIADOMOSC-S '1(0)' do 1
+7;8;STATUS: WIADOMOSC-S '1(0)' do 2
+7;8;STATUS: WIADOMOSC-S '1(0)' do 3
+7;8;STATUS: WIADOMOSC-S '1(0)' do 4
+7;8;STATUS: WIADOMOSC-S '1(0)' do 5
+7;8;STATUS: WIADOMOSC-S '1(0)' do 6
+7;9;Received a valid message from [6]
+7;9;Waiting for messages.
+7;9;Received info that [6] wants to enter Pyrkon.
+7;9;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;9;Sends agreement to enter Pyrkon to [6].
+7;10;S-FOR ZGODA [6].
+7;10;Opening semaphore allowing_pyrkon.
+7;10;STATUS: WIADOMOSC-S '1(0)' do 8
+7;11;Received a valid message from [4]
+7;11;Waiting for messages.
+7;11;Received info that [4] wants to enter Pyrkon.
+7;11;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;11;Sends agreement to enter Pyrkon to [4].
+7;12;S-FOR ZGODA [4].
+7;12;Opening semaphore allowing_pyrkon.
+7;13;Received a valid message from [5]
+7;13;Waiting for messages.
+7;13;Received info that [5] wants to enter Pyrkon.
+7;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;13;Sends agreement to enter Pyrkon to [5].
+7;14;S-FOR ZGODA [5].
+7;14;Opening semaphore allowing_pyrkon.
+7;15;Received a valid message from [3]
+7;15;Waiting for messages.
+7;15;Received info that [3] wants to enter Pyrkon.
+7;15;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;15;Sends agreement to enter Pyrkon to [3].
+7;16;S-FOR ZGODA [3].
+7;16;Opening semaphore allowing_pyrkon.
+7;16;STATUS: WIADOMOSC-S '1(0)' do 9
+7;17;Received a valid message from [1]
+7;17;Waiting for messages.
+7;17;Received info that [1] wants to enter Pyrkon.
+7;17;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;17;Sends agreement to enter Pyrkon to [1].
+7;18;S-FOR ZGODA [1].
+7;18;Opening semaphore allowing_pyrkon.
+7;18;STATUS: WIADOMOSC-S '2(0)' do 0
+7;19;Received a valid message from [9]
+7;19;Waiting for messages.
+7;19;Received info that [9] wants to enter Pyrkon.
+7;19;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+7;19;S-FOR CZEKA [9].
+7;19;Opening semaphore allowing_pyrkon.
+7;19;STATUS: WIADOMOSC-S '2(0)' do 6
+7;20;Received a valid message from [9]
+7;20;Waiting for messages.
+7;20;Received agreement to enter Pyrkon from [9].
+7;20;AEPE 1
+7;20;STATUS: WIADOMOSC-S '2(0)' do 4
+7;20;STATUS: WIADOMOSC-S '2(0)' do 5
+7;20;STATUS: WIADOMOSC-S '2(0)' do 3
+7;20;STATUS: WIADOMOSC-S '2(0)' do 1
+7;27;Received a valid message from [2]
+7;27;Waiting for messages.
+7;27;Received info that [2] has left Pyrkon.
+7;27;WYSZLO LACZNIE: 1
+7;28;Received a valid message from [8]
+7;28;Waiting for messages.
+7;28;Received info that [8] has left Pyrkon.
+7;28;WYSZLO LACZNIE: 2
+7;29;Received a valid message from [8]
+7;29;Waiting for messages.
+7;29;Received agreement to enter Pyrkon from [8].
+7;29;AEPE 2
+7;30;Received a valid message from [2]
+7;30;Waiting for messages.
+7;30;Received agreement to enter Pyrkon from [2].
+7;30;AEPE 3
+7;31;Received a valid message from [0]
+7;31;Waiting for messages.
+7;32;Received a valid message from [0]
+7;32;Waiting for messages.
+7;32;Received info that [0] has left Pyrkon.
+7;32;WYSZLO LACZNIE: 3
+7;32;Received agreement to enter Pyrkon from [0].
+7;32;AEPE 4
+7;34;Received a valid message from [1]
+7;34;Waiting for messages.
+7;34;Received info that [1] has left Pyrkon.
+7;34;WYSZLO LACZNIE: 4
+7;35;Received a valid message from [1]
+7;35;Waiting for messages.
+7;35;Received agreement to enter Pyrkon from [1].
+7;35;AEPE 5
+7;37;Received a valid message from [3]
+7;37;Waiting for messages.
+7;37;Received info that [3] has left Pyrkon.
+7;37;WYSZLO LACZNIE: 5
+7;38;Received a valid message from [4]
+7;38;Waiting for messages.
+7;38;Received info that [4] has left Pyrkon.
+7;38;WYSZLO LACZNIE: 6
+7;39;Received a valid message from [3]
+7;39;Waiting for messages.
+7;39;Received agreement to enter Pyrkon from [3].
+7;39;AEPE 6
+7;40;Received a valid message from [4]
+7;40;Waiting for messages.
+7;40;Received agreement to enter Pyrkon from [4].
+7;40;AEPE 7
+7;40;SSSR: WCHODZI NA PYRKON (0)
+7;40;SS 2
+7;40;SS 3
+7;40;Opening semaphore wait_for_agreement_to_enter {AEPE}
+7;40;STATUS: ENTERING_PYRKON: (0)
+7;40;Entering Pyrkon.
+7;40;Closing semaphore on_pyrkon_mutex BP1.
+7;40;SS 4
+7;40;Closing semaphore allowing_pyrkon BP2.
+7;40;SS 5
+7;40;SS 6
+7;40;Opening semaphore allowing_lecture BP.
+7;40;BEFORE-E
+7;40;STATUS: ON_PYRKON: (0)
+7;40;ON-S
+7;40;SSS: W TRAKCIE (0)
+7;40;STATUS: EXITING_PYRKON: (0)
+7;40;Closing semaphore allowing_lecture OP.
+7;40;ON-E
+7;42;Received a valid message from [5]
+7;42;Waiting for messages.
+7;42;Received info that [5] has left Pyrkon.
+7;42;WYSZLO LACZNIE: 7
+7;43;Received a valid message from [5]
+7;43;Waiting for messages.
+7;43;STATUS: AFTER_PYRKON: (0)
+7;43;END-S
+7;43;SSS: PO (0)
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+7;44;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+7;44;STATUS: CLEANING
+7;44;RR5.
+7;44;RR6.
+7;44;RR7.
+7;44;RRx
+7;44;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+7;44;FFF.
+7;45;SEGMENTATION.
+7;45;FOR PO [9].
+7;45;KKK: 6, 0, -383037658, 9, 0 
+7;45;SEGMENTATION-S
+7;45;SEGMENTATION??.
+7;45;SEGMENTATION!!.
+7;45;STATUS: SKONCZYLEM ODPOWIADAC
+7;45;Closing semaphore wait_for_new_pyrkon AP.
+7;45;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+7;45;T1_0
+7;45;T1_1
+7;45;T1_2 8
+7;45;T1_3
+7;45;czy_moge_wyjsc
+7;45;STATUS: WIADOMOSC-S '3(0)' do 0
+7;45;STATUS: WIADOMOSC-S '3(0)' do 1
+7;45;STATUS: WIADOMOSC-S '3(0)' do 2
+7;46;STATUS: WIADOMOSC-S '3(0)' do 3
+7;46;STATUS: WIADOMOSC-S '3(0)' do 4
+7;46;STATUS: WIADOMOSC-S '3(0)' do 5
+7;46;STATUS: WIADOMOSC-S '3(0)' do 6
+7;46;STATUS: WIADOMOSC-S '3(0)' do 8
+7;46;STATUS: WIADOMOSC-S '3(0)' do 9
+7;46;STATUS: WIADOMOSC-S '2(0)' do 9
+8;0;Closing semaphore allowing_lecture ML before while.
+8;0;Waiting for messages.
+8;0;STATUS: BEFORE_PYRKON: (0)
+8;0;SS 1
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+8;1;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9
+8;1;Waiting for Pyrkon.
+8;1;STATUS: WIADOMOSC-S '1(0)' do 0
+8;1;STATUS: WIADOMOSC-S '1(0)' do 1
+8;6;Received a valid message from [0]
+8;6;Waiting for messages.
+8;6;Received agreement to enter Pyrkon from [0].
+8;6;AEPE 1
+8;7;Received a valid message from [1]
+8;7;Waiting for messages.
+8;7;Received agreement to enter Pyrkon from [1].
+8;7;AEPE 2
+8;7;STATUS: WIADOMOSC-S '1(0)' do 2
+8;7;STATUS: WIADOMOSC-S '1(0)' do 3
+8;8;Received a valid message from [3]
+8;8;Waiting for messages.
+8;8;Received agreement to enter Pyrkon from [3].
+8;8;AEPE 3
+8;8;STATUS: WIADOMOSC-S '1(0)' do 4
+8;8;STATUS: WIADOMOSC-S '1(0)' do 5
+8;9;Received a valid message from [5]
+8;9;Waiting for messages.
+8;9;Received agreement to enter Pyrkon from [5].
+8;9;AEPE 4
+8;10;Received a valid message from [4]
+8;10;Waiting for messages.
+8;10;Received agreement to enter Pyrkon from [4].
+8;10;AEPE 5
+8;10;STATUS: WIADOMOSC-S '1(0)' do 6
+8;10;STATUS: WIADOMOSC-S '1(0)' do 7
+8;11;Received a valid message from [6]
+8;11;Waiting for messages.
+8;11;STATUS: WIADOMOSC-S '1(0)' do 9
+8;11;Received agreement to enter Pyrkon from [6].
+8;11;AEPE 6
+8;12;Received a valid message from [7]
+8;12;Waiting for messages.
+8;13;Received a valid message from [2]
+8;13;Waiting for messages.
+8;13;Received agreement to enter Pyrkon from [7].
+8;13;AEPE 7
+8;13;SSSR: WCHODZI NA PYRKON (0)
+8;13;SS 2
+8;13;SS 3
+8;13;Opening semaphore wait_for_agreement_to_enter {AEPE}
+8;13;STATUS: ENTERING_PYRKON: (0)
+8;13;Entering Pyrkon.
+8;13;Closing semaphore on_pyrkon_mutex BP1.
+8;13;SS 4
+8;13;Closing semaphore allowing_pyrkon BP2.
+8;13;SS 5
+8;13;SS 6
+8;13;Opening semaphore allowing_lecture BP.
+8;13;BEFORE-E
+8;13;Received info that [2] wants to enter Pyrkon.
+8;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;13;Sends agreement to enter Pyrkon to [2].
+8;14;S-FOR ZGODA [2].
+8;14;Opening semaphore allowing_pyrkon.
+8;15;Received a valid message from [9]
+8;15;Waiting for messages.
+8;15;STATUS: WIADOMOSC-S '2(0)' do 2
+8;16;Received a valid message from [0]
+8;16;Waiting for messages.
+8;16;Received info that [0] wants to enter Pyrkon.
+8;16;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;16;S-FOR CZEKA [0].
+8;16;Opening semaphore allowing_pyrkon.
+8;17;Received a valid message from [7]
+8;17;Waiting for messages.
+8;17;Received info that [7] wants to enter Pyrkon.
+8;17;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;17;S-FOR CZEKA [7].
+8;17;Opening semaphore allowing_pyrkon.
+8;18;Received a valid message from [4]
+8;18;Waiting for messages.
+8;18;Received info that [4] wants to enter Pyrkon.
+8;18;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;18;S-FOR CZEKA [4].
+8;18;Opening semaphore allowing_pyrkon.
+8;19;Received a valid message from [5]
+8;19;Waiting for messages.
+8;19;Received info that [5] wants to enter Pyrkon.
+8;19;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;19;S-FOR CZEKA [5].
+8;19;Opening semaphore allowing_pyrkon.
+8;20;Received a valid message from [6]
+8;20;Waiting for messages.
+8;20;Received info that [6] wants to enter Pyrkon.
+8;20;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;20;S-FOR CZEKA [6].
+8;20;Opening semaphore allowing_pyrkon.
+8;21;Received a valid message from [3]
+8;21;Waiting for messages.
+8;21;Received info that [3] wants to enter Pyrkon.
+8;21;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;21;S-FOR CZEKA [3].
+8;21;Opening semaphore allowing_pyrkon.
+8;21;STATUS: ON_PYRKON: (0)
+8;22;Received a valid message from [1]
+8;22;Waiting for messages.
+8;22;Received info that [1] wants to enter Pyrkon.
+8;22;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;22;S-FOR CZEKA [1].
+8;22;Opening semaphore allowing_pyrkon.
+8;23;Received a valid message from [9]
+8;23;Waiting for messages.
+8;23;Received info that [9] wants to enter Pyrkon.
+8;23;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+8;23;S-FOR CZEKA [9].
+8;23;Opening semaphore allowing_pyrkon.
+8;23;ON-S
+8;23;SSS: W TRAKCIE (0)
+8;23;STATUS: EXITING_PYRKON: (0)
+8;23;Closing semaphore allowing_lecture OP.
+8;23;ON-E
+8;23;STATUS: AFTER_PYRKON: (0)
+8;23;END-S
+8;23;SSS: PO (0)
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+8;24;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9
+8;24;STATUS: CLEANING
+8;24;RR5.
+8;24;RR6.
+8;24;RR7.
+8;24;RRx
+8;24;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+8;24;FFF.
+8;25;SEGMENTATION.
+8;25;FOR PO [0].
+8;25;KKK: 6, 0, -1688113370, 0, 0 
+8;25;SEGMENTATION-S
+8;26;SEGMENTATION.
+8;26;FOR PO [7].
+8;26;KKK: 6, 0, 1859288870, 7, 0 
+8;26;SEGMENTATION-S
+8;27;SEGMENTATION.
+8;27;FOR PO [4].
+8;27;KKK: 6, 0, -1053384922, 4, 0 
+8;27;SEGMENTATION-S
+8;28;SEGMENTATION.
+8;28;FOR PO [5].
+8;28;KKK: 6, 0, 39976742, 5, 0 
+8;28;SEGMENTATION-S
+8;29;SEGMENTATION.
+8;29;FOR PO [6].
+8;29;KKK: 6, 0, 1899159334, 6, 0 
+8;29;SEGMENTATION-S
+8;30;SEGMENTATION.
+8;30;FOR PO [3].
+8;30;KKK: 6, 0, 1643216678, 3, 0 
+8;30;SEGMENTATION-S
+8;31;SEGMENTATION.
+8;31;FOR PO [1].
+8;31;KKK: 6, 0, 455835430, 1, 0 
+8;31;SEGMENTATION-S
+8;32;SEGMENTATION.
+8;32;FOR PO [9].
+8;32;KKK: 6, 0, -383037658, 9, 0 
+8;32;SEGMENTATION-S
+8;32;SEGMENTATION??.
+8;32;SEGMENTATION!!.
+8;32;STATUS: SKONCZYLEM ODPOWIADAC
+8;32;Closing semaphore wait_for_new_pyrkon AP.
+8;32;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+8;32;T1_0
+8;32;T1_1
+8;32;T1_2 1
+8;32;T1_3
+8;32;czy_moge_wyjsc
+8;32;STATUS: WIADOMOSC-S '3(0)' do 0
+8;32;STATUS: WIADOMOSC-S '3(0)' do 1
+8;32;STATUS: WIADOMOSC-S '3(0)' do 2
+8;32;STATUS: WIADOMOSC-S '3(0)' do 3
+8;32;STATUS: WIADOMOSC-S '3(0)' do 4
+8;32;STATUS: WIADOMOSC-S '3(0)' do 5
+8;32;STATUS: WIADOMOSC-S '3(0)' do 6
+8;32;STATUS: WIADOMOSC-S '3(0)' do 7
+8;33;STATUS: WIADOMOSC-S '3(0)' do 9
+8;33;STATUS: WIADOMOSC-S '2(0)' do 0
+8;33;STATUS: WIADOMOSC-S '2(0)' do 7
+8;33;STATUS: WIADOMOSC-S '2(0)' do 4
+8;33;STATUS: WIADOMOSC-S '2(0)' do 5
+8;33;STATUS: WIADOMOSC-S '2(0)' do 6
+8;33;STATUS: WIADOMOSC-S '2(0)' do 3
+8;33;STATUS: WIADOMOSC-S '2(0)' do 1
+8;33;STATUS: WIADOMOSC-S '2(0)' do 9
+9;0;Waiting for messages.
+9;0;Closing semaphore allowing_lecture ML before while.
+9;2;Received a valid message from [8]
+9;2;Waiting for messages.
+9;2;Received info that [8] wants to enter Pyrkon.
+9;2;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;2;Sends agreement to enter Pyrkon to [8].
+9;3;S-FOR ZGODA [8].
+9;3;Opening semaphore allowing_pyrkon.
+9;3;STATUS: WIADOMOSC-S '2(0)' do 8
+9;4;Received a valid message from [2]
+9;4;Waiting for messages.
+9;4;Received info that [2] wants to enter Pyrkon.
+9;4;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;4;Sends agreement to enter Pyrkon to [2].
+9;5;S-FOR ZGODA [2].
+9;5;Opening semaphore allowing_pyrkon.
+9;5;STATUS: WIADOMOSC-S '2(0)' do 2
+9;5;STATUS: BEFORE_PYRKON: (0)
+9;5;SS 1
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+9;6;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+9;6;Waiting for Pyrkon.
+9;7;Received a valid message from [0]
+9;7;Waiting for messages.
+9;7;Received info that [0] wants to enter Pyrkon.
+9;7;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;7;Sends agreement to enter Pyrkon to [0].
+9;8;S-FOR ZGODA [0].
+9;8;Opening semaphore allowing_pyrkon.
+9;8;STATUS: WIADOMOSC-S '1(0)' do 0
+9;8;STATUS: WIADOMOSC-S '1(0)' do 1
+9;8;STATUS: WIADOMOSC-S '1(0)' do 2
+9;8;STATUS: WIADOMOSC-S '1(0)' do 3
+9;8;STATUS: WIADOMOSC-S '1(0)' do 4
+9;8;STATUS: WIADOMOSC-S '1(0)' do 5
+9;9;Received a valid message from [5]
+9;9;Waiting for messages.
+9;9;Received info that [5] wants to enter Pyrkon.
+9;9;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;9;Sends agreement to enter Pyrkon to [5].
+9;10;S-FOR ZGODA [5].
+9;10;Opening semaphore allowing_pyrkon.
+9;11;Received a valid message from [7]
+9;11;Waiting for messages.
+9;12;Received a valid message from [6]
+9;12;Waiting for messages.
+9;12;STATUS: WIADOMOSC-S '1(0)' do 6
+9;12;Received info that [7] wants to enter Pyrkon.
+9;12;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;12;Sends agreement to enter Pyrkon to [7].
+9;13;S-FOR ZGODA [7].
+9;13;Opening semaphore allowing_pyrkon.
+9;13;Received info that [6] wants to enter Pyrkon.
+9;13;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;13;Sends agreement to enter Pyrkon to [6].
+9;14;S-FOR ZGODA [6].
+9;14;Opening semaphore allowing_pyrkon.
+9;15;Received a valid message from [4]
+9;15;Waiting for messages.
+9;15;Received info that [4] wants to enter Pyrkon.
+9;15;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;15;Sends agreement to enter Pyrkon to [4].
+9;16;S-FOR ZGODA [4].
+9;16;Opening semaphore allowing_pyrkon.
+9;17;Received a valid message from [3]
+9;17;Waiting for messages.
+9;17;Received info that [3] wants to enter Pyrkon.
+9;17;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;17;Sends agreement to enter Pyrkon to [3].
+9;18;S-FOR ZGODA [3].
+9;18;Opening semaphore allowing_pyrkon.
+9;18;STATUS: WIADOMOSC-S '1(0)' do 7
+9;19;Received a valid message from [1]
+9;19;Waiting for messages.
+9;19;STATUS: WIADOMOSC-S '1(0)' do 8
+9;19;Received info that [1] wants to enter Pyrkon.
+9;19;Closing semaphore allowing_pyrkon {allow_pyrkon}.
+9;19;Sends agreement to enter Pyrkon to [1].
+9;20;S-FOR ZGODA [1].
+9;20;Opening semaphore allowing_pyrkon.
+9;20;STATUS: WIADOMOSC-S '2(0)' do 0
+9;20;STATUS: WIADOMOSC-S '2(0)' do 5
+9;20;STATUS: WIADOMOSC-S '2(0)' do 7
+9;20;STATUS: WIADOMOSC-S '2(0)' do 6
+9;20;STATUS: WIADOMOSC-S '2(0)' do 4
+9;20;STATUS: WIADOMOSC-S '2(0)' do 3
+9;20;STATUS: WIADOMOSC-S '2(0)' do 1
+9;27;Received a valid message from [2]
+9;27;Waiting for messages.
+9;27;Received info that [2] has left Pyrkon.
+9;27;WYSZLO LACZNIE: 1
+9;28;Received a valid message from [8]
+9;28;Waiting for messages.
+9;28;Received info that [8] has left Pyrkon.
+9;28;WYSZLO LACZNIE: 2
+9;29;Received a valid message from [2]
+9;29;Waiting for messages.
+9;29;Received agreement to enter Pyrkon from [2].
+9;29;AEPE 1
+9;30;Received a valid message from [8]
+9;30;Waiting for messages.
+9;30;Received agreement to enter Pyrkon from [8].
+9;30;AEPE 2
+9;31;Received a valid message from [0]
+9;31;Waiting for messages.
+9;31;Received info that [0] has left Pyrkon.
+9;32;Received a valid message from [0]
+9;32;Waiting for messages.
+9;32;Received agreement to enter Pyrkon from [0].
+9;32;AEPE 3
+9;32;WYSZLO LACZNIE: 3
+9;34;Received a valid message from [1]
+9;34;Waiting for messages.
+9;34;Received info that [1] has left Pyrkon.
+9;34;WYSZLO LACZNIE: 4
+9;35;Received a valid message from [1]
+9;35;Waiting for messages.
+9;35;Received agreement to enter Pyrkon from [1].
+9;35;AEPE 4
+9;37;Received a valid message from [3]
+9;37;Waiting for messages.
+9;37;Received info that [3] has left Pyrkon.
+9;37;WYSZLO LACZNIE: 5
+9;38;Received a valid message from [4]
+9;38;Waiting for messages.
+9;38;Received info that [4] has left Pyrkon.
+9;38;WYSZLO LACZNIE: 6
+9;39;Received a valid message from [3]
+9;39;Waiting for messages.
+9;39;Received agreement to enter Pyrkon from [3].
+9;39;AEPE 5
+9;40;Received a valid message from [4]
+9;40;Waiting for messages.
+9;40;Received agreement to enter Pyrkon from [4].
+9;40;AEPE 6
+9;42;Received a valid message from [5]
+9;42;Waiting for messages.
+9;42;Received info that [5] has left Pyrkon.
+9;42;WYSZLO LACZNIE: 7
+9;43;Received a valid message from [5]
+9;43;Waiting for messages.
+9;43;Received agreement to enter Pyrkon from [5].
+9;43;AEPE 7
+9;43;SSSR: WCHODZI NA PYRKON (0)
+9;43;Opening semaphore wait_for_agreement_to_enter {AEPE}
+9;43;SS 2
+9;43;SS 3
+9;43;STATUS: ENTERING_PYRKON: (0)
+9;43;Entering Pyrkon.
+9;43;Closing semaphore on_pyrkon_mutex BP1.
+9;43;SS 4
+9;43;Closing semaphore allowing_pyrkon BP2.
+9;43;SS 5
+9;43;SS 6
+9;43;Opening semaphore allowing_lecture BP.
+9;43;BEFORE-E
+9;45;Received a valid message from [6]
+9;45;Waiting for messages.
+9;45;Received info that [6] has left Pyrkon.
+9;45;WYSZLO LACZNIE: 8
+9;46;Received a valid message from [6]
+9;46;Waiting for messages.
+9;47;Received a valid message from [7]
+9;47;Waiting for messages.
+9;47;Received info that [7] has left Pyrkon.
+9;47;WYSZLO LACZNIE: 9
+9;48;Received a valid message from [7]
+9;48;Waiting for messages.
+9;48;STATUS: ON_PYRKON: (0)
+9;48;ON-S
+9;48;SSS: W TRAKCIE (0)
+9;48;STATUS: EXITING_PYRKON: (0)
+9;48;Closing semaphore allowing_lecture OP.
+9;48;ON-E
+9;48;STATUS: AFTER_PYRKON: (0)
+9;48;END-S
+9;48;SSS: PO (0)
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7
+9;49;Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8
+9;49;STATUS: CLEANING
+9;49;RR5.
+9;49;RR6.
+9;49;RR7.
+9;49;RRx
+9;49;STATUS: ODPOWIADAM NA STARE WIADOMOSCI
+9;49;FFF.
+9;49;SEGMENTATION??.
+9;49;SEGMENTATION!!.
+9;49;STATUS: SKONCZYLEM ODPOWIADAC
+9;49;Closing semaphore wait_for_new_pyrkon AP.
+9;49;STATUS: WAITING_FOR_NEW_PYRKON: (0)
+9;49;T1_0
+9;49;T1_1
+9;49;T1_x
+9;49;T1_2 10
+9;49;T1_3
+9;49;czy_moge_wyjsc
+9;49;po lock po czy_moge_wyjsc
+9;49;zmiena statnu po czy_moge_wyjsc
+9;49;po zmianie stanu po czy_moge_wyjsc
+9;49;Opening semaphore on_pyrkon_mutex AP.
+9;49;RR0.
+9;49;STATUS: WIADOMOSC-S '3(0)' do 0
+9;49;STATUS: WIADOMOSC-S '3(0)' do 1
+9;49;STATUS: WIADOMOSC-S '3(0)' do 2
+9;49;STATUS: WIADOMOSC-S '3(0)' do 3
+9;49;STATUS: WIADOMOSC-S '3(0)' do 4
+9;49;STATUS: WIADOMOSC-S '3(0)' do 5
+9;49;STATUS: WIADOMOSC-S '3(0)' do 6
+9;49;STATUS: WIADOMOSC-S '3(0)' do 7
+9;49;STATUS: WIADOMOSC-S '3(0)' do 8
+9;49;RR1.
+9;49;RR2.
+9;49;RR3.
+9;49;RR4.
+9;49;RR8.
+9;49;RR9.
+9;49;Opening semaphore allowing_pyrkon AP.
+9;49;END-E
+9;49;STATUS: NEW_PYRKON: (1)
+9;49;STATUS: BEFORE_PYRKON: (1)
+9;49;SS 1
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7
+9;50;Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8
+9;50;Waiting for Pyrkon.
+9;50;STATUS: WIADOMOSC-S '1(0)' do 0
+9;50;STATUS: WIADOMOSC-S '1(0)' do 1
+9;50;STATUS: WIADOMOSC-S '1(0)' do 2
+9;50;STATUS: WIADOMOSC-S '1(0)' do 3
+9;50;STATUS: WIADOMOSC-S '1(0)' do 4
+9;50;STATUS: WIADOMOSC-S '1(0)' do 5
+9;50;STATUS: WIADOMOSC-S '1(0)' do 6
+9;50;STATUS: WIADOMOSC-S '1(0)' do 7
+9;50;STATUS: WIADOMOSC-S '1(0)' do 8

@@ -20,7 +20,7 @@ pthread_mutex_t allowing_lecture = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t pyrkon_test = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t my_clocks_edit = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t odpowiadam_na_stare_wiadomosci = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t cleaning_mutex = PTHREAD_MUTEX_INITIALIZER;
+// pthread_mutex_t cleaning_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 
 volatile int state = BEFORE_PYRKON;
@@ -34,10 +34,10 @@ volatile int *desired_lectures;
 //WAK
 volatile int *my_clocks;
 void *odpowiedz_na_stare_wiadomosci(int event);
-volatile int cleaning = FALSE;
-void cleaning_start();
-void cleaning_stop();
-int cleaning_progress();
+// volatile int cleaning = FALSE;
+// void cleaning_start();
+// void cleaning_stop();
+// int cleaning_progress();
 void czy_moge_wyjsc();
 
 /* end == TRUE oznacza wyjście z main_loop */
@@ -504,8 +504,8 @@ void mainLoop(void)
 			/* Process broadcasts information that it's left Pyrkon */
 			pyrkon_broadcast(EXIT, 0, "AFTER_PYRKON");
 			pthread_t new_thread;
-			cleaning_start();
-			println("STATUS: CLEANING\n");
+			// cleaning_start();
+			// println("STATUS: CLEANING\n");
 
 
 			println("RR5.\n");
@@ -536,6 +536,11 @@ void mainLoop(void)
 			println("czy_moge_wyjsc\n");
 			pthread_mutex_lock(&wait_for_new_pyrkon);
 			println("po lock po czy_moge_wyjsc\n");
+
+			pthread_mutex_lock( &modify_exited_from_pyrkon );
+			exited_from_pyrkon = 0;
+			pthread_mutex_unlock( &modify_exited_from_pyrkon );
+
 			pthread_mutex_unlock(&wait_for_new_pyrkon);
 			println("zmiena statnu po czy_moge_wyjsc\n");
 			set_state(BEFORE_PYRKON);
@@ -574,7 +579,7 @@ void mainLoop(void)
 			// println("RR7.\n");
 			// pthread_mutex_unlock(&my_clocks_edit);
 			println("RR8.\n");
-			cleaning_stop();
+			// cleaning_stop();
 			println("RR9.\n");
 			
 
@@ -611,6 +616,8 @@ void *comFunc(void *ptr)
 		MPI_Recv(pakiet, 1, MPI_PAKIET_T, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		pakiet->src = status.MPI_SOURCE;
 
+		println("Waiting for messages #odebranoc#.\n");
+
 		pthread_mutex_lock(&clock_mutex);
 		if (lamport_clock < pakiet->ts)
 		{
@@ -623,9 +630,9 @@ void *comFunc(void *ptr)
 		pthread_mutex_unlock(&clock_mutex);
 
 		// println("Waiting for messages {cleaning_b}.\n");
-		while(cleaning_progress()) {
-			sleep(1);
-		}
+		// while(cleaning_progress()) {
+		// 	sleep(1);
+		// }
 		// println("Waiting for messages {cleaning_a}.\n");
 
 		if (get_pyrkon_number() == pakiet->pyrkon_number)
@@ -773,6 +780,9 @@ void alright_enter_pyrkon_extension(packet_t *message)
 			pthread_mutex_unlock(&state_mutex);
 		}
 	}
+	else {
+		println("Received agreement OLD to enter Pyrkon from [%d].\n ", message->src);
+	}
 }
 
 void alright_enter_lecture_extension(packet_t *message)
@@ -861,17 +871,23 @@ void exit_handler(packet_t *message)
 
 	/* Changing variable and using mutex to protect it from other processes. */
 	pthread_mutex_lock(&modify_exited_from_pyrkon);
+	println("E1_1\n");
 
 	/* If everyone exited Pyrkon process can start another one. */
 	if (++exited_from_pyrkon == size)
 	{
+		println("E1_1w1\n");
 		pthread_mutex_unlock(&wait_for_new_pyrkon);
+		println("E1_1w2\n");
 		println("Opening semaphore wait_for_new_Pyrkon {EH}\n");
 		println("SSSZ: NOWY (%d)\n", get_pyrkon_number());
 	}
+	println("E1_2\n");
 	println("WYSZLO LACZNIE: %d\n", exited_from_pyrkon);
 	pthread_mutex_unlock(&modify_exited_from_pyrkon);
+	println("E1_3\n");
 	free(message);
+	println("E1_4\n");
 }
 
 int get_pyrkon_number()
@@ -932,27 +948,27 @@ void *odpowiedz_na_stare_wiadomosci(int event)
 	return 0;
 }
 
-void cleaning_start() {
-	pthread_mutex_lock(&cleaning_mutex);
-	cleaning = TRUE;
-	pthread_mutex_unlock(&cleaning_mutex);
-}
+// void cleaning_start() {
+// 	pthread_mutex_lock(&cleaning_mutex);
+// 	cleaning = TRUE;
+// 	pthread_mutex_unlock(&cleaning_mutex);
+// }
 
-void cleaning_stop() {
-	pthread_mutex_lock(&cleaning_mutex);
-	cleaning = FALSE;
-	pthread_mutex_unlock(&cleaning_mutex);
-}
+// void cleaning_stop() {
+// 	pthread_mutex_lock(&cleaning_mutex);
+// 	cleaning = FALSE;
+// 	pthread_mutex_unlock(&cleaning_mutex);
+// }
 
-int cleaning_progress() {
-	// println("cleaning sc.\n");
-	pthread_mutex_lock(&cleaning_mutex);
-	int okay = cleaning;
-	// println("cleaning %d.\n", okay);
-	pthread_mutex_unlock(&cleaning_mutex);
-	// println("cleaning so.\n");
-	return okay;
-}
+// int cleaning_progress() {
+// 	// println("cleaning sc.\n");
+// 	pthread_mutex_lock(&cleaning_mutex);
+// 	int okay = cleaning;
+// 	// println("cleaning %d.\n", okay);
+// 	pthread_mutex_unlock(&cleaning_mutex);
+// 	// println("cleaning so.\n");
+// 	return okay;
+// }
 
 void czy_moge_wyjsc(){
 	println("T1_0\n");

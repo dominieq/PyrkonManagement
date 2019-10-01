@@ -83,7 +83,7 @@ extern pthread_mutex_t allowing_lecture;
 extern pthread_mutex_t pyrkon_test;
 extern pthread_mutex_t my_clocks_edit;
 extern pthread_mutex_t odpowiadam_na_stare_wiadomosci;
-extern pthread_mutex_t cleaning_mutex;
+// extern pthread_mutex_t cleaning_mutex;
 
 /* argument musi być, bo wymaga tego pthreads. Wątek monitora, który po jakimś czasie ma wykryć stan */
 extern void *monitorFunc(void *);

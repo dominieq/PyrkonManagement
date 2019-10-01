@@ -98,7 +98,7 @@ void *delayFunc(void *ptr)
 			//				println( "FINISH DO %d", stackEl->dst );
 			//			}
 			MPI_Send(stackEl->newP, 1, MPI_PAKIET_T, stackEl->dst, stackEl->type, MPI_COMM_WORLD);
-			println("STATUS: WIADOMOSC-S '%d(%d)' do %d\n", stackEl->type, stackEl->newP->data, stackEl->dst);
+			// println("STATUS: WIADOMOSC-S '%d(%d)' do %d\n", stackEl->type, stackEl->newP->data, stackEl->dst);
 			free(stackEl->newP);
 			free(stackEl);
 		}
