@@ -1,0 +1,3201 @@
+0,0,MESSAGE-REC: Waiting for messages.
+0,0,MESSAGE-REC: Received new message.
+0,2,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+0,2,MESSAGE-REC-VAL: Received a valid message from [9]
+0,2,MESSAGE-REC: Waiting for messages.
+0,2,INFO: Received info that [9] wants to enter Pyrkon.
+0,2,INFO: Sends agreement to enter Pyrkon to [9].
+0,3,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+0,3,MESSAGE-REC: Received new message.
+0,4,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+0,4,MESSAGE-REC-VAL: Received a valid message from [3]
+0,4,MESSAGE-REC: Waiting for messages.
+0,4,INFO: Received info that [3] wants to enter Pyrkon.
+0,4,INFO: Sends agreement to enter Pyrkon to [3].
+0,5,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+0,5,MESSAGE-REC: Received new message.
+0,6,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+0,6,MESSAGE-REC-VAL: Received a valid message from [8]
+0,6,MESSAGE-REC: Waiting for messages.
+0,6,INFO: Received info that [8] wants to enter Pyrkon.
+0,6,INFO: Sends agreement to enter Pyrkon to [8].
+0,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+0,7,STATUS: BEFORE_PYRKON {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+0,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+0,8,MESSAGE-REC: Received new message.
+0,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+0,9,MESSAGE-REC-VAL: Received a valid message from [6]
+0,9,MESSAGE-REC: Waiting for messages.
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+0,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+0,9,MESSAGE-REC: Received new message.
+0,10,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+0,10,MESSAGE-REC-VAL: Received a valid message from [2]
+0,10,MESSAGE-REC: Waiting for messages.
+0,10,INFO: Received info that [2] wants to enter Pyrkon.
+0,10,INFO: Received info that [6] wants to enter Pyrkon.
+0,10,MESSAGE-REC: Received new message.
+0,11,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+0,11,MESSAGE-REC-VAL: Received a valid message from [5]
+0,11,MESSAGE-REC: Waiting for messages.
+0,11,INFO: Received info that [5] wants to enter Pyrkon.
+0,11,MESSAGE-REC: Received new message.
+0,12,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+0,12,MESSAGE-REC-VAL: Received a valid message from [1]
+0,12,MESSAGE-REC: Waiting for messages.
+0,12,INFO: Received info that [1] wants to enter Pyrkon.
+0,12,MESSAGE-REC: Received new message.
+0,13,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+0,13,MESSAGE-REC-VAL: Received a valid message from [4]
+0,13,MESSAGE-REC: Waiting for messages.
+0,13,MESSAGE-REC: Received new message.
+0,14,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+0,14,MESSAGE-REC-VAL: Received a valid message from [7]
+0,14,MESSAGE-REC: Waiting for messages.
+0,14,INFO: Received info that [4] wants to enter Pyrkon.
+0,14,INFO: Received info that [7] wants to enter Pyrkon.
+0,14,MESSAGE-REC: Received new message.
+0,15,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+0,15,MESSAGE-REC-VAL: Received a valid message from [2]
+0,15,MESSAGE-REC: Waiting for messages.
+0,15,INFO: Received agreement to enter Pyrkon from [2].
+0,15,MESSAGE-REC: Received new message.
+0,16,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+0,16,MESSAGE-REC-VAL: Received a valid message from [5]
+0,16,MESSAGE-REC: Waiting for messages.
+0,16,INFO: Received agreement to enter Pyrkon from [5].
+0,16,MESSAGE-REC: Received new message.
+0,17,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+0,17,MESSAGE-REC-VAL: Received a valid message from [6]
+0,17,MESSAGE-REC: Waiting for messages.
+0,17,INFO: Received agreement to enter Pyrkon from [6].
+0,17,MESSAGE-REC: Received new message.
+0,18,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+0,18,MESSAGE-REC-VAL: Received a valid message from [4]
+0,18,MESSAGE-REC: Waiting for messages.
+0,18,INFO: Received agreement to enter Pyrkon from [4].
+0,18,MESSAGE-REC: Received new message.
+0,19,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+0,19,MESSAGE-REC-VAL: Received a valid message from [1]
+0,19,MESSAGE-REC: Waiting for messages.
+0,19,MESSAGE-REC: Received new message.
+0,20,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+0,20,MESSAGE-REC-VAL: Received a valid message from [7]
+0,20,MESSAGE-REC: Waiting for messages.
+0,20,INFO: Received agreement to enter Pyrkon from [1].
+0,20,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+0,20,STATUS: ON_PYRKON {pyrkon 0)
+0,20,MESSAGE-REC: Received new message.
+0,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+0,25,MESSAGE-REC-VAL: Received a valid message from [3]
+0,25,MESSAGE-REC: Waiting for messages.
+0,25,INFO: Received info that [3] wants to enter lecture [1].
+0,25,INFO: Sends agreement to enter lecture [1] to [3].
+0,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+0,26,MESSAGE-REC: Received new message.
+0,27,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+0,27,MESSAGE-REC-VAL: Received a valid message from [3]
+0,27,MESSAGE-REC: Waiting for messages.
+0,27,INFO: Received info that [3] wants to enter lecture [2].
+0,27,INFO: Sends agreement to enter lecture [2] to [3].
+0,28,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+0,28,MESSAGE-REC: Received new message.
+0,29,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+0,29,MESSAGE-REC-VAL: Received a valid message from [9]
+0,29,MESSAGE-REC: Waiting for messages.
+0,29,INFO: Received info that [9] wants to enter lecture [1].
+0,29,INFO: Sends agreement to enter lecture [1] to [9].
+0,30,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+0,30,MESSAGE-REC: Received new message.
+0,31,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+0,31,MESSAGE-REC-VAL: Received a valid message from [8]
+0,31,MESSAGE-REC: Waiting for messages.
+0,31,INFO: Received info that [8] has left Pyrkon.
+0,31,MESSAGE-REC: Received new message.
+0,33,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+0,33,MESSAGE-REC-VAL: Received a valid message from [1]
+0,33,MESSAGE-REC: Waiting for messages.
+0,33,INFO: Received info that [1] wants to enter lecture [1].
+0,33,INFO: Sends agreement to enter lecture [1] to [1].
+0,34,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+0,34,MESSAGE-REC: Received new message.
+0,35,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+0,35,MESSAGE-REC-VAL: Received a valid message from [9]
+0,35,MESSAGE-REC: Waiting for messages.
+0,35,INFO: Received info that [9] wants to enter lecture [2].
+0,35,INFO: Sends agreement to enter lecture [2] to [9].
+0,36,MESSAGE-REC: Received new message.
+0,37,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+0,37,MESSAGE-REC-VAL: Received a valid message from [8]
+0,37,MESSAGE-REC: Waiting for messages.
+0,37,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+0,37,STATUS: WANT_TO_LECTURE[2] {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 1 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 2 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 3 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 4 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 5 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 6 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 7 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 8 {pyrkon: 0}
+0,38,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 9 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 1 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 2 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 3 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 4 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 5 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 6 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 7 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 8 {pyrkon: 0}
+0,39,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 9 {pyrkon: 0}
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 5 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 6 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 8 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 1 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 2 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 5 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 6 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 7 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 8 on pyrkon 0
+0,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+0,39,MESSAGE-REC: Received new message.
+0,42,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 2 on pyrkon 0
+0,42,MESSAGE-REC-VAL: Received a valid message from [2]
+0,42,MESSAGE-REC: Waiting for messages.
+0,42,MESSAGE-REC: Received new message.
+0,43,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+0,43,MESSAGE-REC-VAL: Received a valid message from [4]
+0,43,MESSAGE-REC: Waiting for messages.
+0,43,MESSAGE-REC: Received new message.
+0,44,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 6 on pyrkon 0
+0,44,MESSAGE-REC-VAL: Received a valid message from [6]
+0,44,MESSAGE-REC: Waiting for messages.
+0,44,MESSAGE-REC: Received new message.
+0,45,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 5 on pyrkon 0
+0,45,MESSAGE-REC-VAL: Received a valid message from [5]
+0,45,MESSAGE-REC: Waiting for messages.
+0,45,INFO: Received agreement to enter lecture [2] from [2].
+0,45,INFO: Received agreement to enter lecture [1] from [5].
+0,45,INFO: Received agreement to enter lecture [1] from [4].
+0,45,MESSAGE-REC: Received new message.
+0,46,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+0,46,MESSAGE-REC-VAL: Received a valid message from [7]
+0,46,MESSAGE-REC: Waiting for messages.
+0,46,INFO: Received agreement to enter lecture [1] from [6].
+0,46,MESSAGE-REC: Received new message.
+0,47,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 5 on pyrkon 0
+0,47,MESSAGE-REC-VAL: Received a valid message from [5]
+0,47,MESSAGE-REC: Waiting for messages.
+0,47,INFO: Received agreement to enter lecture [1] from [7].
+0,47,INFO: Received agreement to enter lecture [2] from [5].
+0,47,MESSAGE-REC: Received new message.
+0,48,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 6 on pyrkon 0
+0,48,MESSAGE-REC-VAL: Received a valid message from [6]
+0,48,MESSAGE-REC: Waiting for messages.
+0,48,MESSAGE-REC: Received new message.
+0,49,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 1 on pyrkon 0
+0,49,MESSAGE-REC-VAL: Received a valid message from [1]
+0,49,MESSAGE-REC: Waiting for messages.
+0,49,MESSAGE-REC: Received new message.
+0,50,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+0,50,MESSAGE-REC-VAL: Received a valid message from [2]
+0,50,MESSAGE-REC: Waiting for messages.
+0,50,INFO: Received agreement to enter lecture [1] from [2].
+0,50,INFO: Received agreement to enter lecture [2] from [6].
+0,50,INFO: Received agreement to enter lecture [2] from [1].
+0,50,MESSAGE-REC: Received new message.
+0,51,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 8 on pyrkon 0
+0,51,MESSAGE-REC-VAL: Received a valid message from [8]
+0,51,MESSAGE-REC: Waiting for messages.
+0,51,INFO: Received agreement to enter lecture [1] from [8].
+0,51,MESSAGE-REC: Received new message.
+0,52,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+0,52,MESSAGE-REC-VAL: Received a valid message from [4]
+0,52,MESSAGE-REC: Waiting for messages.
+0,52,INFO: Received agreement to enter lecture [2] from [4].
+0,52,MESSAGE-REC: Received new message.
+0,53,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 7 on pyrkon 0
+0,53,MESSAGE-REC-VAL: Received a valid message from [7]
+0,53,MESSAGE-REC: Waiting for messages.
+0,53,INFO: Received agreement to enter lecture [2] from [7].
+0,53,MESSAGE-REC: Received new message.
+0,54,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 8 on pyrkon 0
+0,54,MESSAGE-REC-VAL: Received a valid message from [8]
+0,54,MESSAGE-REC: Waiting for messages.
+0,54,INFO: Received agreement to enter lecture [2] from [8].
+0,54,MESSAGE-REC: Received new message.
+0,55,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+0,55,MESSAGE-REC-VAL: Received a valid message from [3]
+0,55,MESSAGE-REC: Waiting for messages.
+0,55,MESSAGE-REC: Received new message.
+0,56,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+0,56,MESSAGE-REC-VAL: Received a valid message from [9]
+0,56,MESSAGE-REC: Waiting for messages.
+0,56,MESSAGE-REC: Received new message.
+0,70,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+0,70,MESSAGE-REC-VAL: Received a valid message from [9]
+0,70,MESSAGE-REC: Waiting for messages.
+0,70,INFO: Received agreement to enter lecture [1] from [9].
+0,70,MESSAGE-REC: Received new message.
+0,71,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+0,71,MESSAGE-REC-VAL: Received a valid message from [2]
+0,71,MESSAGE-REC: Waiting for messages.
+0,71,INFO: Received info that [2] wants to enter lecture [1].
+0,71,INFO: Agreement to enter lecture [1] to [2] was saved for later use.
+0,71,MESSAGE-REC: Received new message.
+0,72,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+0,72,MESSAGE-REC-VAL: Received a valid message from [3]
+0,72,MESSAGE-REC: Waiting for messages.
+0,72,INFO: Received agreement to enter lecture [1] from [3].
+0,72,STATUS: ON_LECTURE[1] {pyrkon 0)
+0,72,MESSAGE-REC: Received new message.
+0,73,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+0,73,MESSAGE-REC-VAL: Received a valid message from [3]
+0,73,MESSAGE-REC: Waiting for messages.
+0,73,INFO: Received agreement to enter lecture [2] from [3].
+0,73,MESSAGE-REC: Received new message.
+0,74,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+0,74,MESSAGE-REC-VAL: Received a valid message from [3]
+0,74,MESSAGE-REC: Waiting for messages.
+0,74,INFO: Received info that [3] has left Pyrkon.
+0,74,MESSAGE-REC: Received new message.
+0,75,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+0,75,MESSAGE-REC-VAL: Received a valid message from [4]
+0,75,MESSAGE-REC: Waiting for messages.
+0,75,INFO: Received info that [4] wants to enter lecture [1].
+0,75,MESSAGE-REC: Received new message.
+0,76,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+0,76,MESSAGE-REC-VAL: Received a valid message from [4]
+0,76,MESSAGE-REC: Waiting for messages.
+0,76,INFO: Received info that [4] wants to enter lecture [2].
+0,76,MESSAGE-REC: Received new message.
+0,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+0,79,MESSAGE-REC-VAL: Received a valid message from [9]
+0,79,MESSAGE-REC: Waiting for messages.
+0,79,INFO: Received info that [9] has left Pyrkon.
+0,79,MESSAGE-REC: Received new message.
+0,80,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+0,80,MESSAGE-REC-VAL: Received a valid message from [5]
+0,80,MESSAGE-REC: Waiting for messages.
+0,80,INFO: Received info that [5] has left Pyrkon.
+0,80,STATUS: AFTER_LECTURE[1] {pyrkon 0)
+0,80,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+0,86,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+0,86,STATUS: ON_LECTURE[2] {pyrkon 0)
+0,86,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+0,86,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+0,86,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+0,86,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+0,86,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+0,86,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+0,86,MESSAGE-REC: Received new message.
+0,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+0,90,MESSAGE-REC-VAL: Received a valid message from [1]
+0,90,MESSAGE-REC: Waiting for messages.
+0,90,INFO: Received info that [1] has left Pyrkon.
+0,90,STATUS: AFTER_LECTURE[2] {pyrkon 0)
+0,90,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+0,90,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+0,90,INFO: Sends agreement to enter lecture [1] to [4].
+0,91,INFO: Sends agreement to enter lecture [2] to [4].
+0,92,STATUS: EXITING_PYRKON {pyrkon: 0}
+0,92,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+0,92,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+0,92,STATUS: AFTER_PYRKON {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+0,93,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+0,93,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+0,93,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+0,93,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+0,93,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+0,93,MESSAGE-REC: Received new message.
+0,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+0,96,MESSAGE-REC-VAL: Received a valid message from [6]
+0,96,MESSAGE-REC: Waiting for messages.
+0,96,INFO: Received info that [6] has left Pyrkon.
+0,96,MESSAGE-REC: Received new message.
+0,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+0,97,MESSAGE-REC-VAL: Received a valid message from [7]
+0,97,MESSAGE-REC: Waiting for messages.
+0,97,INFO: Received info that [7] wants to enter lecture [1].
+0,97,INFO: Sends agreement to enter lecture [1] to [7].
+0,98,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+0,98,MESSAGE-REC: Received new message.
+0,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+0,102,MESSAGE-REC-VAL: Received a valid message from [4]
+0,102,MESSAGE-REC: Waiting for messages.
+0,102,INFO: Received info that [4] has left Pyrkon.
+0,102,MESSAGE-REC: Received new message.
+0,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+0,110,MESSAGE-REC-VAL: Received a valid message from [7]
+0,110,MESSAGE-REC: Waiting for messages.
+0,110,INFO: Received info that [7] has left Pyrkon.
+1,0,MESSAGE-REC: Waiting for messages.
+1,0,MESSAGE-REC: Received new message.
+1,2,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+1,2,MESSAGE-REC-VAL: Received a valid message from [3]
+1,2,MESSAGE-REC: Waiting for messages.
+1,2,INFO: Received info that [3] wants to enter Pyrkon.
+1,2,INFO: Sends agreement to enter Pyrkon to [3].
+1,3,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+1,3,MESSAGE-REC: Received new message.
+1,4,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+1,4,MESSAGE-REC-VAL: Received a valid message from [8]
+1,4,MESSAGE-REC: Waiting for messages.
+1,4,MESSAGE-REC: Received new message.
+1,5,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+1,5,MESSAGE-REC-VAL: Received a valid message from [9]
+1,5,MESSAGE-REC: Waiting for messages.
+1,5,INFO: Received info that [8] wants to enter Pyrkon.
+1,5,INFO: Sends agreement to enter Pyrkon to [8].
+1,6,INFO: Received info that [9] wants to enter Pyrkon.
+1,6,INFO: Sends agreement to enter Pyrkon to [9].
+1,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+1,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+1,7,STATUS: BEFORE_PYRKON {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+1,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+1,8,MESSAGE-REC: Received new message.
+1,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+1,9,MESSAGE-REC-VAL: Received a valid message from [0]
+1,9,MESSAGE-REC: Waiting for messages.
+1,9,INFO: Received info that [0] wants to enter Pyrkon.
+1,9,INFO: Sends agreement to enter Pyrkon to [0].
+1,10,MESSAGE-REC: Received new message.
+1,11,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+1,11,MESSAGE-REC-VAL: Received a valid message from [2]
+1,11,MESSAGE-REC: Waiting for messages.
+1,11,INFO: Received info that [2] wants to enter Pyrkon.
+1,11,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+1,11,MESSAGE-REC: Received new message.
+1,12,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+1,12,MESSAGE-REC-VAL: Received a valid message from [6]
+1,12,MESSAGE-REC: Waiting for messages.
+1,12,INFO: Received info that [6] wants to enter Pyrkon.
+1,12,MESSAGE-REC: Received new message.
+1,13,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+1,13,MESSAGE-REC-VAL: Received a valid message from [5]
+1,13,MESSAGE-REC: Waiting for messages.
+1,13,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+1,13,INFO: Received info that [5] wants to enter Pyrkon.
+1,13,MESSAGE-REC: Received new message.
+1,14,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+1,14,MESSAGE-REC-VAL: Received a valid message from [4]
+1,14,MESSAGE-REC: Waiting for messages.
+1,14,INFO: Received info that [4] wants to enter Pyrkon.
+1,14,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+1,14,MESSAGE-REC: Received new message.
+1,15,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+1,15,MESSAGE-REC-VAL: Received a valid message from [7]
+1,15,MESSAGE-REC: Waiting for messages.
+1,15,INFO: Received info that [7] wants to enter Pyrkon.
+1,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+1,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+1,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+1,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+1,15,MESSAGE-REC: Received new message.
+1,16,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+1,16,MESSAGE-REC-VAL: Received a valid message from [2]
+1,16,MESSAGE-REC: Waiting for messages.
+1,16,INFO: Received agreement to enter Pyrkon from [2].
+1,16,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+1,16,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+1,16,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+1,16,MESSAGE-REC: Received new message.
+1,19,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+1,19,MESSAGE-REC-VAL: Received a valid message from [5]
+1,19,MESSAGE-REC: Waiting for messages.
+1,19,INFO: Received agreement to enter Pyrkon from [5].
+1,19,MESSAGE-REC: Received new message.
+1,20,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+1,20,MESSAGE-REC-VAL: Received a valid message from [4]
+1,20,MESSAGE-REC: Waiting for messages.
+1,20,INFO: Received agreement to enter Pyrkon from [4].
+1,20,MESSAGE-REC: Received new message.
+1,21,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+1,21,MESSAGE-REC-VAL: Received a valid message from [6]
+1,21,MESSAGE-REC: Waiting for messages.
+1,21,INFO: Received agreement to enter Pyrkon from [6].
+1,21,MESSAGE-REC: Received new message.
+1,22,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+1,22,MESSAGE-REC-VAL: Received a valid message from [7]
+1,22,MESSAGE-REC: Waiting for messages.
+1,22,INFO: Received agreement to enter Pyrkon from [7].
+1,22,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+1,22,STATUS: ON_PYRKON {pyrkon 0)
+1,22,MESSAGE-REC: Received new message.
+1,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+1,25,MESSAGE-REC-VAL: Received a valid message from [3]
+1,25,MESSAGE-REC: Waiting for messages.
+1,25,INFO: Received info that [3] wants to enter lecture [1].
+1,25,INFO: Sends agreement to enter lecture [1] to [3].
+1,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+1,26,MESSAGE-REC: Received new message.
+1,27,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+1,27,MESSAGE-REC-VAL: Received a valid message from [3]
+1,27,MESSAGE-REC: Waiting for messages.
+1,27,INFO: Received info that [3] wants to enter lecture [2].
+1,27,INFO: Sends agreement to enter lecture [2] to [3].
+1,28,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+1,28,MESSAGE-REC: Received new message.
+1,29,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+1,29,MESSAGE-REC-VAL: Received a valid message from [9]
+1,29,MESSAGE-REC: Waiting for messages.
+1,29,INFO: Received info that [9] wants to enter lecture [1].
+1,29,INFO: Sends agreement to enter lecture [1] to [9].
+1,30,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+1,30,MESSAGE-REC: Received new message.
+1,31,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+1,31,MESSAGE-REC-VAL: Received a valid message from [8]
+1,31,MESSAGE-REC: Waiting for messages.
+1,31,INFO: Received info that [8] has left Pyrkon.
+1,31,STATUS: WANT_TO_LECTURE[1] {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 0 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 2 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 3 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 4 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 5 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 6 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 7 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 8 {pyrkon: 0}
+1,32,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 9 {pyrkon: 0}
+1,32,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+1,32,MESSAGE-REC: Received new message.
+1,35,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+1,35,MESSAGE-REC-VAL: Received a valid message from [0]
+1,35,MESSAGE-REC: Waiting for messages.
+1,35,INFO: Received agreement to enter lecture [1] from [0].
+1,35,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+1,35,MESSAGE-REC: Received new message.
+1,36,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+1,36,MESSAGE-REC-VAL: Received a valid message from [9]
+1,36,MESSAGE-REC: Waiting for messages.
+1,36,INFO: Received info that [9] wants to enter lecture [2].
+1,36,INFO: Sends agreement to enter lecture [2] to [9].
+1,37,MESSAGE-REC: Received new message.
+1,38,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+1,38,MESSAGE-REC-VAL: Received a valid message from [2]
+1,38,MESSAGE-REC: Waiting for messages.
+1,38,INFO: Received agreement to enter lecture [1] from [2].
+1,38,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+1,38,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+1,38,MESSAGE-REC: Received new message.
+1,39,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+1,39,MESSAGE-REC-VAL: Received a valid message from [4]
+1,39,MESSAGE-REC: Waiting for messages.
+1,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 5 on pyrkon 0
+1,39,INFO: Received agreement to enter lecture [1] from [4].
+1,39,MESSAGE-REC: Received new message.
+1,40,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 5 on pyrkon 0
+1,40,MESSAGE-REC-VAL: Received a valid message from [5]
+1,40,MESSAGE-REC: Waiting for messages.
+1,40,INFO: Received agreement to enter lecture [1] from [5].
+1,40,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 6 on pyrkon 0
+1,40,MESSAGE-REC: Received new message.
+1,41,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 6 on pyrkon 0
+1,41,MESSAGE-REC-VAL: Received a valid message from [6]
+1,41,MESSAGE-REC: Waiting for messages.
+1,41,INFO: Received agreement to enter lecture [1] from [6].
+1,41,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+1,41,MESSAGE-REC: Received new message.
+1,42,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+1,42,MESSAGE-REC-VAL: Received a valid message from [8]
+1,42,MESSAGE-REC: Waiting for messages.
+1,42,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 8 on pyrkon 0
+1,42,MESSAGE-REC: Received new message.
+1,43,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+1,43,MESSAGE-REC-VAL: Received a valid message from [7]
+1,43,MESSAGE-REC: Waiting for messages.
+1,43,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+1,43,INFO: Received agreement to enter lecture [1] from [7].
+1,43,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+1,43,MESSAGE-REC: Received new message.
+1,44,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+1,44,MESSAGE-REC-VAL: Received a valid message from [0]
+1,44,MESSAGE-REC: Waiting for messages.
+1,44,MESSAGE-REC: Received new message.
+1,45,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+1,45,MESSAGE-REC-VAL: Received a valid message from [0]
+1,45,MESSAGE-REC: Waiting for messages.
+1,45,INFO: Received info that [0] wants to enter lecture [1].
+1,45,INFO: Agreement to enter lecture [1] to [0] was saved for later use.
+1,45,INFO: Received info that [0] wants to enter lecture [2].
+1,45,INFO: Sends agreement to enter lecture [2] to [0].
+1,46,MESSAGE-REC: Received new message.
+1,47,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 8 on pyrkon 0
+1,47,MESSAGE-REC-VAL: Received a valid message from [8]
+1,47,MESSAGE-REC: Waiting for messages.
+1,47,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+1,47,INFO: Received agreement to enter lecture [1] from [8].
+1,47,MESSAGE-REC: Received new message.
+1,48,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+1,48,MESSAGE-REC-VAL: Received a valid message from [3]
+1,48,MESSAGE-REC: Waiting for messages.
+1,48,MESSAGE-REC: Received new message.
+1,49,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+1,49,MESSAGE-REC-VAL: Received a valid message from [9]
+1,49,MESSAGE-REC: Waiting for messages.
+1,49,MESSAGE-REC: Received new message.
+1,50,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+1,50,MESSAGE-REC-VAL: Received a valid message from [2]
+1,50,MESSAGE-REC: Waiting for messages.
+1,50,INFO: Received info that [2] wants to enter lecture [1].
+1,50,INFO: Agreement to enter lecture [1] to [2] was saved for later use.
+1,50,MESSAGE-REC: Received new message.
+1,63,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+1,63,MESSAGE-REC-VAL: Received a valid message from [3]
+1,63,MESSAGE-REC: Waiting for messages.
+1,63,INFO: Received agreement to enter lecture [1] from [3].
+1,63,STATUS: ON_LECTURE[1] {pyrkon 0)
+1,63,MESSAGE-REC: Received new message.
+1,68,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+1,68,MESSAGE-REC-VAL: Received a valid message from [3]
+1,68,MESSAGE-REC: Waiting for messages.
+1,68,INFO: Received info that [3] has left Pyrkon.
+1,68,MESSAGE-REC: Received new message.
+1,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+1,70,MESSAGE-REC-VAL: Received a valid message from [4]
+1,70,MESSAGE-REC: Waiting for messages.
+1,70,INFO: Received info that [4] wants to enter lecture [1].
+1,70,MESSAGE-REC: Received new message.
+1,71,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+1,71,MESSAGE-REC-VAL: Received a valid message from [4]
+1,71,MESSAGE-REC: Waiting for messages.
+1,71,INFO: Received info that [4] wants to enter lecture [2].
+1,71,MESSAGE-REC: Received new message.
+1,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+1,79,MESSAGE-REC-VAL: Received a valid message from [9]
+1,79,MESSAGE-REC: Waiting for messages.
+1,79,INFO: Received info that [9] has left Pyrkon.
+1,79,MESSAGE-REC: Received new message.
+1,80,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+1,80,MESSAGE-REC-VAL: Received a valid message from [5]
+1,80,MESSAGE-REC: Waiting for messages.
+1,80,INFO: Received info that [5] has left Pyrkon.
+1,80,STATUS: AFTER_LECTURE[1] {pyrkon 0)
+1,80,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+1,85,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+1,85,INFO: Sends agreement to enter lecture [1] to [4].
+1,86,INFO: Sends agreement to enter lecture [2] to [4].
+1,87,STATUS: EXITING_PYRKON {pyrkon: 0}
+1,87,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+1,87,MESSAGE-REC: Received new message.
+1,88,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+1,88,MESSAGE-REC-VAL: Received a valid message from [0]
+1,88,MESSAGE-REC: Waiting for messages.
+1,88,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+1,88,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+1,88,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+1,88,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+1,88,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+1,88,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+1,88,STATUS: AFTER_PYRKON {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+1,89,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+1,89,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+1,89,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+1,89,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+1,89,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+1,89,MESSAGE-REC: Received new message.
+1,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+1,94,MESSAGE-REC-VAL: Received a valid message from [0]
+1,94,MESSAGE-REC: Waiting for messages.
+1,94,INFO: Received info that [0] has left Pyrkon.
+1,94,MESSAGE-REC: Received new message.
+1,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+1,96,MESSAGE-REC-VAL: Received a valid message from [6]
+1,96,MESSAGE-REC: Waiting for messages.
+1,96,INFO: Received info that [6] has left Pyrkon.
+1,96,MESSAGE-REC: Received new message.
+1,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+1,97,MESSAGE-REC-VAL: Received a valid message from [7]
+1,97,MESSAGE-REC: Waiting for messages.
+1,97,INFO: Received info that [7] wants to enter lecture [1].
+1,97,INFO: Sends agreement to enter lecture [1] to [7].
+1,98,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+1,98,MESSAGE-REC: Received new message.
+1,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+1,102,MESSAGE-REC-VAL: Received a valid message from [4]
+1,102,MESSAGE-REC: Waiting for messages.
+1,102,INFO: Received info that [4] has left Pyrkon.
+1,102,MESSAGE-REC: Received new message.
+1,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+1,110,MESSAGE-REC-VAL: Received a valid message from [7]
+1,110,MESSAGE-REC: Waiting for messages.
+1,110,INFO: Received info that [7] has left Pyrkon.
+2,0,MESSAGE-REC: Waiting for messages.
+2,0,MESSAGE-REC: Received new message.
+2,2,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+2,2,MESSAGE-REC-VAL: Received a valid message from [9]
+2,2,MESSAGE-REC: Waiting for messages.
+2,2,INFO: Received info that [9] wants to enter Pyrkon.
+2,2,INFO: Sends agreement to enter Pyrkon to [9].
+2,3,MESSAGE-REC: Received new message.
+2,4,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+2,4,MESSAGE-REC-VAL: Received a valid message from [3]
+2,4,MESSAGE-REC: Waiting for messages.
+2,4,INFO: Received info that [3] wants to enter Pyrkon.
+2,4,INFO: Sends agreement to enter Pyrkon to [3].
+2,5,MESSAGE-REC: Received new message.
+2,6,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+2,6,MESSAGE-REC-VAL: Received a valid message from [8]
+2,6,MESSAGE-REC: Waiting for messages.
+2,6,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+2,6,INFO: Received info that [8] wants to enter Pyrkon.
+2,6,INFO: Sends agreement to enter Pyrkon to [8].
+2,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+2,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+2,7,STATUS: BEFORE_PYRKON {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+2,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+2,8,MESSAGE-REC: Received new message.
+2,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+2,9,MESSAGE-REC-VAL: Received a valid message from [0]
+2,9,MESSAGE-REC: Waiting for messages.
+2,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+2,9,INFO: Received info that [0] wants to enter Pyrkon.
+2,9,INFO: Sends agreement to enter Pyrkon to [0].
+2,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+2,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+2,10,MESSAGE-REC: Received new message.
+2,11,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+2,11,MESSAGE-REC-VAL: Received a valid message from [1]
+2,11,MESSAGE-REC: Waiting for messages.
+2,11,INFO: Received info that [1] wants to enter Pyrkon.
+2,11,INFO: Sends agreement to enter Pyrkon to [1].
+2,12,MESSAGE-REC: Received new message.
+2,13,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+2,13,MESSAGE-REC-VAL: Received a valid message from [6]
+2,13,MESSAGE-REC: Waiting for messages.
+2,13,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+2,13,INFO: Received info that [6] wants to enter Pyrkon.
+2,13,MESSAGE-REC: Received new message.
+2,14,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+2,14,MESSAGE-REC-VAL: Received a valid message from [5]
+2,14,MESSAGE-REC: Waiting for messages.
+2,14,MESSAGE-REC: Received new message.
+2,15,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+2,15,MESSAGE-REC-VAL: Received a valid message from [7]
+2,15,MESSAGE-REC: Waiting for messages.
+2,15,INFO: Received info that [5] wants to enter Pyrkon.
+2,15,INFO: Received info that [7] wants to enter Pyrkon.
+2,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+2,15,MESSAGE-REC: Received new message.
+2,16,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+2,16,MESSAGE-REC-VAL: Received a valid message from [4]
+2,16,MESSAGE-REC: Waiting for messages.
+2,16,INFO: Received info that [4] wants to enter Pyrkon.
+2,16,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+2,16,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+2,16,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+2,16,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+2,16,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+2,16,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+2,16,MESSAGE-REC: Received new message.
+2,17,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+2,17,MESSAGE-REC-VAL: Received a valid message from [5]
+2,17,MESSAGE-REC: Waiting for messages.
+2,17,INFO: Received agreement to enter Pyrkon from [5].
+2,17,MESSAGE-REC: Received new message.
+2,18,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+2,18,MESSAGE-REC-VAL: Received a valid message from [4]
+2,18,MESSAGE-REC: Waiting for messages.
+2,18,MESSAGE-REC: Received new message.
+2,19,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+2,19,MESSAGE-REC-VAL: Received a valid message from [6]
+2,19,MESSAGE-REC: Waiting for messages.
+2,19,INFO: Received agreement to enter Pyrkon from [6].
+2,19,INFO: Received agreement to enter Pyrkon from [4].
+2,19,MESSAGE-REC: Received new message.
+2,20,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+2,20,MESSAGE-REC-VAL: Received a valid message from [7]
+2,20,MESSAGE-REC: Waiting for messages.
+2,20,INFO: Received agreement to enter Pyrkon from [7].
+2,20,MESSAGE-REC: Received new message.
+2,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+2,25,MESSAGE-REC-VAL: Received a valid message from [3]
+2,25,MESSAGE-REC: Waiting for messages.
+2,25,INFO: Received info that [3] wants to enter lecture [1].
+2,25,INFO: Sends agreement to enter lecture [1] to [3].
+2,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+2,26,MESSAGE-REC: Received new message.
+2,27,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+2,27,MESSAGE-REC-VAL: Received a valid message from [3]
+2,27,MESSAGE-REC: Waiting for messages.
+2,27,INFO: Received info that [3] wants to enter lecture [2].
+2,27,INFO: Sends agreement to enter lecture [2] to [3].
+2,28,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+2,28,MESSAGE-REC: Received new message.
+2,29,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+2,29,MESSAGE-REC-VAL: Received a valid message from [9]
+2,29,MESSAGE-REC: Waiting for messages.
+2,29,INFO: Received info that [9] wants to enter lecture [1].
+2,29,INFO: Sends agreement to enter lecture [1] to [9].
+2,30,MESSAGE-REC: Received new message.
+2,31,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+2,31,MESSAGE-REC-VAL: Received a valid message from [8]
+2,31,MESSAGE-REC: Waiting for messages.
+2,31,INFO: Received info that [8] has left Pyrkon.
+2,31,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+2,31,MESSAGE-REC: Received new message.
+2,33,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+2,33,MESSAGE-REC-VAL: Received a valid message from [1]
+2,33,MESSAGE-REC: Waiting for messages.
+2,33,INFO: Received info that [1] wants to enter lecture [1].
+2,33,INFO: Sends agreement to enter lecture [1] to [1].
+2,34,MESSAGE-REC: Received new message.
+2,35,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+2,35,MESSAGE-REC-VAL: Received a valid message from [8]
+2,35,MESSAGE-REC: Waiting for messages.
+2,35,INFO: Received agreement to enter Pyrkon from [8].
+2,35,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+2,35,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+2,35,MESSAGE-REC: Received new message.
+2,36,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+2,36,MESSAGE-REC-VAL: Received a valid message from [9]
+2,36,MESSAGE-REC: Waiting for messages.
+2,36,INFO: Received info that [9] wants to enter lecture [2].
+2,36,INFO: Sends agreement to enter lecture [2] to [9].
+2,37,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+2,37,MESSAGE-REC: Received new message.
+2,39,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+2,39,MESSAGE-REC-VAL: Received a valid message from [0]
+2,39,MESSAGE-REC: Waiting for messages.
+2,39,MESSAGE-REC: Received new message.
+2,40,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+2,40,MESSAGE-REC-VAL: Received a valid message from [0]
+2,40,MESSAGE-REC: Waiting for messages.
+2,40,INFO: Received info that [0] wants to enter lecture [2].
+2,40,INFO: Sends agreement to enter lecture [2] to [0].
+2,41,INFO: Received info that [0] wants to enter lecture [1].
+2,41,INFO: Sends agreement to enter lecture [1] to [0].
+2,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+2,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+2,42,STATUS: ON_PYRKON {pyrkon 0)
+2,42,MESSAGE-REC: Received new message.
+2,43,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+2,43,MESSAGE-REC-VAL: Received a valid message from [3]
+2,43,MESSAGE-REC: Waiting for messages.
+2,43,MESSAGE-REC: Received new message.
+2,44,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+2,44,MESSAGE-REC-VAL: Received a valid message from [9]
+2,44,MESSAGE-REC: Waiting for messages.
+2,44,STATUS: WANT_TO_LECTURE[1] {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 0 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 1 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 3 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 4 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 5 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 6 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 7 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 8 {pyrkon: 0}
+2,45,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 9 {pyrkon: 0}
+2,45,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+2,45,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+2,45,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+2,45,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+2,45,MESSAGE-REC: Received new message.
+2,48,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+2,48,MESSAGE-REC-VAL: Received a valid message from [4]
+2,48,MESSAGE-REC: Waiting for messages.
+2,48,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 5 on pyrkon 0
+2,48,INFO: Received agreement to enter lecture [1] from [4].
+2,48,MESSAGE-REC: Received new message.
+2,49,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 5 on pyrkon 0
+2,49,MESSAGE-REC-VAL: Received a valid message from [5]
+2,49,MESSAGE-REC: Waiting for messages.
+2,49,INFO: Received agreement to enter lecture [1] from [5].
+2,49,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 6 on pyrkon 0
+2,49,MESSAGE-REC: Received new message.
+2,50,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 6 on pyrkon 0
+2,50,MESSAGE-REC-VAL: Received a valid message from [6]
+2,50,MESSAGE-REC: Waiting for messages.
+2,50,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+2,50,INFO: Received agreement to enter lecture [1] from [6].
+2,50,MESSAGE-REC: Received new message.
+2,51,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+2,51,MESSAGE-REC-VAL: Received a valid message from [7]
+2,51,MESSAGE-REC: Waiting for messages.
+2,51,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 8 on pyrkon 0
+2,51,INFO: Received agreement to enter lecture [1] from [7].
+2,51,MESSAGE-REC: Received new message.
+2,52,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 8 on pyrkon 0
+2,52,MESSAGE-REC-VAL: Received a valid message from [8]
+2,52,MESSAGE-REC: Waiting for messages.
+2,52,INFO: Received agreement to enter lecture [1] from [8].
+2,52,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+2,52,MESSAGE-REC: Received new message.
+2,67,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+2,67,MESSAGE-REC-VAL: Received a valid message from [3]
+2,67,MESSAGE-REC: Waiting for messages.
+2,67,INFO: Received agreement to enter lecture [1] from [3].
+2,67,MESSAGE-REC: Received new message.
+2,68,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+2,68,MESSAGE-REC-VAL: Received a valid message from [3]
+2,68,MESSAGE-REC: Waiting for messages.
+2,68,INFO: Received info that [3] has left Pyrkon.
+2,68,MESSAGE-REC: Received new message.
+2,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+2,70,MESSAGE-REC-VAL: Received a valid message from [4]
+2,70,MESSAGE-REC: Waiting for messages.
+2,70,INFO: Received info that [4] wants to enter lecture [1].
+2,70,INFO: Agreement to enter lecture [1] to [4] was saved for later use.
+2,70,MESSAGE-REC: Received new message.
+2,74,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+2,74,MESSAGE-REC-VAL: Received a valid message from [9]
+2,74,MESSAGE-REC: Waiting for messages.
+2,74,INFO: Received agreement to enter lecture [1] from [9].
+2,74,MESSAGE-REC: Received new message.
+2,75,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+2,75,MESSAGE-REC-VAL: Received a valid message from [4]
+2,75,MESSAGE-REC: Waiting for messages.
+2,75,INFO: Received info that [4] wants to enter lecture [2].
+2,75,INFO: Sends agreement to enter lecture [2] to [4].
+2,76,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+2,76,MESSAGE-REC: Received new message.
+2,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+2,79,MESSAGE-REC-VAL: Received a valid message from [9]
+2,79,MESSAGE-REC: Waiting for messages.
+2,79,INFO: Received info that [9] has left Pyrkon.
+2,79,MESSAGE-REC: Received new message.
+2,80,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+2,80,MESSAGE-REC-VAL: Received a valid message from [5]
+2,80,MESSAGE-REC: Waiting for messages.
+2,80,INFO: Received info that [5] has left Pyrkon.
+2,80,MESSAGE-REC: Received new message.
+2,81,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+2,81,MESSAGE-REC-VAL: Received a valid message from [1]
+2,81,MESSAGE-REC: Waiting for messages.
+2,81,MESSAGE-REC: Received new message.
+2,82,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+2,82,MESSAGE-REC-VAL: Received a valid message from [0]
+2,82,MESSAGE-REC: Waiting for messages.
+2,82,MESSAGE-REC: Received new message.
+2,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+2,90,MESSAGE-REC-VAL: Received a valid message from [1]
+2,90,MESSAGE-REC: Waiting for messages.
+2,90,INFO: Received info that [1] has left Pyrkon.
+2,90,MESSAGE-REC: Received new message.
+2,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+2,94,MESSAGE-REC-VAL: Received a valid message from [0]
+2,94,MESSAGE-REC: Waiting for messages.
+2,94,INFO: Received info that [0] has left Pyrkon.
+2,94,MESSAGE-REC: Received new message.
+2,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+2,96,MESSAGE-REC-VAL: Received a valid message from [6]
+2,96,MESSAGE-REC: Waiting for messages.
+2,96,INFO: Received info that [6] has left Pyrkon.
+2,96,MESSAGE-REC: Received new message.
+2,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+2,97,MESSAGE-REC-VAL: Received a valid message from [7]
+2,97,MESSAGE-REC: Waiting for messages.
+2,97,INFO: Received info that [7] wants to enter lecture [1].
+2,97,INFO: Agreement to enter lecture [1] to [7] was saved for later use.
+2,97,MESSAGE-REC: Received new message.
+2,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+2,102,MESSAGE-REC-VAL: Received a valid message from [4]
+2,102,MESSAGE-REC: Waiting for messages.
+2,102,INFO: Received info that [4] has left Pyrkon.
+2,102,MESSAGE-REC: Received new message.
+2,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+2,110,MESSAGE-REC-VAL: Received a valid message from [7]
+2,110,MESSAGE-REC: Waiting for messages.
+2,110,INFO: Received info that [7] has left Pyrkon.
+3,0,MESSAGE-REC: Waiting for messages.
+3,0,STATUS: BEFORE_PYRKON {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+3,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+3,1,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+3,1,MESSAGE-REC: Received new message.
+3,6,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+3,6,MESSAGE-REC-VAL: Received a valid message from [0]
+3,6,MESSAGE-REC: Waiting for messages.
+3,6,INFO: Received agreement to enter Pyrkon from [0].
+3,6,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+3,6,MESSAGE-REC: Received new message.
+3,7,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+3,7,MESSAGE-REC-VAL: Received a valid message from [1]
+3,7,MESSAGE-REC: Waiting for messages.
+3,7,INFO: Received agreement to enter Pyrkon from [1].
+3,7,MESSAGE-REC: Received new message.
+3,8,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+3,8,MESSAGE-REC-VAL: Received a valid message from [9]
+3,8,MESSAGE-REC: Waiting for messages.
+3,8,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+3,8,INFO: Received info that [9] wants to enter Pyrkon.
+3,8,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+3,8,MESSAGE-REC: Received new message.
+3,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+3,9,MESSAGE-REC-VAL: Received a valid message from [8]
+3,9,MESSAGE-REC: Waiting for messages.
+3,9,MESSAGE-REC: Received new message.
+3,10,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+3,10,MESSAGE-REC-VAL: Received a valid message from [4]
+3,10,MESSAGE-REC: Waiting for messages.
+3,10,INFO: Received info that [8] wants to enter Pyrkon.
+3,10,INFO: Received agreement to enter Pyrkon from [4].
+3,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+3,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+3,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+3,10,MESSAGE-REC: Received new message.
+3,11,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+3,11,MESSAGE-REC-VAL: Received a valid message from [6]
+3,11,MESSAGE-REC: Waiting for messages.
+3,11,MESSAGE-REC: Received new message.
+3,12,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+3,12,MESSAGE-REC-VAL: Received a valid message from [2]
+3,12,MESSAGE-REC: Waiting for messages.
+3,12,INFO: Received agreement to enter Pyrkon from [6].
+3,12,INFO: Received agreement to enter Pyrkon from [2].
+3,12,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+3,12,MESSAGE-REC: Received new message.
+3,13,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+3,13,MESSAGE-REC-VAL: Received a valid message from [5]
+3,13,MESSAGE-REC: Waiting for messages.
+3,13,MESSAGE-REC: Received new message.
+3,14,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+3,14,MESSAGE-REC-VAL: Received a valid message from [7]
+3,14,MESSAGE-REC: Waiting for messages.
+3,14,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+3,14,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+3,14,MESSAGE-REC: Received new message.
+3,15,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+3,15,MESSAGE-REC-VAL: Received a valid message from [8]
+3,15,MESSAGE-REC: Waiting for messages.
+3,15,MESSAGE-REC: Received new message.
+3,16,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+3,16,MESSAGE-REC-VAL: Received a valid message from [9]
+3,16,MESSAGE-REC: Waiting for messages.
+3,16,MESSAGE-REC: Received new message.
+3,17,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+3,17,MESSAGE-REC-VAL: Received a valid message from [0]
+3,17,MESSAGE-REC: Waiting for messages.
+3,17,INFO: Received info that [0] wants to enter Pyrkon.
+3,17,MESSAGE-REC: Received new message.
+3,18,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+3,18,MESSAGE-REC-VAL: Received a valid message from [2]
+3,18,MESSAGE-REC: Waiting for messages.
+3,18,INFO: Received info that [2] wants to enter Pyrkon.
+3,18,MESSAGE-REC: Received new message.
+3,19,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+3,19,MESSAGE-REC-VAL: Received a valid message from [6]
+3,19,MESSAGE-REC: Waiting for messages.
+3,19,MESSAGE-REC: Received new message.
+3,20,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+3,20,MESSAGE-REC-VAL: Received a valid message from [1]
+3,20,MESSAGE-REC: Waiting for messages.
+3,20,INFO: Received info that [6] wants to enter Pyrkon.
+3,20,INFO: Received info that [1] wants to enter Pyrkon.
+3,20,MESSAGE-REC: Received new message.
+3,21,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+3,21,MESSAGE-REC-VAL: Received a valid message from [7]
+3,21,MESSAGE-REC: Waiting for messages.
+3,21,INFO: Received info that [7] wants to enter Pyrkon.
+3,21,STATUS: ON_PYRKON {pyrkon 0)
+3,21,MESSAGE-REC: Received new message.
+3,22,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+3,22,MESSAGE-REC-VAL: Received a valid message from [4]
+3,22,MESSAGE-REC: Waiting for messages.
+3,22,MESSAGE-REC: Received new message.
+3,22,INFO: Received info that [4] wants to enter Pyrkon.
+3,23,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+3,23,MESSAGE-REC-VAL: Received a valid message from [5]
+3,23,MESSAGE-REC: Waiting for messages.
+3,23,INFO: Received info that [5] wants to enter Pyrkon.
+3,23,STATUS: WANT_TO_LECTURE[2] {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 0 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 1 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 2 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 4 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 5 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 6 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 7 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 8 {pyrkon: 0}
+3,24,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 9 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 0 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 1 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 2 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 4 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 5 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 6 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 7 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 8 {pyrkon: 0}
+3,25,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 9 {pyrkon: 0}
+3,25,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+3,25,MESSAGE-REC: Received new message.
+3,27,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+3,27,MESSAGE-REC-VAL: Received a valid message from [0]
+3,27,MESSAGE-REC: Waiting for messages.
+3,27,INFO: Received agreement to enter lecture [1] from [0].
+3,27,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+3,27,MESSAGE-REC: Received new message.
+3,27,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+3,28,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+3,28,MESSAGE-REC-VAL: Received a valid message from [1]
+3,28,MESSAGE-REC: Waiting for messages.
+3,28,INFO: Received agreement to enter lecture [1] from [1].
+3,28,MESSAGE-REC: Received new message.
+3,29,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+3,29,MESSAGE-REC-VAL: Received a valid message from [2]
+3,29,MESSAGE-REC: Waiting for messages.
+3,29,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+3,29,INFO: Received agreement to enter lecture [1] from [2].
+3,29,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 5 on pyrkon 0
+3,29,MESSAGE-REC: Received new message.
+3,30,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+3,30,MESSAGE-REC-VAL: Received a valid message from [4]
+3,30,MESSAGE-REC: Waiting for messages.
+3,30,MESSAGE-REC: Received new message.
+3,30,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 6 on pyrkon 0
+3,30,INFO: Received agreement to enter lecture [1] from [4].
+3,31,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 5 on pyrkon 0
+3,31,MESSAGE-REC-VAL: Received a valid message from [5]
+3,31,MESSAGE-REC: Waiting for messages.
+3,31,INFO: Received agreement to enter lecture [1] from [5].
+3,31,MESSAGE-REC: Received new message.
+3,32,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 6 on pyrkon 0
+3,32,MESSAGE-REC-VAL: Received a valid message from [6]
+3,32,MESSAGE-REC: Waiting for messages.
+3,32,INFO: Received agreement to enter lecture [1] from [6].
+3,32,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+3,32,MESSAGE-REC: Received new message.
+3,33,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+3,33,MESSAGE-REC-VAL: Received a valid message from [7]
+3,33,MESSAGE-REC: Waiting for messages.
+3,33,INFO: Received agreement to enter lecture [1] from [7].
+3,33,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 8 on pyrkon 0
+3,33,MESSAGE-REC: Received new message.
+3,34,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 8 on pyrkon 0
+3,34,MESSAGE-REC-VAL: Received a valid message from [8]
+3,34,MESSAGE-REC: Waiting for messages.
+3,34,INFO: Received agreement to enter lecture [1] from [8].
+3,34,STATUS: ON_LECTURE[1] {pyrkon 0)
+3,34,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+3,34,MESSAGE-REC: Received new message.
+3,35,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+3,35,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+3,35,MESSAGE-REC-VAL: Received a valid message from [9]
+3,35,MESSAGE-REC: Waiting for messages.
+3,35,INFO: Received agreement to enter lecture [1] from [9].
+3,35,MESSAGE-REC: Received new message.
+3,36,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+3,36,MESSAGE-REC-VAL: Received a valid message from [0]
+3,36,MESSAGE-REC: Waiting for messages.
+3,36,INFO: Received agreement to enter lecture [2] from [0].
+3,36,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 1 on pyrkon 0
+3,36,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 2 on pyrkon 0
+3,36,MESSAGE-REC: Received new message.
+3,37,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 1 on pyrkon 0
+3,37,MESSAGE-REC-VAL: Received a valid message from [1]
+3,37,MESSAGE-REC: Waiting for messages.
+3,37,INFO: Received agreement to enter lecture [2] from [1].
+3,37,MESSAGE-REC: Received new message.
+3,38,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 2 on pyrkon 0
+3,38,MESSAGE-REC-VAL: Received a valid message from [2]
+3,38,MESSAGE-REC: Waiting for messages.
+3,38,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+3,38,INFO: Received agreement to enter lecture [2] from [2].
+3,38,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 5 on pyrkon 0
+3,38,MESSAGE-REC: Received new message.
+3,39,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+3,39,MESSAGE-REC-VAL: Received a valid message from [4]
+3,39,MESSAGE-REC: Waiting for messages.
+3,39,INFO: Received agreement to enter lecture [2] from [4].
+3,39,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 6 on pyrkon 0
+3,39,MESSAGE-REC: Received new message.
+3,40,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 5 on pyrkon 0
+3,40,MESSAGE-REC-VAL: Received a valid message from [5]
+3,40,MESSAGE-REC: Waiting for messages.
+3,40,INFO: Received agreement to enter lecture [2] from [5].
+3,40,MESSAGE-REC: Received new message.
+3,41,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 6 on pyrkon 0
+3,41,MESSAGE-REC-VAL: Received a valid message from [6]
+3,41,MESSAGE-REC: Waiting for messages.
+3,41,INFO: Received agreement to enter lecture [2] from [6].
+3,41,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 7 on pyrkon 0
+3,41,MESSAGE-REC: Received new message.
+3,42,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 7 on pyrkon 0
+3,42,MESSAGE-REC-VAL: Received a valid message from [7]
+3,42,MESSAGE-REC: Waiting for messages.
+3,42,INFO: Received agreement to enter lecture [2] from [7].
+3,42,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 8 on pyrkon 0
+3,42,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+3,42,MESSAGE-REC: Received new message.
+3,43,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+3,43,MESSAGE-REC-VAL: Received a valid message from [9]
+3,43,MESSAGE-REC: Waiting for messages.
+3,43,INFO: Received info that [9] wants to enter lecture [1].
+3,43,MESSAGE-REC: Received new message.
+3,44,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+3,44,MESSAGE-REC-VAL: Received a valid message from [8]
+3,44,MESSAGE-REC: Waiting for messages.
+3,44,INFO: Received info that [8] has left Pyrkon.
+3,44,MESSAGE-REC: Received new message.
+3,45,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+3,45,MESSAGE-REC-VAL: Received a valid message from [1]
+3,45,MESSAGE-REC: Waiting for messages.
+3,45,INFO: Received info that [1] wants to enter lecture [1].
+3,45,MESSAGE-REC: Received new message.
+3,46,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+3,46,MESSAGE-REC-VAL: Received a valid message from [9]
+3,46,MESSAGE-REC: Waiting for messages.
+3,46,INFO: Received info that [9] wants to enter lecture [2].
+3,46,MESSAGE-REC: Received new message.
+3,47,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 8 on pyrkon 0
+3,47,MESSAGE-REC-VAL: Received a valid message from [8]
+3,47,MESSAGE-REC: Waiting for messages.
+3,47,INFO: Received agreement to enter lecture [2] from [8].
+3,47,MESSAGE-REC: Received new message.
+3,48,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+3,48,MESSAGE-REC-VAL: Received a valid message from [0]
+3,48,MESSAGE-REC: Waiting for messages.
+3,48,MESSAGE-REC: Received new message.
+3,49,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+3,49,MESSAGE-REC-VAL: Received a valid message from [0]
+3,49,MESSAGE-REC: Waiting for messages.
+3,49,INFO: Received info that [0] wants to enter lecture [1].
+3,49,INFO: Received info that [0] wants to enter lecture [2].
+3,49,MESSAGE-REC: Received new message.
+3,50,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+3,50,MESSAGE-REC-VAL: Received a valid message from [9]
+3,50,MESSAGE-REC: Waiting for messages.
+3,50,INFO: Received agreement to enter lecture [2] from [9].
+3,50,STATUS: AFTER_LECTURE[1] {pyrkon 0)
+3,50,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+3,59,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+3,59,INFO: Sends agreement to enter lecture [1] to [9].
+3,60,STATUS: ON_LECTURE[2] {pyrkon 0)
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+3,60,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+3,60,MESSAGE-REC: Received new message.
+3,61,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+3,61,MESSAGE-REC-VAL: Received a valid message from [2]
+3,61,MESSAGE-REC: Waiting for messages.
+3,61,INFO: Received info that [2] wants to enter lecture [1].
+3,61,STATUS: AFTER_LECTURE[2] {pyrkon 0)
+3,61,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+3,61,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+3,61,INFO: Sends agreement to enter lecture [1] to [1].
+3,62,INFO: Sends agreement to enter lecture [2] to [9].
+3,63,INFO: Sends agreement to enter lecture [1] to [0].
+3,64,INFO: Sends agreement to enter lecture [2] to [0].
+3,65,INFO: Sends agreement to enter lecture [1] to [2].
+3,66,STATUS: EXITING_PYRKON {pyrkon: 0}
+3,66,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+3,66,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+3,66,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+3,66,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+3,66,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+3,66,STATUS: AFTER_PYRKON {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+3,67,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+3,67,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+3,67,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+3,67,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+3,67,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+3,67,MESSAGE-REC: Received new message.
+3,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+3,70,MESSAGE-REC-VAL: Received a valid message from [4]
+3,70,MESSAGE-REC: Waiting for messages.
+3,70,INFO: Received info that [4] wants to enter lecture [1].
+3,70,INFO: Sends agreement to enter lecture [1] to [4].
+3,71,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+3,71,MESSAGE-REC: Received new message.
+3,72,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+3,72,MESSAGE-REC-VAL: Received a valid message from [4]
+3,72,MESSAGE-REC: Waiting for messages.
+3,72,INFO: Received info that [4] wants to enter lecture [2].
+3,72,INFO: Sends agreement to enter lecture [2] to [4].
+3,73,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+3,73,MESSAGE-REC: Received new message.
+3,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+3,79,MESSAGE-REC-VAL: Received a valid message from [9]
+3,79,MESSAGE-REC: Waiting for messages.
+3,79,INFO: Received info that [9] has left Pyrkon.
+3,79,MESSAGE-REC: Received new message.
+3,80,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+3,80,MESSAGE-REC-VAL: Received a valid message from [5]
+3,80,MESSAGE-REC: Waiting for messages.
+3,80,INFO: Received info that [5] has left Pyrkon.
+3,80,MESSAGE-REC: Received new message.
+3,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+3,90,MESSAGE-REC-VAL: Received a valid message from [1]
+3,90,MESSAGE-REC: Waiting for messages.
+3,90,INFO: Received info that [1] has left Pyrkon.
+3,90,MESSAGE-REC: Received new message.
+3,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+3,94,MESSAGE-REC-VAL: Received a valid message from [0]
+3,94,MESSAGE-REC: Waiting for messages.
+3,94,INFO: Received info that [0] has left Pyrkon.
+3,94,MESSAGE-REC: Received new message.
+3,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+3,96,MESSAGE-REC-VAL: Received a valid message from [6]
+3,96,MESSAGE-REC: Waiting for messages.
+3,96,INFO: Received info that [6] has left Pyrkon.
+3,96,MESSAGE-REC: Received new message.
+3,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+3,97,MESSAGE-REC-VAL: Received a valid message from [7]
+3,97,MESSAGE-REC: Waiting for messages.
+3,97,INFO: Received info that [7] wants to enter lecture [1].
+3,97,INFO: Sends agreement to enter lecture [1] to [7].
+3,98,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+3,98,MESSAGE-REC: Received new message.
+3,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+3,102,MESSAGE-REC-VAL: Received a valid message from [4]
+3,102,MESSAGE-REC: Waiting for messages.
+3,102,INFO: Received info that [4] has left Pyrkon.
+3,102,MESSAGE-REC: Received new message.
+3,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+3,110,MESSAGE-REC-VAL: Received a valid message from [7]
+3,110,MESSAGE-REC: Waiting for messages.
+3,110,INFO: Received info that [7] has left Pyrkon.
+4,0,MESSAGE-REC: Waiting for messages.
+4,0,MESSAGE-REC: Received new message.
+4,2,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+4,2,MESSAGE-REC-VAL: Received a valid message from [3]
+4,2,MESSAGE-REC: Waiting for messages.
+4,2,INFO: Received info that [3] wants to enter Pyrkon.
+4,2,INFO: Sends agreement to enter Pyrkon to [3].
+4,3,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+4,3,MESSAGE-REC: Received new message.
+4,4,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+4,4,MESSAGE-REC-VAL: Received a valid message from [8]
+4,4,MESSAGE-REC: Waiting for messages.
+4,4,MESSAGE-REC: Received new message.
+4,5,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+4,5,MESSAGE-REC-VAL: Received a valid message from [9]
+4,5,MESSAGE-REC: Waiting for messages.
+4,5,INFO: Received info that [9] wants to enter Pyrkon.
+4,5,INFO: Sends agreement to enter Pyrkon to [9].
+4,6,INFO: Received info that [8] wants to enter Pyrkon.
+4,6,INFO: Sends agreement to enter Pyrkon to [8].
+4,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+4,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+4,7,STATUS: BEFORE_PYRKON {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+4,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+4,8,MESSAGE-REC: Received new message.
+4,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+4,9,MESSAGE-REC-VAL: Received a valid message from [0]
+4,9,MESSAGE-REC: Waiting for messages.
+4,9,INFO: Received info that [0] wants to enter Pyrkon.
+4,9,INFO: Sends agreement to enter Pyrkon to [0].
+4,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+4,10,MESSAGE-REC: Received new message.
+4,11,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+4,11,MESSAGE-REC-VAL: Received a valid message from [2]
+4,11,MESSAGE-REC: Waiting for messages.
+4,11,INFO: Received info that [2] wants to enter Pyrkon.
+4,11,INFO: Sends agreement to enter Pyrkon to [2].
+4,12,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+4,12,MESSAGE-REC: Received new message.
+4,13,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+4,13,MESSAGE-REC-VAL: Received a valid message from [6]
+4,13,MESSAGE-REC: Waiting for messages.
+4,13,INFO: Received info that [6] wants to enter Pyrkon.
+4,13,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+4,13,MESSAGE-REC: Received new message.
+4,14,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+4,14,MESSAGE-REC-VAL: Received a valid message from [1]
+4,14,MESSAGE-REC: Waiting for messages.
+4,14,INFO: Received info that [1] wants to enter Pyrkon.
+4,14,INFO: Sends agreement to enter Pyrkon to [1].
+4,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+4,15,MESSAGE-REC: Received new message.
+4,16,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+4,16,MESSAGE-REC-VAL: Received a valid message from [7]
+4,16,MESSAGE-REC: Waiting for messages.
+4,16,INFO: Received info that [7] wants to enter Pyrkon.
+4,16,MESSAGE-REC: Received new message.
+4,17,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+4,17,MESSAGE-REC-VAL: Received a valid message from [5]
+4,17,MESSAGE-REC: Waiting for messages.
+4,17,INFO: Received info that [5] wants to enter Pyrkon.
+4,17,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+4,17,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+4,17,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+4,17,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+4,17,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+4,17,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+4,17,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+4,17,MESSAGE-REC: Received new message.
+4,18,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+4,18,MESSAGE-REC-VAL: Received a valid message from [5]
+4,18,MESSAGE-REC: Waiting for messages.
+4,18,INFO: Received agreement to enter Pyrkon from [5].
+4,18,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+4,18,MESSAGE-REC: Received new message.
+4,19,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+4,19,MESSAGE-REC-VAL: Received a valid message from [6]
+4,19,MESSAGE-REC: Waiting for messages.
+4,19,INFO: Received agreement to enter Pyrkon from [6].
+4,19,MESSAGE-REC: Received new message.
+4,20,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+4,20,MESSAGE-REC-VAL: Received a valid message from [7]
+4,20,MESSAGE-REC: Waiting for messages.
+4,20,INFO: Received agreement to enter Pyrkon from [7].
+4,20,MESSAGE-REC: Received new message.
+4,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+4,25,MESSAGE-REC-VAL: Received a valid message from [3]
+4,25,MESSAGE-REC: Waiting for messages.
+4,25,INFO: Received info that [3] wants to enter lecture [1].
+4,25,INFO: Sends agreement to enter lecture [1] to [3].
+4,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+4,26,MESSAGE-REC: Received new message.
+4,27,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+4,27,MESSAGE-REC-VAL: Received a valid message from [3]
+4,27,MESSAGE-REC: Waiting for messages.
+4,27,INFO: Received info that [3] wants to enter lecture [2].
+4,27,INFO: Sends agreement to enter lecture [2] to [3].
+4,28,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+4,28,MESSAGE-REC: Received new message.
+4,29,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+4,29,MESSAGE-REC-VAL: Received a valid message from [8]
+4,29,MESSAGE-REC: Waiting for messages.
+4,29,INFO: Received info that [8] has left Pyrkon.
+4,29,MESSAGE-REC: Received new message.
+4,30,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+4,30,MESSAGE-REC-VAL: Received a valid message from [9]
+4,30,MESSAGE-REC: Waiting for messages.
+4,30,INFO: Received info that [9] wants to enter lecture [1].
+4,30,INFO: Sends agreement to enter lecture [1] to [9].
+4,31,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+4,31,MESSAGE-REC: Received new message.
+4,32,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+4,32,MESSAGE-REC-VAL: Received a valid message from [8]
+4,32,MESSAGE-REC: Waiting for messages.
+4,32,MESSAGE-REC: Received new message.
+4,33,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+4,33,MESSAGE-REC-VAL: Received a valid message from [1]
+4,33,MESSAGE-REC: Waiting for messages.
+4,33,INFO: Received agreement to enter Pyrkon from [8].
+4,33,INFO: Received info that [1] wants to enter lecture [1].
+4,33,INFO: Sends agreement to enter lecture [1] to [1].
+4,34,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+4,34,MESSAGE-REC: Received new message.
+4,35,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+4,35,MESSAGE-REC-VAL: Received a valid message from [9]
+4,35,MESSAGE-REC: Waiting for messages.
+4,35,INFO: Received info that [9] wants to enter lecture [2].
+4,35,INFO: Sends agreement to enter lecture [2] to [9].
+4,36,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+4,36,MESSAGE-REC: Received new message.
+4,39,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+4,39,MESSAGE-REC-VAL: Received a valid message from [0]
+4,39,MESSAGE-REC: Waiting for messages.
+4,39,MESSAGE-REC: Received new message.
+4,40,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+4,40,MESSAGE-REC-VAL: Received a valid message from [0]
+4,40,MESSAGE-REC: Waiting for messages.
+4,40,INFO: Received info that [0] wants to enter lecture [1].
+4,40,INFO: Sends agreement to enter lecture [1] to [0].
+4,41,INFO: Received info that [0] wants to enter lecture [2].
+4,41,INFO: Sends agreement to enter lecture [2] to [0].
+4,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+4,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+4,42,MESSAGE-REC: Received new message.
+4,43,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+4,43,MESSAGE-REC-VAL: Received a valid message from [3]
+4,43,MESSAGE-REC: Waiting for messages.
+4,43,INFO: Received agreement to enter Pyrkon from [3].
+4,43,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+4,43,STATUS: ON_PYRKON {pyrkon 0)
+4,43,MESSAGE-REC: Received new message.
+4,44,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+4,44,MESSAGE-REC-VAL: Received a valid message from [9]
+4,44,MESSAGE-REC: Waiting for messages.
+4,44,MESSAGE-REC: Received new message.
+4,46,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+4,46,MESSAGE-REC-VAL: Received a valid message from [2]
+4,46,MESSAGE-REC: Waiting for messages.
+4,46,INFO: Received info that [2] wants to enter lecture [1].
+4,46,INFO: Sends agreement to enter lecture [1] to [2].
+4,47,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+4,47,MESSAGE-REC: Received new message.
+4,68,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+4,68,MESSAGE-REC-VAL: Received a valid message from [3]
+4,68,MESSAGE-REC: Waiting for messages.
+4,68,INFO: Received info that [3] has left Pyrkon.
+4,68,STATUS: WANT_TO_LECTURE[2] {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 0 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 1 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 2 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 3 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 5 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 6 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 7 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 8 {pyrkon: 0}
+4,69,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 9 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 0 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 1 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 2 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 3 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 5 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 6 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 7 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 8 {pyrkon: 0}
+4,70,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 9 {pyrkon: 0}
+4,70,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+4,70,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+4,70,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+4,70,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+4,70,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 5 on pyrkon 0
+4,70,MESSAGE-REC: Received new message.
+4,72,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+4,72,MESSAGE-REC-VAL: Received a valid message from [3]
+4,72,MESSAGE-REC: Waiting for messages.
+4,72,INFO: Received agreement to enter lecture [1] from [3].
+4,72,MESSAGE-REC: Received new message.
+4,73,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 5 on pyrkon 0
+4,73,MESSAGE-REC-VAL: Received a valid message from [5]
+4,73,MESSAGE-REC: Waiting for messages.
+4,73,INFO: Received agreement to enter lecture [1] from [5].
+4,73,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 6 on pyrkon 0
+4,73,MESSAGE-REC: Received new message.
+4,74,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 6 on pyrkon 0
+4,74,MESSAGE-REC-VAL: Received a valid message from [6]
+4,74,MESSAGE-REC: Waiting for messages.
+4,74,INFO: Received agreement to enter lecture [1] from [6].
+4,74,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+4,74,MESSAGE-REC: Received new message.
+4,75,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+4,75,MESSAGE-REC-VAL: Received a valid message from [7]
+4,75,MESSAGE-REC: Waiting for messages.
+4,75,INFO: Received agreement to enter lecture [1] from [7].
+4,75,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 8 on pyrkon 0
+4,75,MESSAGE-REC: Received new message.
+4,76,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 8 on pyrkon 0
+4,76,MESSAGE-REC-VAL: Received a valid message from [8]
+4,76,MESSAGE-REC: Waiting for messages.
+4,76,INFO: Received agreement to enter lecture [1] from [8].
+4,76,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+4,76,MESSAGE-REC: Received new message.
+4,77,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+4,77,MESSAGE-REC-VAL: Received a valid message from [9]
+4,77,MESSAGE-REC: Waiting for messages.
+4,77,INFO: Received agreement to enter lecture [1] from [9].
+4,77,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+4,77,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 1 on pyrkon 0
+4,77,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 2 on pyrkon 0
+4,77,MESSAGE-REC: Received new message.
+4,78,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 2 on pyrkon 0
+4,78,MESSAGE-REC-VAL: Received a valid message from [2]
+4,78,MESSAGE-REC: Waiting for messages.
+4,78,INFO: Received agreement to enter lecture [2] from [2].
+4,78,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+4,78,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 5 on pyrkon 0
+4,78,MESSAGE-REC: Received new message.
+4,79,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 5 on pyrkon 0
+4,79,MESSAGE-REC-VAL: Received a valid message from [5]
+4,79,MESSAGE-REC: Waiting for messages.
+4,79,INFO: Received agreement to enter lecture [2] from [5].
+4,79,MESSAGE-REC: Received new message.
+4,80,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+4,80,MESSAGE-REC-VAL: Received a valid message from [3]
+4,80,MESSAGE-REC: Waiting for messages.
+4,80,INFO: Received agreement to enter lecture [2] from [3].
+4,80,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 6 on pyrkon 0
+4,80,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 7 on pyrkon 0
+4,80,MESSAGE-REC: Received new message.
+4,81,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 6 on pyrkon 0
+4,81,MESSAGE-REC-VAL: Received a valid message from [6]
+4,81,MESSAGE-REC: Waiting for messages.
+4,81,INFO: Received agreement to enter lecture [2] from [6].
+4,81,MESSAGE-REC: Received new message.
+4,82,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 7 on pyrkon 0
+4,82,MESSAGE-REC-VAL: Received a valid message from [7]
+4,82,MESSAGE-REC: Waiting for messages.
+4,82,INFO: Received agreement to enter lecture [2] from [7].
+4,82,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 8 on pyrkon 0
+4,82,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+4,82,MESSAGE-REC: Received new message.
+4,83,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 8 on pyrkon 0
+4,83,MESSAGE-REC-VAL: Received a valid message from [8]
+4,83,MESSAGE-REC: Waiting for messages.
+4,83,INFO: Received agreement to enter lecture [2] from [8].
+4,83,MESSAGE-REC: Received new message.
+4,84,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+4,84,MESSAGE-REC-VAL: Received a valid message from [9]
+4,84,MESSAGE-REC: Waiting for messages.
+4,84,INFO: Received agreement to enter lecture [2] from [9].
+4,84,MESSAGE-REC: Received new message.
+4,85,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+4,85,MESSAGE-REC-VAL: Received a valid message from [9]
+4,85,MESSAGE-REC: Waiting for messages.
+4,85,INFO: Received info that [9] has left Pyrkon.
+4,85,MESSAGE-REC: Received new message.
+4,86,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+4,86,MESSAGE-REC-VAL: Received a valid message from [5]
+4,86,MESSAGE-REC: Waiting for messages.
+4,86,INFO: Received info that [5] has left Pyrkon.
+4,86,MESSAGE-REC: Received new message.
+4,87,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+4,87,MESSAGE-REC-VAL: Received a valid message from [0]
+4,87,MESSAGE-REC: Waiting for messages.
+4,87,MESSAGE-REC: Received new message.
+4,88,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+4,88,MESSAGE-REC-VAL: Received a valid message from [1]
+4,88,MESSAGE-REC: Waiting for messages.
+4,88,MESSAGE-REC: Received new message.
+4,89,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+4,89,MESSAGE-REC-VAL: Received a valid message from [1]
+4,89,MESSAGE-REC: Waiting for messages.
+4,89,INFO: Received agreement to enter lecture [1] from [1].
+4,89,MESSAGE-REC: Received new message.
+4,90,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 1 on pyrkon 0
+4,90,MESSAGE-REC-VAL: Received a valid message from [1]
+4,90,MESSAGE-REC: Waiting for messages.
+4,90,INFO: Received agreement to enter lecture [2] from [1].
+4,90,STATUS: ON_LECTURE[2] {pyrkon 0)
+4,90,MESSAGE-REC: Received new message.
+4,91,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+4,91,MESSAGE-REC-VAL: Received a valid message from [1]
+4,91,MESSAGE-REC: Waiting for messages.
+4,91,INFO: Received info that [1] has left Pyrkon.
+4,91,MESSAGE-REC: Received new message.
+4,92,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+4,92,MESSAGE-REC-VAL: Received a valid message from [0]
+4,92,MESSAGE-REC: Waiting for messages.
+4,92,MESSAGE-REC: Received new message.
+4,93,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+4,93,MESSAGE-REC-VAL: Received a valid message from [0]
+4,93,MESSAGE-REC: Waiting for messages.
+4,93,INFO: Received agreement to enter lecture [1] from [0].
+4,93,INFO: Received agreement to enter lecture [2] from [0].
+4,93,STATUS: AFTER_LECTURE[2] {pyrkon 0)
+4,93,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+4,96,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+4,96,STATUS: ON_LECTURE[1] {pyrkon 0)
+4,96,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+4,96,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+4,96,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+4,96,MESSAGE-REC: Received new message.
+4,97,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+4,97,MESSAGE-REC-VAL: Received a valid message from [0]
+4,97,MESSAGE-REC: Waiting for messages.
+4,97,INFO: Received info that [0] has left Pyrkon.
+4,97,MESSAGE-REC: Received new message.
+4,98,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+4,98,MESSAGE-REC-VAL: Received a valid message from [6]
+4,98,MESSAGE-REC: Waiting for messages.
+4,98,INFO: Received info that [6] has left Pyrkon.
+4,98,MESSAGE-REC: Received new message.
+4,99,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+4,99,MESSAGE-REC-VAL: Received a valid message from [7]
+4,99,MESSAGE-REC: Waiting for messages.
+4,99,INFO: Received info that [7] wants to enter lecture [1].
+4,99,STATUS: AFTER_LECTURE[1] {pyrkon 0)
+4,99,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+4,99,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+4,99,INFO: Sends agreement to enter lecture [1] to [7].
+4,100,STATUS: EXITING_PYRKON {pyrkon: 0}
+4,100,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+4,100,STATUS: AFTER_PYRKON {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+4,101,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+4,101,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+4,101,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+4,101,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+4,101,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+4,101,MESSAGE-REC: Received new message.
+4,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+4,110,MESSAGE-REC-VAL: Received a valid message from [7]
+4,110,MESSAGE-REC: Waiting for messages.
+4,110,INFO: Received info that [7] has left Pyrkon.
+5,0,MESSAGE-REC: Waiting for messages.
+5,0,MESSAGE-REC: Received new message.
+5,2,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+5,2,MESSAGE-REC-VAL: Received a valid message from [3]
+5,2,MESSAGE-REC: Waiting for messages.
+5,2,INFO: Received info that [3] wants to enter Pyrkon.
+5,2,INFO: Sends agreement to enter Pyrkon to [3].
+5,3,MESSAGE-REC: Received new message.
+5,4,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+5,4,MESSAGE-REC-VAL: Received a valid message from [8]
+5,4,MESSAGE-REC: Waiting for messages.
+5,4,MESSAGE-REC: Received new message.
+5,5,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+5,5,MESSAGE-REC-VAL: Received a valid message from [9]
+5,5,MESSAGE-REC: Waiting for messages.
+5,5,INFO: Received info that [8] wants to enter Pyrkon.
+5,5,INFO: Sends agreement to enter Pyrkon to [8].
+5,6,INFO: Received info that [9] wants to enter Pyrkon.
+5,6,INFO: Sends agreement to enter Pyrkon to [9].
+5,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+5,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+5,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+5,7,STATUS: BEFORE_PYRKON {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+5,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+5,8,MESSAGE-REC: Received new message.
+5,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+5,9,MESSAGE-REC-VAL: Received a valid message from [0]
+5,9,MESSAGE-REC: Waiting for messages.
+5,9,INFO: Received info that [0] wants to enter Pyrkon.
+5,9,INFO: Sends agreement to enter Pyrkon to [0].
+5,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+5,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+5,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+5,10,MESSAGE-REC: Received new message.
+5,11,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+5,11,MESSAGE-REC-VAL: Received a valid message from [2]
+5,11,MESSAGE-REC: Waiting for messages.
+5,11,INFO: Received info that [2] wants to enter Pyrkon.
+5,11,INFO: Sends agreement to enter Pyrkon to [2].
+5,12,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+5,12,MESSAGE-REC: Received new message.
+5,13,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+5,13,MESSAGE-REC-VAL: Received a valid message from [6]
+5,13,MESSAGE-REC: Waiting for messages.
+5,13,MESSAGE-REC: Received new message.
+5,14,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+5,14,MESSAGE-REC-VAL: Received a valid message from [7]
+5,14,MESSAGE-REC: Waiting for messages.
+5,14,INFO: Received info that [6] wants to enter Pyrkon.
+5,14,INFO: Received info that [7] wants to enter Pyrkon.
+5,14,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+5,14,MESSAGE-REC: Received new message.
+5,15,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+5,15,MESSAGE-REC-VAL: Received a valid message from [4]
+5,15,MESSAGE-REC: Waiting for messages.
+5,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+5,15,MESSAGE-REC: Received new message.
+5,16,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+5,16,MESSAGE-REC-VAL: Received a valid message from [1]
+5,16,MESSAGE-REC: Waiting for messages.
+5,16,INFO: Received info that [4] wants to enter Pyrkon.
+5,16,INFO: Sends agreement to enter Pyrkon to [4].
+5,17,INFO: Received info that [1] wants to enter Pyrkon.
+5,17,INFO: Sends agreement to enter Pyrkon to [1].
+5,18,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+5,18,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+5,18,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+5,18,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+5,18,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+5,18,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+5,18,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+5,18,MESSAGE-REC: Received new message.
+5,19,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+5,19,MESSAGE-REC-VAL: Received a valid message from [6]
+5,19,MESSAGE-REC: Waiting for messages.
+5,19,INFO: Received agreement to enter Pyrkon from [6].
+5,19,MESSAGE-REC: Received new message.
+5,20,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+5,20,MESSAGE-REC-VAL: Received a valid message from [7]
+5,20,MESSAGE-REC: Waiting for messages.
+5,20,INFO: Received agreement to enter Pyrkon from [7].
+5,20,MESSAGE-REC: Received new message.
+5,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+5,25,MESSAGE-REC-VAL: Received a valid message from [3]
+5,25,MESSAGE-REC: Waiting for messages.
+5,25,INFO: Received info that [3] wants to enter lecture [1].
+5,25,INFO: Sends agreement to enter lecture [1] to [3].
+5,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+5,26,MESSAGE-REC: Received new message.
+5,27,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+5,27,MESSAGE-REC-VAL: Received a valid message from [3]
+5,27,MESSAGE-REC: Waiting for messages.
+5,27,INFO: Received info that [3] wants to enter lecture [2].
+5,27,INFO: Sends agreement to enter lecture [2] to [3].
+5,28,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+5,28,MESSAGE-REC: Received new message.
+5,29,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+5,29,MESSAGE-REC-VAL: Received a valid message from [9]
+5,29,MESSAGE-REC: Waiting for messages.
+5,29,MESSAGE-REC: Received new message.
+5,30,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+5,30,MESSAGE-REC-VAL: Received a valid message from [8]
+5,30,INFO: Received info that [9] wants to enter lecture [1].
+5,30,INFO: Sends agreement to enter lecture [1] to [9].
+5,31,MESSAGE-REC: Waiting for messages.
+5,31,INFO: Received info that [8] has left Pyrkon.
+5,31,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+5,31,MESSAGE-REC: Received new message.
+5,32,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+5,32,MESSAGE-REC-VAL: Received a valid message from [8]
+5,32,MESSAGE-REC: Waiting for messages.
+5,32,INFO: Received agreement to enter Pyrkon from [8].
+5,32,MESSAGE-REC: Received new message.
+5,33,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+5,33,MESSAGE-REC-VAL: Received a valid message from [1]
+5,33,MESSAGE-REC: Waiting for messages.
+5,33,INFO: Received info that [1] wants to enter lecture [1].
+5,33,INFO: Sends agreement to enter lecture [1] to [1].
+5,34,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+5,34,MESSAGE-REC: Received new message.
+5,35,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+5,35,MESSAGE-REC-VAL: Received a valid message from [9]
+5,35,MESSAGE-REC: Waiting for messages.
+5,35,INFO: Received info that [9] wants to enter lecture [2].
+5,35,INFO: Sends agreement to enter lecture [2] to [9].
+5,36,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+5,36,MESSAGE-REC: Received new message.
+5,39,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+5,39,MESSAGE-REC-VAL: Received a valid message from [0]
+5,39,MESSAGE-REC: Waiting for messages.
+5,39,MESSAGE-REC: Received new message.
+5,40,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+5,40,MESSAGE-REC-VAL: Received a valid message from [0]
+5,40,MESSAGE-REC: Waiting for messages.
+5,40,INFO: Received info that [0] wants to enter lecture [1].
+5,40,INFO: Sends agreement to enter lecture [1] to [0].
+5,41,INFO: Received info that [0] wants to enter lecture [2].
+5,41,INFO: Sends agreement to enter lecture [2] to [0].
+5,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+5,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+5,42,MESSAGE-REC: Received new message.
+5,43,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+5,43,MESSAGE-REC-VAL: Received a valid message from [3]
+5,43,MESSAGE-REC: Waiting for messages.
+5,43,INFO: Received agreement to enter Pyrkon from [3].
+5,43,MESSAGE-REC: Received new message.
+5,44,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+5,44,MESSAGE-REC-VAL: Received a valid message from [9]
+5,44,MESSAGE-REC: Waiting for messages.
+5,44,INFO: Received agreement to enter Pyrkon from [9].
+5,44,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+5,44,STATUS: ON_PYRKON {pyrkon 0)
+5,44,MESSAGE-REC: Received new message.
+5,46,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+5,46,MESSAGE-REC-VAL: Received a valid message from [2]
+5,46,MESSAGE-REC: Waiting for messages.
+5,46,INFO: Received info that [2] wants to enter lecture [1].
+5,46,INFO: Sends agreement to enter lecture [1] to [2].
+5,47,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+5,47,MESSAGE-REC: Received new message.
+5,68,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+5,68,MESSAGE-REC-VAL: Received a valid message from [3]
+5,68,MESSAGE-REC: Waiting for messages.
+5,68,INFO: Received info that [3] has left Pyrkon.
+5,68,MESSAGE-REC: Received new message.
+5,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+5,70,MESSAGE-REC-VAL: Received a valid message from [4]
+5,70,MESSAGE-REC: Waiting for messages.
+5,70,INFO: Received info that [4] wants to enter lecture [1].
+5,70,INFO: Sends agreement to enter lecture [1] to [4].
+5,71,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+5,71,MESSAGE-REC: Received new message.
+5,72,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+5,72,MESSAGE-REC-VAL: Received a valid message from [4]
+5,72,MESSAGE-REC: Waiting for messages.
+5,72,INFO: Received info that [4] wants to enter lecture [2].
+5,72,INFO: Sends agreement to enter lecture [2] to [4].
+5,73,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+5,73,STATUS: WANT_TO_LECTURE[0] {pyrkon: 0}
+5,73,STATUS: EXITING_PYRKON {pyrkon: 0}
+5,73,STATUS: AFTER_PYRKON {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+5,74,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+5,74,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+5,76,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+5,76,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+5,76,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+5,76,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+5,76,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+5,76,MESSAGE-REC: Received new message.
+5,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+5,79,MESSAGE-REC-VAL: Received a valid message from [9]
+5,79,MESSAGE-REC: Waiting for messages.
+5,79,INFO: Received info that [9] has left Pyrkon.
+5,79,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+5,79,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+5,79,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+5,79,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+5,79,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+5,79,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+5,79,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+5,79,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+5,79,MESSAGE-REC: Received new message.
+5,80,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+5,80,MESSAGE-REC-VAL: Received a valid message from [0]
+5,80,MESSAGE-REC: Waiting for messages.
+5,80,MESSAGE-REC: Received new message.
+5,81,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+5,81,MESSAGE-REC-VAL: Received a valid message from [1]
+5,81,MESSAGE-REC: Waiting for messages.
+5,81,MESSAGE-REC: Received new message.
+5,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+5,90,MESSAGE-REC-VAL: Received a valid message from [1]
+5,90,MESSAGE-REC: Waiting for messages.
+5,90,INFO: Received info that [1] has left Pyrkon.
+5,90,MESSAGE-REC: Received new message.
+5,91,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+5,91,MESSAGE-REC-VAL: Received a valid message from [4]
+5,91,MESSAGE-REC: Waiting for messages.
+5,91,MESSAGE-REC: Received new message.
+5,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+5,94,MESSAGE-REC-VAL: Received a valid message from [0]
+5,94,MESSAGE-REC: Waiting for messages.
+5,94,INFO: Received info that [0] has left Pyrkon.
+5,94,MESSAGE-REC: Received new message.
+5,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+5,96,MESSAGE-REC-VAL: Received a valid message from [6]
+5,96,MESSAGE-REC: Waiting for messages.
+5,96,INFO: Received info that [6] has left Pyrkon.
+5,96,MESSAGE-REC: Received new message.
+5,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+5,97,MESSAGE-REC-VAL: Received a valid message from [7]
+5,97,MESSAGE-REC: Waiting for messages.
+5,97,INFO: Received info that [7] wants to enter lecture [1].
+5,97,INFO: Sends agreement to enter lecture [1] to [7].
+5,98,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+5,98,MESSAGE-REC: Received new message.
+5,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+5,102,MESSAGE-REC-VAL: Received a valid message from [4]
+5,102,MESSAGE-REC: Waiting for messages.
+5,102,INFO: Received info that [4] has left Pyrkon.
+5,102,MESSAGE-REC: Received new message.
+5,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+5,110,MESSAGE-REC-VAL: Received a valid message from [7]
+5,110,MESSAGE-REC: Waiting for messages.
+5,110,INFO: Received info that [7] has left Pyrkon.
+6,0,MESSAGE-REC: Waiting for messages.
+6,0,MESSAGE-REC: Received new message.
+6,2,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+6,2,MESSAGE-REC-VAL: Received a valid message from [3]
+6,2,MESSAGE-REC: Waiting for messages.
+6,2,INFO: Received info that [3] wants to enter Pyrkon.
+6,2,INFO: Sends agreement to enter Pyrkon to [3].
+6,3,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+6,3,MESSAGE-REC: Received new message.
+6,4,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+6,4,MESSAGE-REC-VAL: Received a valid message from [9]
+6,4,MESSAGE-REC: Waiting for messages.
+6,4,INFO: Received info that [9] wants to enter Pyrkon.
+6,4,INFO: Sends agreement to enter Pyrkon to [9].
+6,5,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+6,5,MESSAGE-REC: Received new message.
+6,6,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+6,6,MESSAGE-REC-VAL: Received a valid message from [8]
+6,6,MESSAGE-REC: Waiting for messages.
+6,6,INFO: Received info that [8] wants to enter Pyrkon.
+6,6,INFO: Sends agreement to enter Pyrkon to [8].
+6,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+6,7,STATUS: BEFORE_PYRKON {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+6,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+6,8,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+6,8,MESSAGE-REC: Received new message.
+6,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+6,9,MESSAGE-REC-VAL: Received a valid message from [0]
+6,9,MESSAGE-REC: Waiting for messages.
+6,9,INFO: Received info that [0] wants to enter Pyrkon.
+6,9,INFO: Sends agreement to enter Pyrkon to [0].
+6,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+6,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+6,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+6,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+6,10,MESSAGE-REC: Received new message.
+6,11,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+6,11,MESSAGE-REC-VAL: Received a valid message from [2]
+6,11,MESSAGE-REC: Waiting for messages.
+6,11,INFO: Received info that [2] wants to enter Pyrkon.
+6,11,INFO: Sends agreement to enter Pyrkon to [2].
+6,12,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+6,12,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+6,12,MESSAGE-REC: Received new message.
+6,13,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+6,13,MESSAGE-REC-VAL: Received a valid message from [5]
+6,13,MESSAGE-REC: Waiting for messages.
+6,13,INFO: Received info that [5] wants to enter Pyrkon.
+6,13,INFO: Sends agreement to enter Pyrkon to [5].
+6,14,MESSAGE-REC: Received new message.
+6,15,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+6,15,MESSAGE-REC-VAL: Received a valid message from [4]
+6,15,MESSAGE-REC: Waiting for messages.
+6,15,MESSAGE-REC: Received new message.
+6,16,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+6,16,MESSAGE-REC-VAL: Received a valid message from [7]
+6,16,MESSAGE-REC: Waiting for messages.
+6,16,INFO: Received info that [4] wants to enter Pyrkon.
+6,16,INFO: Sends agreement to enter Pyrkon to [4].
+6,17,INFO: Received info that [7] wants to enter Pyrkon.
+6,17,MESSAGE-REC: Received new message.
+6,18,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+6,18,MESSAGE-REC-VAL: Received a valid message from [1]
+6,18,MESSAGE-REC: Waiting for messages.
+6,18,INFO: Received info that [1] wants to enter Pyrkon.
+6,18,INFO: Sends agreement to enter Pyrkon to [1].
+6,19,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+6,19,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+6,19,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+6,19,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+6,19,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+6,19,MESSAGE-REC: Received new message.
+6,20,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+6,20,MESSAGE-REC-VAL: Received a valid message from [7]
+6,20,MESSAGE-REC: Waiting for messages.
+6,20,INFO: Received agreement to enter Pyrkon from [7].
+6,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+6,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+6,20,MESSAGE-REC: Received new message.
+6,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+6,25,MESSAGE-REC-VAL: Received a valid message from [3]
+6,25,MESSAGE-REC: Waiting for messages.
+6,25,INFO: Received info that [3] wants to enter lecture [1].
+6,25,INFO: Sends agreement to enter lecture [1] to [3].
+6,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+6,26,MESSAGE-REC: Received new message.
+6,27,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+6,27,MESSAGE-REC-VAL: Received a valid message from [3]
+6,27,MESSAGE-REC: Waiting for messages.
+6,27,INFO: Received info that [3] wants to enter lecture [2].
+6,27,INFO: Sends agreement to enter lecture [2] to [3].
+6,28,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+6,28,MESSAGE-REC: Received new message.
+6,29,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+6,29,MESSAGE-REC-VAL: Received a valid message from [9]
+6,29,MESSAGE-REC: Waiting for messages.
+6,29,INFO: Received info that [9] wants to enter lecture [1].
+6,29,INFO: Sends agreement to enter lecture [1] to [9].
+6,30,MESSAGE-REC: Received new message.
+6,31,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+6,31,MESSAGE-REC-VAL: Received a valid message from [8]
+6,31,MESSAGE-REC: Waiting for messages.
+6,31,INFO: Received info that [8] has left Pyrkon.
+6,31,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+6,31,MESSAGE-REC: Received new message.
+6,32,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+6,32,MESSAGE-REC-VAL: Received a valid message from [8]
+6,32,MESSAGE-REC: Waiting for messages.
+6,32,MESSAGE-REC: Received new message.
+6,33,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+6,33,MESSAGE-REC-VAL: Received a valid message from [1]
+6,33,MESSAGE-REC: Waiting for messages.
+6,33,INFO: Received agreement to enter Pyrkon from [8].
+6,33,INFO: Received info that [1] wants to enter lecture [1].
+6,33,INFO: Sends agreement to enter lecture [1] to [1].
+6,34,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+6,34,MESSAGE-REC: Received new message.
+6,35,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+6,35,MESSAGE-REC-VAL: Received a valid message from [9]
+6,35,MESSAGE-REC: Waiting for messages.
+6,35,INFO: Received info that [9] wants to enter lecture [2].
+6,35,INFO: Sends agreement to enter lecture [2] to [9].
+6,36,MESSAGE-REC: Received new message.
+6,39,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+6,39,MESSAGE-REC-VAL: Received a valid message from [0]
+6,39,MESSAGE-REC: Waiting for messages.
+6,39,MESSAGE-REC: Received new message.
+6,40,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+6,40,MESSAGE-REC-VAL: Received a valid message from [0]
+6,40,MESSAGE-REC: Waiting for messages.
+6,40,INFO: Received info that [0] wants to enter lecture [1].
+6,40,INFO: Sends agreement to enter lecture [1] to [0].
+6,41,INFO: Received info that [0] wants to enter lecture [2].
+6,41,INFO: Sends agreement to enter lecture [2] to [0].
+6,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+6,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+6,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+6,42,MESSAGE-REC: Received new message.
+6,43,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+6,43,MESSAGE-REC-VAL: Received a valid message from [3]
+6,43,MESSAGE-REC: Waiting for messages.
+6,43,INFO: Received agreement to enter Pyrkon from [3].
+6,43,MESSAGE-REC: Received new message.
+6,44,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+6,44,MESSAGE-REC-VAL: Received a valid message from [9]
+6,44,MESSAGE-REC: Waiting for messages.
+6,44,INFO: Received agreement to enter Pyrkon from [9].
+6,44,MESSAGE-REC: Received new message.
+6,46,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+6,46,MESSAGE-REC-VAL: Received a valid message from [2]
+6,46,MESSAGE-REC: Waiting for messages.
+6,46,INFO: Received info that [2] wants to enter lecture [1].
+6,46,INFO: Sends agreement to enter lecture [1] to [2].
+6,47,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+6,47,MESSAGE-REC: Received new message.
+6,68,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+6,68,MESSAGE-REC-VAL: Received a valid message from [3]
+6,68,MESSAGE-REC: Waiting for messages.
+6,68,INFO: Received info that [3] has left Pyrkon.
+6,68,MESSAGE-REC: Received new message.
+6,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+6,70,MESSAGE-REC-VAL: Received a valid message from [4]
+6,70,MESSAGE-REC: Waiting for messages.
+6,70,INFO: Received info that [4] wants to enter lecture [1].
+6,70,INFO: Sends agreement to enter lecture [1] to [4].
+6,71,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+6,71,MESSAGE-REC: Received new message.
+6,72,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+6,72,MESSAGE-REC-VAL: Received a valid message from [4]
+6,72,MESSAGE-REC: Waiting for messages.
+6,72,INFO: Received info that [4] wants to enter lecture [2].
+6,72,INFO: Sends agreement to enter lecture [2] to [4].
+6,73,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+6,73,MESSAGE-REC: Received new message.
+6,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+6,79,MESSAGE-REC-VAL: Received a valid message from [9]
+6,79,MESSAGE-REC: Waiting for messages.
+6,79,INFO: Received info that [9] has left Pyrkon.
+6,79,MESSAGE-REC: Received new message.
+6,80,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+6,80,MESSAGE-REC-VAL: Received a valid message from [5]
+6,80,MESSAGE-REC: Waiting for messages.
+6,80,INFO: Received info that [5] has left Pyrkon.
+6,80,MESSAGE-REC: Received new message.
+6,81,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+6,81,MESSAGE-REC-VAL: Received a valid message from [5]
+6,81,MESSAGE-REC: Waiting for messages.
+6,81,INFO: Received agreement to enter Pyrkon from [5].
+6,81,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+6,81,MESSAGE-REC: Received new message.
+6,82,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+6,82,MESSAGE-REC-VAL: Received a valid message from [0]
+6,82,MESSAGE-REC: Waiting for messages.
+6,82,MESSAGE-REC: Received new message.
+6,83,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+6,83,MESSAGE-REC-VAL: Received a valid message from [1]
+6,83,MESSAGE-REC: Waiting for messages.
+6,83,STATUS: ON_PYRKON {pyrkon 0)
+6,83,MESSAGE-REC: Received new message.
+6,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+6,90,MESSAGE-REC-VAL: Received a valid message from [1]
+6,90,MESSAGE-REC: Waiting for messages.
+6,90,INFO: Received info that [1] has left Pyrkon.
+6,90,MESSAGE-REC: Received new message.
+6,91,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+6,91,MESSAGE-REC-VAL: Received a valid message from [4]
+6,91,MESSAGE-REC: Waiting for messages.
+6,91,STATUS: WANT_TO_LECTURE[0] {pyrkon: 0}
+6,91,STATUS: EXITING_PYRKON {pyrkon: 0}
+6,91,MESSAGE-REC: Received new message.
+6,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+6,94,MESSAGE-REC-VAL: Received a valid message from [0]
+6,94,MESSAGE-REC: Waiting for messages.
+6,94,INFO: Received info that [0] has left Pyrkon.
+6,94,STATUS: AFTER_PYRKON {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+6,95,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+6,95,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+6,96,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+6,96,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+6,96,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+6,96,MESSAGE-REC: Received new message.
+6,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+6,97,MESSAGE-REC-VAL: Received a valid message from [7]
+6,97,MESSAGE-REC: Waiting for messages.
+6,97,INFO: Received info that [7] wants to enter lecture [1].
+6,97,INFO: Sends agreement to enter lecture [1] to [7].
+6,98,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+6,98,MESSAGE-REC: Received new message.
+6,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+6,102,MESSAGE-REC-VAL: Received a valid message from [4]
+6,102,MESSAGE-REC: Waiting for messages.
+6,102,INFO: Received info that [4] has left Pyrkon.
+6,102,MESSAGE-REC: Received new message.
+6,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+6,110,MESSAGE-REC-VAL: Received a valid message from [7]
+6,110,MESSAGE-REC: Waiting for messages.
+6,110,INFO: Received info that [7] has left Pyrkon.
+7,0,MESSAGE-REC: Waiting for messages.
+7,0,MESSAGE-REC: Received new message.
+7,2,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+7,2,MESSAGE-REC-VAL: Received a valid message from [3]
+7,2,MESSAGE-REC: Waiting for messages.
+7,2,INFO: Received info that [3] wants to enter Pyrkon.
+7,2,INFO: Sends agreement to enter Pyrkon to [3].
+7,3,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+7,3,MESSAGE-REC: Received new message.
+7,4,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+7,4,MESSAGE-REC-VAL: Received a valid message from [9]
+7,4,MESSAGE-REC: Waiting for messages.
+7,4,INFO: Received info that [9] wants to enter Pyrkon.
+7,4,INFO: Sends agreement to enter Pyrkon to [9].
+7,5,MESSAGE-REC: Received new message.
+7,6,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+7,6,MESSAGE-REC-VAL: Received a valid message from [8]
+7,6,MESSAGE-REC: Waiting for messages.
+7,6,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+7,6,INFO: Received info that [8] wants to enter Pyrkon.
+7,6,INFO: Sends agreement to enter Pyrkon to [8].
+7,7,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+7,7,STATUS: BEFORE_PYRKON {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+7,8,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+7,8,MESSAGE-REC: Received new message.
+7,9,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+7,9,MESSAGE-REC-VAL: Received a valid message from [0]
+7,9,MESSAGE-REC: Waiting for messages.
+7,9,INFO: Received info that [0] wants to enter Pyrkon.
+7,9,INFO: Sends agreement to enter Pyrkon to [0].
+7,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+7,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+7,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+7,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+7,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+7,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+7,10,MESSAGE-REC: Received new message.
+7,11,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+7,11,MESSAGE-REC-VAL: Received a valid message from [2]
+7,11,MESSAGE-REC: Waiting for messages.
+7,11,INFO: Received info that [2] wants to enter Pyrkon.
+7,11,INFO: Sends agreement to enter Pyrkon to [2].
+7,12,MESSAGE-REC: Received new message.
+7,13,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+7,13,MESSAGE-REC-VAL: Received a valid message from [6]
+7,13,MESSAGE-REC: Waiting for messages.
+7,13,INFO: Received info that [6] wants to enter Pyrkon.
+7,13,INFO: Sends agreement to enter Pyrkon to [6].
+7,14,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+7,14,MESSAGE-REC: Received new message.
+7,15,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+7,15,MESSAGE-REC-VAL: Received a valid message from [4]
+7,15,MESSAGE-REC: Waiting for messages.
+7,15,MESSAGE-REC: Received new message.
+7,16,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+7,16,MESSAGE-REC-VAL: Received a valid message from [5]
+7,16,MESSAGE-REC: Waiting for messages.
+7,16,INFO: Received info that [4] wants to enter Pyrkon.
+7,16,INFO: Sends agreement to enter Pyrkon to [4].
+7,17,INFO: Received info that [5] wants to enter Pyrkon.
+7,17,INFO: Sends agreement to enter Pyrkon to [5].
+7,18,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+7,18,MESSAGE-REC: Received new message.
+7,19,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+7,19,MESSAGE-REC-VAL: Received a valid message from [1]
+7,19,MESSAGE-REC: Waiting for messages.
+7,19,INFO: Received info that [1] wants to enter Pyrkon.
+7,19,INFO: Sends agreement to enter Pyrkon to [1].
+7,20,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+7,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+7,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+7,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+7,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+7,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+7,20,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+7,20,MESSAGE-REC: Received new message.
+7,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+7,25,MESSAGE-REC-VAL: Received a valid message from [3]
+7,25,MESSAGE-REC: Waiting for messages.
+7,25,INFO: Received info that [3] wants to enter lecture [1].
+7,25,INFO: Sends agreement to enter lecture [1] to [3].
+7,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+7,26,MESSAGE-REC: Received new message.
+7,27,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+7,27,MESSAGE-REC-VAL: Received a valid message from [3]
+7,27,MESSAGE-REC: Waiting for messages.
+7,27,INFO: Received info that [3] wants to enter lecture [2].
+7,27,INFO: Sends agreement to enter lecture [2] to [3].
+7,28,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+7,28,MESSAGE-REC: Received new message.
+7,29,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+7,29,MESSAGE-REC-VAL: Received a valid message from [9]
+7,29,MESSAGE-REC: Waiting for messages.
+7,29,INFO: Received info that [9] wants to enter lecture [1].
+7,29,INFO: Sends agreement to enter lecture [1] to [9].
+7,30,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+7,30,MESSAGE-REC: Received new message.
+7,31,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+7,31,MESSAGE-REC-VAL: Received a valid message from [8]
+7,31,MESSAGE-REC: Waiting for messages.
+7,31,INFO: Received info that [8] has left Pyrkon.
+7,31,MESSAGE-REC: Received new message.
+7,32,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+7,32,MESSAGE-REC-VAL: Received a valid message from [8]
+7,32,MESSAGE-REC: Waiting for messages.
+7,32,MESSAGE-REC: Received new message.
+7,33,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+7,33,MESSAGE-REC-VAL: Received a valid message from [1]
+7,33,MESSAGE-REC: Waiting for messages.
+7,33,INFO: Received agreement to enter Pyrkon from [8].
+7,33,INFO: Received info that [1] wants to enter lecture [1].
+7,33,INFO: Sends agreement to enter lecture [1] to [1].
+7,34,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+7,34,MESSAGE-REC: Received new message.
+7,39,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+7,39,MESSAGE-REC-VAL: Received a valid message from [0]
+7,39,MESSAGE-REC: Waiting for messages.
+7,39,MESSAGE-REC: Received new message.
+7,40,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+7,40,MESSAGE-REC-VAL: Received a valid message from [0]
+7,40,MESSAGE-REC: Waiting for messages.
+7,40,INFO: Received info that [0] wants to enter lecture [1].
+7,40,INFO: Sends agreement to enter lecture [1] to [0].
+7,41,INFO: Received info that [0] wants to enter lecture [2].
+7,41,INFO: Sends agreement to enter lecture [2] to [0].
+7,42,MESSAGE-REC: Received new message.
+7,43,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+7,43,MESSAGE-REC-VAL: Received a valid message from [9]
+7,43,MESSAGE-REC: Waiting for messages.
+7,43,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+7,43,INFO: Received info that [9] wants to enter lecture [2].
+7,43,INFO: Sends agreement to enter lecture [2] to [9].
+7,44,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+7,44,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+7,44,MESSAGE-REC: Received new message.
+7,45,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+7,45,MESSAGE-REC-VAL: Received a valid message from [3]
+7,45,MESSAGE-REC: Waiting for messages.
+7,45,INFO: Received agreement to enter Pyrkon from [3].
+7,45,MESSAGE-REC: Received new message.
+7,46,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+7,46,MESSAGE-REC-VAL: Received a valid message from [9]
+7,46,MESSAGE-REC: Waiting for messages.
+7,46,INFO: Received agreement to enter Pyrkon from [9].
+7,46,MESSAGE-REC: Received new message.
+7,47,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+7,47,MESSAGE-REC-VAL: Received a valid message from [2]
+7,47,MESSAGE-REC: Waiting for messages.
+7,47,INFO: Received info that [2] wants to enter lecture [1].
+7,47,INFO: Sends agreement to enter lecture [1] to [2].
+7,48,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+7,48,MESSAGE-REC: Received new message.
+7,68,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+7,68,MESSAGE-REC-VAL: Received a valid message from [3]
+7,68,MESSAGE-REC: Waiting for messages.
+7,68,INFO: Received info that [3] has left Pyrkon.
+7,68,MESSAGE-REC: Received new message.
+7,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+7,70,MESSAGE-REC-VAL: Received a valid message from [4]
+7,70,MESSAGE-REC: Waiting for messages.
+7,70,INFO: Received info that [4] wants to enter lecture [1].
+7,70,INFO: Sends agreement to enter lecture [1] to [4].
+7,71,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+7,71,MESSAGE-REC: Received new message.
+7,72,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+7,72,MESSAGE-REC-VAL: Received a valid message from [4]
+7,72,MESSAGE-REC: Waiting for messages.
+7,72,INFO: Received info that [4] wants to enter lecture [2].
+7,72,INFO: Sends agreement to enter lecture [2] to [4].
+7,73,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+7,73,MESSAGE-REC: Received new message.
+7,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+7,79,MESSAGE-REC-VAL: Received a valid message from [9]
+7,79,MESSAGE-REC: Waiting for messages.
+7,79,INFO: Received info that [9] has left Pyrkon.
+7,79,MESSAGE-REC: Received new message.
+7,80,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+7,80,MESSAGE-REC-VAL: Received a valid message from [5]
+7,80,MESSAGE-REC: Waiting for messages.
+7,80,INFO: Received info that [5] has left Pyrkon.
+7,80,MESSAGE-REC: Received new message.
+7,81,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+7,81,MESSAGE-REC-VAL: Received a valid message from [5]
+7,81,MESSAGE-REC: Waiting for messages.
+7,81,INFO: Received agreement to enter Pyrkon from [5].
+7,81,MESSAGE-REC: Received new message.
+7,82,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+7,82,MESSAGE-REC-VAL: Received a valid message from [0]
+7,82,MESSAGE-REC: Waiting for messages.
+7,82,INFO: Received agreement to enter Pyrkon from [0].
+7,82,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+7,82,MESSAGE-REC: Received new message.
+7,83,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+7,83,MESSAGE-REC-VAL: Received a valid message from [1]
+7,83,MESSAGE-REC: Waiting for messages.
+7,83,MESSAGE-REC: Received new message.
+7,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+7,90,MESSAGE-REC-VAL: Received a valid message from [1]
+7,90,MESSAGE-REC: Waiting for messages.
+7,90,INFO: Received info that [1] has left Pyrkon.
+7,90,STATUS: ON_PYRKON {pyrkon 0)
+7,90,MESSAGE-REC: Received new message.
+7,91,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+7,91,MESSAGE-REC-VAL: Received a valid message from [4]
+7,91,MESSAGE-REC: Waiting for messages.
+7,91,MESSAGE-REC: Received new message.
+7,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+7,94,MESSAGE-REC-VAL: Received a valid message from [0]
+7,94,MESSAGE-REC: Waiting for messages.
+7,94,INFO: Received info that [0] has left Pyrkon.
+7,94,STATUS: WANT_TO_LECTURE[1] {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 0 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 1 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 2 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 3 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 4 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 5 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 6 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 8 {pyrkon: 0}
+7,95,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 9 {pyrkon: 0}
+7,95,MESSAGE-REC: Received new message.
+7,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+7,96,MESSAGE-REC-VAL: Received a valid message from [6]
+7,96,MESSAGE-REC: Waiting for messages.
+7,96,INFO: Received info that [6] has left Pyrkon.
+7,96,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+7,96,MESSAGE-REC: Received new message.
+7,99,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+7,99,MESSAGE-REC-VAL: Received a valid message from [0]
+7,99,MESSAGE-REC: Waiting for messages.
+7,99,INFO: Received agreement to enter lecture [1] from [0].
+7,99,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+7,99,MESSAGE-REC: Received new message.
+7,100,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+7,100,MESSAGE-REC-VAL: Received a valid message from [1]
+7,100,MESSAGE-REC: Waiting for messages.
+7,100,INFO: Received agreement to enter lecture [1] from [1].
+7,100,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+7,100,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+7,100,MESSAGE-REC: Received new message.
+7,101,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+7,101,MESSAGE-REC-VAL: Received a valid message from [3]
+7,101,MESSAGE-REC: Waiting for messages.
+7,101,INFO: Received agreement to enter lecture [1] from [3].
+7,101,MESSAGE-REC: Received new message.
+7,102,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+7,102,MESSAGE-REC-VAL: Received a valid message from [6]
+7,102,MESSAGE-REC: Waiting for messages.
+7,102,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+7,102,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 5 on pyrkon 0
+7,102,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 6 on pyrkon 0
+7,102,MESSAGE-REC: Received new message.
+7,103,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 5 on pyrkon 0
+7,103,MESSAGE-REC-VAL: Received a valid message from [5]
+7,103,MESSAGE-REC: Waiting for messages.
+7,103,INFO: Received agreement to enter lecture [1] from [5].
+7,103,MESSAGE-REC: Received new message.
+7,104,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 6 on pyrkon 0
+7,104,MESSAGE-REC-VAL: Received a valid message from [6]
+7,104,MESSAGE-REC: Waiting for messages.
+7,104,INFO: Received agreement to enter lecture [1] from [6].
+7,104,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 8 on pyrkon 0
+7,104,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+7,104,MESSAGE-REC: Received new message.
+7,105,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 8 on pyrkon 0
+7,105,MESSAGE-REC-VAL: Received a valid message from [8]
+7,105,MESSAGE-REC: Waiting for messages.
+7,105,MESSAGE-REC: Received new message.
+7,106,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+7,106,MESSAGE-REC-VAL: Received a valid message from [9]
+7,106,MESSAGE-REC: Waiting for messages.
+7,106,INFO: Received agreement to enter lecture [1] from [8].
+7,106,INFO: Received agreement to enter lecture [1] from [9].
+7,106,MESSAGE-REC: Received new message.
+7,107,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+7,107,MESSAGE-REC-VAL: Received a valid message from [4]
+7,107,MESSAGE-REC: Waiting for messages.
+7,107,INFO: Received agreement to enter lecture [1] from [4].
+7,107,STATUS: ON_LECTURE[1] {pyrkon 0)
+7,107,MESSAGE-REC: Received new message.
+7,108,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+7,108,MESSAGE-REC-VAL: Received a valid message from [4]
+7,108,MESSAGE-REC: Waiting for messages.
+7,108,INFO: Received info that [4] has left Pyrkon.
+7,108,STATUS: AFTER_LECTURE[1] {pyrkon 0)
+7,108,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+7,108,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+7,108,STATUS: EXITING_PYRKON {pyrkon: 0}
+7,108,STATUS: AFTER_PYRKON {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+7,109,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+7,109,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+7,109,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+7,109,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+7,109,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+8,0,MESSAGE-REC: Waiting for messages.
+8,0,STATUS: BEFORE_PYRKON {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+8,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 9 {pyrkon: 0}
+8,1,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+8,1,MESSAGE-REC: Received new message.
+8,8,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+8,8,MESSAGE-REC-VAL: Received a valid message from [0]
+8,8,MESSAGE-REC: Waiting for messages.
+8,8,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+8,8,INFO: Received agreement to enter Pyrkon from [0].
+8,8,MESSAGE-REC: Received new message.
+8,9,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+8,9,MESSAGE-REC-VAL: Received a valid message from [1]
+8,9,MESSAGE-REC: Waiting for messages.
+8,9,INFO: Received agreement to enter Pyrkon from [1].
+8,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+8,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+8,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+8,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+8,9,MESSAGE-REC: Received new message.
+8,10,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+8,10,MESSAGE-REC-VAL: Received a valid message from [3]
+8,10,MESSAGE-REC: Waiting for messages.
+8,10,INFO: Received info that [3] wants to enter Pyrkon.
+8,10,INFO: Sends agreement to enter Pyrkon to [3].
+8,11,MESSAGE-REC: Received new message.
+8,11,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+8,12,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+8,12,MESSAGE-REC-VAL: Received a valid message from [4]
+8,12,MESSAGE-REC: Waiting for messages.
+8,12,MESSAGE-REC: Received new message.
+8,13,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+8,13,MESSAGE-REC-VAL: Received a valid message from [2]
+8,13,MESSAGE-REC: Waiting for messages.
+8,13,INFO: Received agreement to enter Pyrkon from [4].
+8,13,INFO: Received agreement to enter Pyrkon from [2].
+8,13,MESSAGE-REC: Received new message.
+8,14,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+8,14,MESSAGE-REC-VAL: Received a valid message from [6]
+8,14,MESSAGE-REC: Waiting for messages.
+8,14,INFO: Received agreement to enter Pyrkon from [6].
+8,14,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+8,14,MESSAGE-REC: Received new message.
+8,15,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+8,15,MESSAGE-REC-VAL: Received a valid message from [5]
+8,15,MESSAGE-REC: Waiting for messages.
+8,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+8,15,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+8,15,MESSAGE-REC: Received new message.
+8,16,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+8,16,MESSAGE-REC-VAL: Received a valid message from [9]
+8,16,MESSAGE-REC: Waiting for messages.
+8,16,INFO: Received info that [9] wants to enter Pyrkon.
+8,16,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+8,16,MESSAGE-REC: Received new message.
+8,17,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+8,17,MESSAGE-REC-VAL: Received a valid message from [7]
+8,17,MESSAGE-REC: Waiting for messages.
+8,17,MESSAGE-REC: Received new message.
+8,18,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 9 on pyrkon 0
+8,18,MESSAGE-REC-VAL: Received a valid message from [9]
+8,18,MESSAGE-REC: Waiting for messages.
+8,18,MESSAGE-REC: Received new message.
+8,19,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+8,19,MESSAGE-REC-VAL: Received a valid message from [0]
+8,19,MESSAGE-REC: Waiting for messages.
+8,19,INFO: Received info that [0] wants to enter Pyrkon.
+8,19,STATUS: ON_PYRKON {pyrkon 0)
+8,19,MESSAGE-REC: Received new message.
+8,20,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+8,20,MESSAGE-REC-VAL: Received a valid message from [2]
+8,20,MESSAGE-REC: Waiting for messages.
+8,20,INFO: Received info that [2] wants to enter Pyrkon.
+8,20,MESSAGE-REC: Received new message.
+8,21,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+8,21,MESSAGE-REC-VAL: Received a valid message from [4]
+8,21,MESSAGE-REC: Waiting for messages.
+8,21,MESSAGE-REC: Received new message.
+8,22,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+8,22,MESSAGE-REC-VAL: Received a valid message from [5]
+8,22,MESSAGE-REC: Waiting for messages.
+8,22,INFO: Received info that [4] wants to enter Pyrkon.
+8,22,INFO: Received info that [5] wants to enter Pyrkon.
+8,22,MESSAGE-REC: Received new message.
+8,23,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+8,23,MESSAGE-REC-VAL: Received a valid message from [6]
+8,23,MESSAGE-REC: Waiting for messages.
+8,23,INFO: Received info that [6] wants to enter Pyrkon.
+8,23,MESSAGE-REC: Received new message.
+8,24,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+8,24,MESSAGE-REC-VAL: Received a valid message from [7]
+8,24,MESSAGE-REC: Waiting for messages.
+8,24,INFO: Received info that [7] wants to enter Pyrkon.
+8,24,MESSAGE-REC: Received new message.
+8,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+8,25,MESSAGE-REC-VAL: Received a valid message from [1]
+8,25,MESSAGE-REC: Waiting for messages.
+8,25,INFO: Received info that [1] wants to enter Pyrkon.
+8,25,STATUS: WANT_TO_LECTURE[0] {pyrkon: 0}
+8,25,STATUS: EXITING_PYRKON {pyrkon: 0}
+8,25,MESSAGE-REC: Received new message.
+8,26,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+8,26,MESSAGE-REC-VAL: Received a valid message from [3]
+8,26,MESSAGE-REC: Waiting for messages.
+8,26,INFO: Received info that [3] wants to enter lecture [1].
+8,26,INFO: Sends agreement to enter lecture [1] to [3].
+8,27,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+8,27,STATUS: AFTER_PYRKON {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+8,28,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 9 {pyrkon: 0}
+8,28,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+8,36,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+8,36,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+8,36,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+8,36,MESSAGE-REC: Received new message.
+8,37,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+8,37,MESSAGE-REC-VAL: Received a valid message from [3]
+8,37,MESSAGE-REC: Waiting for messages.
+8,37,INFO: Received info that [3] wants to enter lecture [2].
+8,37,INFO: Sends agreement to enter lecture [2] to [3].
+8,38,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+8,38,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+8,38,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+8,38,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+8,38,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+8,38,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+8,38,MESSAGE-REC: Received new message.
+8,39,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 9 on pyrkon 0
+8,39,MESSAGE-REC-VAL: Received a valid message from [9]
+8,39,MESSAGE-REC: Waiting for messages.
+8,39,INFO: Received info that [9] wants to enter lecture [1].
+8,39,INFO: Sends agreement to enter lecture [1] to [9].
+8,40,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 9 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 9 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+8,40,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+8,40,MESSAGE-REC: Received new message.
+8,41,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+8,41,MESSAGE-REC-VAL: Received a valid message from [1]
+8,41,MESSAGE-REC: Waiting for messages.
+8,41,INFO: Received info that [1] wants to enter lecture [1].
+8,41,INFO: Sends agreement to enter lecture [1] to [1].
+8,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+8,42,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 9 on pyrkon 0
+8,42,MESSAGE-REC: Received new message.
+8,43,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+8,43,MESSAGE-REC-VAL: Received a valid message from [0]
+8,43,MESSAGE-REC: Waiting for messages.
+8,43,MESSAGE-REC: Received new message.
+8,44,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+8,44,MESSAGE-REC-VAL: Received a valid message from [0]
+8,44,MESSAGE-REC: Waiting for messages.
+8,44,INFO: Received info that [0] wants to enter lecture [1].
+8,44,INFO: Sends agreement to enter lecture [1] to [0].
+8,44,INFO: Received info that [0] wants to enter lecture [2].
+8,45,INFO: Sends agreement to enter lecture [2] to [0].
+8,46,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+8,46,MESSAGE-REC: Received new message.
+8,47,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 9 on pyrkon 0
+8,47,MESSAGE-REC-VAL: Received a valid message from [9]
+8,47,MESSAGE-REC: Waiting for messages.
+8,47,INFO: Received info that [9] wants to enter lecture [2].
+8,47,INFO: Sends agreement to enter lecture [2] to [9].
+8,48,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+8,48,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+8,48,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 9 on pyrkon 0
+8,48,MESSAGE-REC: Received new message.
+8,49,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+8,49,MESSAGE-REC-VAL: Received a valid message from [3]
+8,49,MESSAGE-REC: Waiting for messages.
+8,49,MESSAGE-REC: Received new message.
+8,50,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+8,50,MESSAGE-REC-VAL: Received a valid message from [2]
+8,50,MESSAGE-REC: Waiting for messages.
+8,50,INFO: Received info that [2] wants to enter lecture [1].
+8,50,INFO: Sends agreement to enter lecture [1] to [2].
+8,51,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+8,51,MESSAGE-REC: Received new message.
+8,68,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+8,68,MESSAGE-REC-VAL: Received a valid message from [3]
+8,68,MESSAGE-REC: Waiting for messages.
+8,68,INFO: Received info that [3] has left Pyrkon.
+8,68,MESSAGE-REC: Received new message.
+8,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+8,70,MESSAGE-REC-VAL: Received a valid message from [4]
+8,70,MESSAGE-REC: Waiting for messages.
+8,70,INFO: Received info that [4] wants to enter lecture [1].
+8,70,INFO: Sends agreement to enter lecture [1] to [4].
+8,71,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+8,71,MESSAGE-REC: Received new message.
+8,72,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+8,72,MESSAGE-REC-VAL: Received a valid message from [4]
+8,72,MESSAGE-REC: Waiting for messages.
+8,72,INFO: Received info that [4] wants to enter lecture [2].
+8,72,INFO: Sends agreement to enter lecture [2] to [4].
+8,73,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+8,73,MESSAGE-REC: Received new message.
+8,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 9 on pyrkon 0
+8,79,MESSAGE-REC-VAL: Received a valid message from [9]
+8,79,MESSAGE-REC: Waiting for messages.
+8,79,INFO: Received info that [9] has left Pyrkon.
+8,79,MESSAGE-REC: Received new message.
+8,80,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+8,80,MESSAGE-REC-VAL: Received a valid message from [5]
+8,80,MESSAGE-REC: Waiting for messages.
+8,80,INFO: Received info that [5] has left Pyrkon.
+8,80,MESSAGE-REC: Received new message.
+8,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+8,90,MESSAGE-REC-VAL: Received a valid message from [1]
+8,90,MESSAGE-REC: Waiting for messages.
+8,90,INFO: Received info that [1] has left Pyrkon.
+8,90,MESSAGE-REC: Received new message.
+8,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+8,94,MESSAGE-REC-VAL: Received a valid message from [0]
+8,94,MESSAGE-REC: Waiting for messages.
+8,94,INFO: Received info that [0] has left Pyrkon.
+8,94,MESSAGE-REC: Received new message.
+8,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+8,96,MESSAGE-REC-VAL: Received a valid message from [6]
+8,96,MESSAGE-REC: Waiting for messages.
+8,96,INFO: Received info that [6] has left Pyrkon.
+8,96,MESSAGE-REC: Received new message.
+8,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+8,97,MESSAGE-REC-VAL: Received a valid message from [7]
+8,97,MESSAGE-REC: Waiting for messages.
+8,97,INFO: Received info that [7] wants to enter lecture [1].
+8,97,INFO: Sends agreement to enter lecture [1] to [7].
+8,98,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+8,98,MESSAGE-REC: Received new message.
+8,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+8,102,MESSAGE-REC-VAL: Received a valid message from [4]
+8,102,MESSAGE-REC: Waiting for messages.
+8,102,INFO: Received info that [4] has left Pyrkon.
+8,102,MESSAGE-REC: Received new message.
+8,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+8,110,MESSAGE-REC-VAL: Received a valid message from [7]
+8,110,MESSAGE-REC: Waiting for messages.
+8,110,INFO: Received info that [7] has left Pyrkon.
+9,0,MESSAGE-REC: Waiting for messages.
+9,0,STATUS: BEFORE_PYRKON {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 0 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 1 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 2 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 3 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 4 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 5 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 6 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 7 {pyrkon: 0}
+9,1,BROADCAST: Is BEFORE_PYRKON and sent WANT_TO_ENTER PYRKON[0] to 8 {pyrkon: 0}
+9,1,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+9,1,MESSAGE-REC: Received new message.
+9,4,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+9,4,MESSAGE-REC-VAL: Received a valid message from [0]
+9,4,MESSAGE-REC: Waiting for messages.
+9,4,INFO: Received agreement to enter Pyrkon from [0].
+9,4,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+9,4,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+9,4,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+9,4,MESSAGE-REC: Received new message.
+9,8,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+9,8,MESSAGE-REC-VAL: Received a valid message from [1]
+9,8,MESSAGE-REC: Waiting for messages.
+9,8,MESSAGE-REC: Received new message.
+9,9,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+9,9,MESSAGE-REC-VAL: Received a valid message from [2]
+9,9,MESSAGE-REC: Waiting for messages.
+9,9,INFO: Received agreement to enter Pyrkon from [1].
+9,9,INFO: Received agreement to enter Pyrkon from [2].
+9,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+9,9,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+9,9,MESSAGE-REC: Received new message.
+9,10,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+9,10,MESSAGE-REC-VAL: Received a valid message from [4]
+9,10,MESSAGE-REC: Waiting for messages.
+9,10,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+9,10,INFO: Received agreement to enter Pyrkon from [4].
+9,10,MESSAGE-REC: Received new message.
+9,11,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+9,11,MESSAGE-REC-VAL: Received a valid message from [6]
+9,11,MESSAGE-REC: Waiting for messages.
+9,11,INFO: Received agreement to enter Pyrkon from [6].
+9,11,STATUS: ENTERING_PYRKON: {pyrkon: 0}
+9,11,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+9,11,MESSAGE-REC: Received new message.
+9,12,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+9,12,MESSAGE-REC-VAL: Received a valid message from [3]
+9,12,MESSAGE-REC: Waiting for messages.
+9,12,INFO: Received info that [3] wants to enter Pyrkon.
+9,12,INFO: Sends agreement to enter Pyrkon to [3].
+9,13,MESSAGE-REC: Received new message.
+9,14,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+9,14,MESSAGE-REC-VAL: Received a valid message from [5]
+9,14,MESSAGE-REC: Waiting for messages.
+9,14,MESSAGE-REC: Received new message.
+9,15,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+9,15,MESSAGE-REC-VAL: Received a valid message from [7]
+9,15,MESSAGE-REC: Waiting for messages.
+9,15,MESSAGE-REC: Received new message.
+9,16,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+9,16,MESSAGE-REC-VAL: Received a valid message from [8]
+9,16,MESSAGE-REC: Waiting for messages.
+9,16,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+9,16,INFO: Received info that [8] wants to enter Pyrkon.
+9,16,INFO: Sends agreement to enter Pyrkon to [8].
+9,17,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 3 on pyrkon 0
+9,17,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 8 on pyrkon 0
+9,17,MESSAGE-REC: Received new message.
+9,18,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 0 on pyrkon 0
+9,18,MESSAGE-REC-VAL: Received a valid message from [0]
+9,18,MESSAGE-REC: Waiting for messages.
+9,18,INFO: Received info that [0] wants to enter Pyrkon.
+9,18,MESSAGE-REC: Received new message.
+9,19,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 2 on pyrkon 0
+9,19,MESSAGE-REC-VAL: Received a valid message from [2]
+9,19,MESSAGE-REC: Waiting for messages.
+9,19,INFO: Received info that [2] wants to enter Pyrkon.
+9,19,MESSAGE-REC: Received new message.
+9,20,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 5 on pyrkon 0
+9,20,MESSAGE-REC-VAL: Received a valid message from [5]
+9,20,MESSAGE-REC: Waiting for messages.
+9,20,INFO: Received info that [5] wants to enter Pyrkon.
+9,20,MESSAGE-REC: Received new message.
+9,21,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 6 on pyrkon 0
+9,21,MESSAGE-REC-VAL: Received a valid message from [6]
+9,21,MESSAGE-REC: Waiting for messages.
+9,21,INFO: Received info that [6] wants to enter Pyrkon.
+9,21,MESSAGE-REC: Received new message.
+9,22,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 4 on pyrkon 0
+9,22,MESSAGE-REC-VAL: Received a valid message from [4]
+9,22,MESSAGE-REC: Waiting for messages.
+9,22,INFO: Received info that [4] wants to enter Pyrkon.
+9,22,MESSAGE-REC: Received new message.
+9,23,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 7 on pyrkon 0
+9,23,MESSAGE-REC-VAL: Received a valid message from [7]
+9,23,MESSAGE-REC: Waiting for messages.
+9,23,INFO: Received info that [7] wants to enter Pyrkon.
+9,23,MESSAGE-REC: Received new message.
+9,24,MESSAGE-REC-FULL: Got WANT_TO_ENTER PYRKON[0] from 1 on pyrkon 0
+9,24,MESSAGE-REC-VAL: Received a valid message from [1]
+9,24,MESSAGE-REC: Waiting for messages.
+9,24,INFO: Received info that [1] wants to enter Pyrkon.
+9,24,STATUS: ON_PYRKON {pyrkon 0)
+9,24,MESSAGE-REC: Received new message.
+9,25,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+9,25,MESSAGE-REC-VAL: Received a valid message from [3]
+9,25,MESSAGE-REC: Waiting for messages.
+9,25,INFO: Received info that [3] wants to enter lecture [1].
+9,25,INFO: Sends agreement to enter lecture [1] to [3].
+9,26,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+9,26,STATUS: WANT_TO_LECTURE[2] {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 0 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 1 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 2 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 3 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 4 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 5 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 6 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 7 {pyrkon: 0}
+9,27,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[1] to 8 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 0 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 1 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 2 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 3 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 4 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 5 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 6 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 7 {pyrkon: 0}
+9,28,BROADCAST: Is ON_PYRKON and sent WANT_TO_ENTER LECTURE[2] to 8 {pyrkon: 0}
+9,28,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+9,28,MESSAGE-REC: Received new message.
+9,31,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+9,31,MESSAGE-REC-VAL: Received a valid message from [0]
+9,31,MESSAGE-REC: Waiting for messages.
+9,31,INFO: Received agreement to enter lecture [1] from [0].
+9,31,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 1 on pyrkon 0
+9,31,MESSAGE-REC: Received new message.
+9,32,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+9,32,MESSAGE-REC-VAL: Received a valid message from [1]
+9,32,MESSAGE-REC: Waiting for messages.
+9,32,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+9,32,INFO: Received agreement to enter lecture [1] from [1].
+9,32,MESSAGE-REC: Received new message.
+9,33,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+9,33,MESSAGE-REC-VAL: Received a valid message from [3]
+9,33,MESSAGE-REC: Waiting for messages.
+9,33,INFO: Received info that [3] wants to enter lecture [2].
+9,33,INFO: Sends agreement to enter lecture [2] to [3].
+9,34,MESSAGE-REC: Received new message.
+9,35,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+9,35,MESSAGE-REC-VAL: Received a valid message from [2]
+9,35,MESSAGE-REC: Waiting for messages.
+9,35,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 3 on pyrkon 0
+9,35,INFO: Received agreement to enter lecture [1] from [2].
+9,35,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+9,35,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 5 on pyrkon 0
+9,35,MESSAGE-REC: Received new message.
+9,36,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+9,36,MESSAGE-REC-VAL: Received a valid message from [4]
+9,36,MESSAGE-REC: Waiting for messages.
+9,36,INFO: Received agreement to enter lecture [1] from [4].
+9,36,MESSAGE-REC: Received new message.
+9,37,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 5 on pyrkon 0
+9,37,MESSAGE-REC-VAL: Received a valid message from [5]
+9,37,MESSAGE-REC: Waiting for messages.
+9,37,INFO: Received agreement to enter lecture [1] from [5].
+9,37,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 6 on pyrkon 0
+9,37,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+9,37,MESSAGE-REC: Received new message.
+9,38,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+9,38,MESSAGE-REC-VAL: Received a valid message from [7]
+9,38,MESSAGE-REC: Waiting for messages.
+9,38,INFO: Received agreement to enter lecture [1] from [7].
+9,38,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[1] to 8 on pyrkon 0
+9,38,MESSAGE-REC: Received new message.
+9,39,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 6 on pyrkon 0
+9,39,MESSAGE-REC-VAL: Received a valid message from [6]
+9,39,MESSAGE-REC: Waiting for messages.
+9,39,INFO: Received agreement to enter lecture [1] from [6].
+9,39,MESSAGE-REC: Received new message.
+9,40,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 8 on pyrkon 0
+9,40,MESSAGE-REC-VAL: Received a valid message from [8]
+9,40,MESSAGE-REC: Waiting for messages.
+9,40,INFO: Received info that [8] has left Pyrkon.
+9,40,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 0 on pyrkon 0
+9,40,MESSAGE-REC: Received new message.
+9,41,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 8 on pyrkon 0
+9,41,MESSAGE-REC-VAL: Received a valid message from [8]
+9,41,MESSAGE-REC: Waiting for messages.
+9,41,MESSAGE-REC: Received new message.
+9,42,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+9,42,MESSAGE-REC-VAL: Received a valid message from [0]
+9,42,MESSAGE-REC: Waiting for messages.
+9,42,INFO: Received agreement to enter lecture [2] from [0].
+9,42,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 1 on pyrkon 0
+9,42,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 2 on pyrkon 0
+9,42,MESSAGE-REC: Received new message.
+9,43,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 2 on pyrkon 0
+9,43,MESSAGE-REC-VAL: Received a valid message from [2]
+9,43,MESSAGE-REC: Waiting for messages.
+9,43,INFO: Received agreement to enter lecture [2] from [2].
+9,43,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+9,43,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+9,43,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 5 on pyrkon 0
+9,43,MESSAGE-REC: Received new message.
+9,44,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+9,44,MESSAGE-REC-VAL: Received a valid message from [4]
+9,44,MESSAGE-REC: Waiting for messages.
+9,44,INFO: Received agreement to enter lecture [2] from [4].
+9,44,MESSAGE-REC: Received new message.
+9,45,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 5 on pyrkon 0
+9,45,MESSAGE-REC-VAL: Received a valid message from [5]
+9,45,MESSAGE-REC: Waiting for messages.
+9,45,INFO: Received agreement to enter lecture [2] from [5].
+9,45,MESSAGE-REC: Received new message.
+9,46,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 1 on pyrkon 0
+9,46,MESSAGE-REC-VAL: Received a valid message from [1]
+9,46,MESSAGE-REC: Waiting for messages.
+9,46,INFO: Received info that [1] wants to enter lecture [1].
+9,46,INFO: Agreement to enter lecture [1] to [1] was saved for later use.
+9,46,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 6 on pyrkon 0
+9,46,MESSAGE-REC: Received new message.
+9,47,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 8 on pyrkon 0
+9,47,MESSAGE-REC-VAL: Received a valid message from [8]
+9,47,MESSAGE-REC: Waiting for messages.
+9,47,MESSAGE-REC: Received new message.
+9,48,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 1 on pyrkon 0
+9,48,MESSAGE-REC-VAL: Received a valid message from [1]
+9,48,MESSAGE-REC: Waiting for messages.
+9,48,INFO: Received agreement to enter lecture [1] from [8].
+9,48,STATUS: ON_LECTURE[1] {pyrkon 0)
+9,48,MESSAGE-REC: Received new message.
+9,49,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 0 on pyrkon 0
+9,49,MESSAGE-REC-VAL: Received a valid message from [0]
+9,49,MESSAGE-REC: Waiting for messages.
+9,49,MESSAGE-REC: Received new message.
+9,50,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 0 on pyrkon 0
+9,50,MESSAGE-REC-VAL: Received a valid message from [0]
+9,50,MESSAGE-REC: Waiting for messages.
+9,50,INFO: Received agreement to enter lecture [2] from [1].
+9,50,INFO: Received info that [0] wants to enter lecture [1].
+9,50,INFO: Received info that [0] wants to enter lecture [2].
+9,50,MESSAGE-REC: Received new message.
+9,51,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 6 on pyrkon 0
+9,51,MESSAGE-REC-VAL: Received a valid message from [6]
+9,51,MESSAGE-REC: Waiting for messages.
+9,51,INFO: Received agreement to enter lecture [2] from [6].
+9,51,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 7 on pyrkon 0
+9,51,MESSAGE-SEND-FULL: Sent WANT_TO_ENTER LECTURE[2] to 8 on pyrkon 0
+9,51,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 3 on pyrkon 0
+9,51,MESSAGE-REC: Received new message.
+9,52,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 7 on pyrkon 0
+9,52,MESSAGE-REC-VAL: Received a valid message from [7]
+9,52,MESSAGE-REC: Waiting for messages.
+9,52,INFO: Received agreement to enter lecture [2] from [7].
+9,52,MESSAGE-REC: Received new message.
+9,53,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 8 on pyrkon 0
+9,53,MESSAGE-REC-VAL: Received a valid message from [8]
+9,53,MESSAGE-REC: Waiting for messages.
+9,53,INFO: Received agreement to enter lecture [2] from [8].
+9,53,MESSAGE-REC: Received new message.
+9,54,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER PYRKON[0] from 3 on pyrkon 0
+9,54,MESSAGE-REC-VAL: Received a valid message from [3]
+9,54,MESSAGE-REC: Waiting for messages.
+9,54,MESSAGE-REC: Received new message.
+9,61,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[1] from 3 on pyrkon 0
+9,61,MESSAGE-REC-VAL: Received a valid message from [3]
+9,61,MESSAGE-REC: Waiting for messages.
+9,61,INFO: Received agreement to enter lecture [1] from [3].
+9,61,STATUS: AFTER_LECTURE[1] {pyrkon 0)
+9,61,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+9,68,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 1 {pyrkon 0}
+9,68,INFO: Sends agreement to enter lecture [1] to [0].
+9,69,INFO: Agreement to enter lecture [2] to [0] was saved for later use.
+9,69,STATUS: ON_LECTURE[2] {pyrkon 0)
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 0 on pyrkon 0
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 2 on pyrkon 0
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 5 on pyrkon 0
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 6 on pyrkon 0
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 4 on pyrkon 0
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 7 on pyrkon 0
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER PYRKON[0] to 1 on pyrkon 0
+9,69,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 0 on pyrkon 0
+9,69,MESSAGE-REC: Received new message.
+9,70,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 2 on pyrkon 0
+9,70,MESSAGE-REC-VAL: Received a valid message from [2]
+9,70,MESSAGE-REC: Waiting for messages.
+9,70,INFO: Received info that [2] wants to enter lecture [1].
+9,70,MESSAGE-REC: Received new message.
+9,71,MESSAGE-REC-FULL: Got ALRIGHT_TO_ENTER LECTURE[2] from 3 on pyrkon 0
+9,71,MESSAGE-REC-VAL: Received a valid message from [3]
+9,71,MESSAGE-REC: Waiting for messages.
+9,71,INFO: Received agreement to enter lecture [2] from [3].
+9,71,MESSAGE-REC: Received new message.
+9,72,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 3 on pyrkon 0
+9,72,MESSAGE-REC-VAL: Received a valid message from [3]
+9,72,MESSAGE-REC: Waiting for messages.
+9,72,INFO: Received info that [3] has left Pyrkon.
+9,72,STATUS: AFTER_LECTURE[2] {pyrkon 0)
+9,72,OLD: ODPOWIADAM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+9,72,OLD: SKONCZYLEM NA STARE WIADOMOSCI WARSZTAT 2 {pyrkon 0}
+9,72,INFO: Sends agreement to enter lecture [1] to [2].
+9,73,STATUS: EXITING_PYRKON {pyrkon: 0}
+9,73,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 2 on pyrkon 0
+9,73,MESSAGE-REC: Received new message.
+9,74,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 4 on pyrkon 0
+9,74,MESSAGE-REC-VAL: Received a valid message from [4]
+9,74,MESSAGE-REC: Waiting for messages.
+9,74,INFO: Received info that [4] wants to enter lecture [1].
+9,74,INFO: Sends agreement to enter lecture [1] to [4].
+9,75,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 4 on pyrkon 0
+9,75,MESSAGE-REC: Received new message.
+9,76,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[2] from 4 on pyrkon 0
+9,76,MESSAGE-REC-VAL: Received a valid message from [4]
+9,76,MESSAGE-REC: Waiting for messages.
+9,76,INFO: Received info that [4] wants to enter lecture [2].
+9,76,INFO: Sends agreement to enter lecture [2] to [4].
+9,77,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[2] to 4 on pyrkon 0
+9,77,STATUS: AFTER_PYRKON {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 0 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 1 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 2 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 3 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 4 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 5 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 6 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 7 {pyrkon: 0}
+9,78,BROADCAST: Is AFTER_PYRKON and sent EXIT PYRKON[0] to 8 {pyrkon: 0}
+9,78,OLD: ODPOWIADAM NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+9,78,OLD: SKONCZYLEM ODPOWIADAC NA STARE WIADOMOSCI PYRKON {pyrkon: 0}
+9,78,STATUS: WAITING_FOR_NEW_PYRKON {pyrkon: 0}
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 0 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 1 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 2 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 3 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 4 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 5 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 6 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 7 on pyrkon 0
+9,78,MESSAGE-SEND-FULL: Sent EXIT PYRKON[0] to 8 on pyrkon 0
+9,78,MESSAGE-REC: Received new message.
+9,79,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 5 on pyrkon 0
+9,79,MESSAGE-REC-VAL: Received a valid message from [5]
+9,79,MESSAGE-REC: Waiting for messages.
+9,79,INFO: Received info that [5] has left Pyrkon.
+9,79,MESSAGE-REC: Received new message.
+9,90,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 1 on pyrkon 0
+9,90,MESSAGE-REC-VAL: Received a valid message from [1]
+9,90,MESSAGE-REC: Waiting for messages.
+9,90,INFO: Received info that [1] has left Pyrkon.
+9,90,MESSAGE-REC: Received new message.
+9,94,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 0 on pyrkon 0
+9,94,MESSAGE-REC-VAL: Received a valid message from [0]
+9,94,MESSAGE-REC: Waiting for messages.
+9,94,INFO: Received info that [0] has left Pyrkon.
+9,94,MESSAGE-REC: Received new message.
+9,96,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 6 on pyrkon 0
+9,96,MESSAGE-REC-VAL: Received a valid message from [6]
+9,96,MESSAGE-REC: Waiting for messages.
+9,96,INFO: Received info that [6] has left Pyrkon.
+9,96,MESSAGE-REC: Received new message.
+9,97,MESSAGE-REC-FULL: Got WANT_TO_ENTER LECTURE[1] from 7 on pyrkon 0
+9,97,MESSAGE-REC-VAL: Received a valid message from [7]
+9,97,MESSAGE-REC: Waiting for messages.
+9,97,INFO: Received info that [7] wants to enter lecture [1].
+9,97,INFO: Sends agreement to enter lecture [1] to [7].
+9,98,MESSAGE-SEND-FULL: Sent ALRIGHT_TO_ENTER LECTURE[1] to 7 on pyrkon 0
+9,98,MESSAGE-REC: Received new message.
+9,102,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 4 on pyrkon 0
+9,102,MESSAGE-REC-VAL: Received a valid message from [4]
+9,102,MESSAGE-REC: Waiting for messages.
+9,102,INFO: Received info that [4] has left Pyrkon.
+9,102,MESSAGE-REC: Received new message.
+9,110,MESSAGE-REC-FULL: Got EXIT PYRKON[0] from 7 on pyrkon 0
+9,110,MESSAGE-REC-VAL: Received a valid message from [7]
+9,110,MESSAGE-REC: Waiting for messages.
+9,110,INFO: Received info that [7] has left Pyrkon.

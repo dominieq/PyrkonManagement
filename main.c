@@ -415,7 +415,7 @@ void *comFunc(void *ptr)
 		{
 			strcpy(data_c, "LECTURE");
 		}
-		println("MESSAGE-REC-FULL: Got %s %s[%d] from %d on pyrkon %d\n", type_c, data_c, pakiet->data, pakiet->src, pakiet->pyrkon_number);
+		
 		/* ------------------------------ */
 		
 
@@ -430,12 +430,18 @@ void *comFunc(void *ptr)
 		}
 		pthread_mutex_unlock(&clock_mutex);
 
+		println("MESSAGE-REC-FULL: Got %s %s[%d] from %d on pyrkon %d\n", type_c, data_c, pakiet->data, pakiet->src, pakiet->pyrkon_number);
+
 		if (get_pyrkon_number() == pakiet->pyrkon_number)
 		{
 			println("MESSAGE-REC-VAL: Received a valid message from [%d]\n", pakiet->src);
 			pthread_t new_thread;
 			pthread_create(&new_thread, NULL, (void *)handlers[(int)status.MPI_TAG], pakiet);
 		}
+		// else if (pakiet->pyrkon_number == -1) {
+		// 	end = TRUE;
+		// 	sleep(2);
+		// }
 		else
 		{
 			println("MESSAGE-REC-VAL: Received outdated message from [%d]\n", pakiet->src);
@@ -479,7 +485,7 @@ void allow_pyrkon(packet_t *message)
 void allow_lecture(packet_t *message)
 {
 	/* Other process wanted to enter lecture.*/
-	println("INFO: Received info that [%d] wants to enter lecture [%d].\n", message->src, message->data);
+	println("INFO: Received info that [%d] wants to enter lecture[%d].\n", message->src, message->data);
 
 	int lecture = message->data;
 	pthread_mutex_lock(&lecture_analize);
@@ -711,7 +717,7 @@ void *odpowiedz_na_stare_wiadomosci(int event)
 	packet_t *pakiet;
 
 	while (TRUE) {
-		pakiet = pop_pkt_save(0);
+		pakiet = pop_pkt_save(event);
 		if (pakiet == NULL) {
 			break;
 		} else {
