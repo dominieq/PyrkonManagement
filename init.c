@@ -11,8 +11,7 @@ pthread_mutex_t stackMut = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t send_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 //WAK
-pthread_mutex_t stackMutPyrkon = PTHREAD_MUTEX_INITIALIZER;
-pthread_mutex_t stackMutLecture = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t stackMutSave = PTHREAD_MUTEX_INITIALIZER;
 
 typedef struct stack_s
 {
@@ -30,8 +29,9 @@ typedef struct stack_s_R
 	struct stack_s_R *prev;
 	struct stack_s_R *next;
 } stack_t_R;
-stack_t_R **stack_pyrkon;
-stack_t_R **stack_lecture;
+stack_t_R **stack_save;
+// stack_t_R **stack_lecture;
+// stack_t_R **stack_lecture_kopia;
 
 void check_thread_support(int provided)
 {
@@ -99,6 +99,42 @@ void *delayFunc(void *ptr)
 			//			}
 			MPI_Send(stackEl->newP, 1, MPI_PAKIET_T, stackEl->dst, stackEl->type, MPI_COMM_WORLD);
 			// println("STATUS: WIADOMOSC-S '%d(%d)' do %d\n", stackEl->type, stackEl->newP->data, stackEl->dst);
+
+			/* ------------------------------ */
+			char type_c[100];
+			char data_c[100];
+			switch (stackEl->type)
+			{
+			case WANT_TO_ENTER:
+			{
+				strcpy(type_c, "WANT_TO_ENTER");
+				break;
+			}
+			case ALRIGHT_TO_ENTER:
+			{
+				strcpy(type_c, "ALRIGHT_TO_ENTER");
+				break;
+			}
+			case EXIT:
+			{
+				strcpy(type_c, "EXIT");
+				break;
+			}
+			default:
+				break;
+			}
+			if (stackEl->newP->data == 0)
+			{
+				strcpy(data_c, "PYRKON");
+			}
+			else
+			{
+				strcpy(data_c, "LECTURE");
+			}
+			println("MESSAGE-SEND-FULL: Sent %s %s[%d] to %d on pyrkon %d\n", type_c, data_c, stackEl->newP->data, stackEl->dst, stackEl->newP->pyrkon_number);
+			/* ------------------------------ */
+
+
 			free(stackEl->newP);
 			free(stackEl);
 		}
@@ -156,10 +192,8 @@ void inicjuj(int *argc, char ***argv)
 	memset(stack, 0, sizeof(stack_t *) * size);
 
 	//WAK
-	stack_pyrkon = malloc(sizeof(stack_t_R *) * size);
-	memset(stack_pyrkon, 0, sizeof(stack_t_R *) * size);
-	stack_lecture = malloc(sizeof(stack_t_R *) * size);
-	memset(stack_lecture, 0, sizeof(stack_t_R *) * size);
+	stack_save = malloc(sizeof(stack_t_R *) * size);
+	memset(stack_save, 0, sizeof(stack_t_R *) * size);
 
 	pthread_create(&threadCom, NULL, comFunc, 0);
 	pthread_create(&threadDelay, NULL, delayFunc, 0);
@@ -180,15 +214,19 @@ void finalizuj(void)
 	//WAK
 	pthread_mutex_destroy(&state_mutex);
 	pthread_mutex_destroy(&ready_to_exit_mutex);
-	pthread_mutex_destroy(&allowing_lecture);
 	pthread_mutex_destroy(&allowing_pyrkon);
+	pthread_mutex_destroy(&allowing_lecture);
+	pthread_mutex_destroy(&pyrkon_number_mutex);
+	pthread_mutex_destroy(&my_clocks_edit);
+	pthread_mutex_destroy(&desired_lectures_mutex);
+	pthread_mutex_destroy(&odpowiadam_na_stare_wiadomosci);
+	pthread_mutex_destroy(&lecture_analize);
+	
 	pthread_mutex_destroy(&packetMut);
 	pthread_mutex_destroy(&stackMut);
 	pthread_mutex_destroy(&send_mutex);
-	pthread_mutex_destroy(&stackMutPyrkon);
-	pthread_mutex_destroy(&stackMutLecture);
+	pthread_mutex_destroy(&stackMutSave);
 
-	pthread_mutex_destroy(&pyrkon_test);
 
 
 	/* Czekamy, aż wątek potomny się zakończy */
@@ -221,26 +259,20 @@ void finalizuj(void)
 	{
 		do
 		{
-			tmp_p = pop_pkt_pyrkon(i);
+			tmp_p = pop_pkt_save(i);
 			if (tmp_p)
 			{
 				free(tmp_p);
 			}
 		} while (tmp_p);
 	}
-	free(stack_pyrkon);
-	for (i = 0; i < size; i++)
-	{
-		do
-		{
-			tmp_p = pop_pkt_lecture(i);
-			if (tmp_p)
-			{
-				free(tmp_p);
-			}
-		} while (tmp_p);
-	}
-	free(stack_lecture);
+	free(stack_save);
+
+	free(permits);
+	free(desired_lectures);
+	free(my_clocks);
+
+	println("FIN\n");
 }
 
 void push_pkt(stackEl_t *pakiet, int n)
@@ -304,89 +336,45 @@ void sendPacket(packet_t *data, int dst, int type)
 }
 
 //WAK
-void push_pkt_pyrkon(packet_t *pakiet, int n)
+void push_pkt_save(packet_t *pakiet, int n)
 {
 	stack_t_R *tmp = malloc(sizeof(stack_t_R));
 	tmp->pakiet = pakiet;
 
 	tmp->next = 0;
 	tmp->prev = 0;
-	pthread_mutex_lock(&stackMutPyrkon);
-	if (!stack_pyrkon[n])
-		stack_pyrkon[n] = tmp;
+	pthread_mutex_lock(&stackMutSave);
+	if (!stack_save[n])
+		stack_save[n] = tmp;
 	else
 	{
-		stack_t_R *head = stack_pyrkon[n];
+		stack_t_R *head = stack_save[n];
 		while (head->next)
 			head = head->next;
 		tmp->prev = head;
 		head->next = tmp;
 	}
-	pthread_mutex_unlock(&stackMutPyrkon);
+	pthread_mutex_unlock(&stackMutSave);
 }
 
 //WAK
-packet_t *pop_pkt_pyrkon(int n)
+packet_t *pop_pkt_save(int n)
 {
-	pthread_mutex_lock(&stackMutPyrkon);
-	if (stack_pyrkon[n] == NULL)
+	pthread_mutex_lock(&stackMutSave);
+	if (stack_save[n] == NULL)
 	{
-		pthread_mutex_unlock(&stackMutPyrkon);
+		pthread_mutex_unlock(&stackMutSave);
 		return NULL;
 	}
 	else
 	{
-		packet_t *tmp = stack_pyrkon[n]->pakiet;
-		stack_t_R *next = stack_pyrkon[n]->next;
+		packet_t *tmp = stack_save[n]->pakiet;
+		stack_t_R *next = stack_save[n]->next;
 		if (next)
 			next->prev = 0;
-		free(stack_pyrkon[n]);
-		stack_pyrkon[n] = next;
-		pthread_mutex_unlock(&stackMutPyrkon);
-		return tmp;
-	}
-}
-
-//WAK
-void push_pkt_lecture(packet_t *pakiet, int n)
-{
-	stack_t_R *tmp = malloc(sizeof(stack_t_R));
-	tmp->pakiet = pakiet;
-
-	tmp->next = 0;
-	tmp->prev = 0;
-	pthread_mutex_lock(&stackMutLecture);
-	if (!stack_lecture[n])
-		stack_lecture[n] = tmp;
-	else
-	{
-		stack_t_R *head = stack_lecture[n];
-		while (head->next)
-			head = head->next;
-		tmp->prev = head;
-		head->next = tmp;
-	}
-	pthread_mutex_unlock(&stackMutLecture);
-}
-
-//WAK
-packet_t *pop_pkt_lecture(int n)
-{
-	pthread_mutex_lock(&stackMutLecture);
-	if (stack_lecture[n] == NULL)
-	{
-		pthread_mutex_unlock(&stackMutLecture);
-		return NULL;
-	}
-	else
-	{
-		packet_t *tmp = stack_lecture[n]->pakiet;
-		stack_t_R *next = stack_lecture[n]->next;
-		if (next)
-			next->prev = 0;
-		free(stack_lecture[n]);
-		stack_lecture[n] = next;
-		pthread_mutex_unlock(&stackMutLecture);
+		free(stack_save[n]);
+		stack_save[n] = next;
+		pthread_mutex_unlock(&stackMutSave);
 		return tmp;
 	}
 }

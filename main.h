@@ -30,6 +30,7 @@
 #include <semaphore.h>
 #include <unistd.h>
 #include <string.h>
+#include <time.h>
 
 /* FIELDNO: liczba pól w strukturze packet_t */
 #define FIELDNO 5
@@ -54,12 +55,13 @@ extern pthread_t threadCom, threadM, threadDelay;
 extern volatile int last_message_clock;
 extern volatile int pyrkon_number;
 extern volatile int exited_from_pyrkon;
-extern volatile int *permits;
-extern volatile int *desired_lectures;
+int *permits;
+int *desired_lectures;
 extern volatile int allowed_lecture;
 
 //WAK
-extern volatile int *my_clocks;
+// #define STOP 3
+int *my_clocks;
 extern void increase_pyrkon_number();
 extern int get_pyrkon_number();
 extern void czy_moge_wyjsc();
@@ -80,10 +82,11 @@ extern pthread_mutex_t allowing_pyrkon;
 extern pthread_mutex_t allowing_lecture;
 
 //WAK
-extern pthread_mutex_t pyrkon_test;
+extern pthread_mutex_t pyrkon_number_mutex;
 extern pthread_mutex_t my_clocks_edit;
+extern pthread_mutex_t desired_lectures_mutex;
 extern pthread_mutex_t odpowiadam_na_stare_wiadomosci;
-// extern pthread_mutex_t cleaning_mutex;
+extern pthread_mutex_t lecture_analize;
 
 /* argument musi być, bo wymaga tego pthreads. Wątek monitora, który po jakimś czasie ma wykryć stan */
 extern void *monitorFunc(void *);
@@ -91,12 +94,6 @@ extern void *monitorFunc(void *);
 extern void *comFunc(void *);
 
 extern void sendPacket(packet_t *, int, int);
-
-#define PROB_OF_SENDING 35
-#define PROB_OF_PASSIVE 5
-#define PROB_OF_SENDING_DECREASE 1
-#define PROB_SENDING_LOWER_LIMIT 1
-#define PROB_OF_PASSIVE_INCREASE 1
 
 /* makra do wypisywania na ekranie */
 #define P_WHITE printf("%c[%d;%dm", 27, 1, 37);
@@ -145,10 +142,10 @@ void push_pkt(stackEl_t *, int);
 stackEl_t *pop_pkt(int);
 
 //WAK
-void push_pkt_pyrkon(packet_t *, int);
-packet_t *pop_pkt_pyrkon(int);
-void push_pkt_lecture(packet_t *, int);
-packet_t *pop_pkt_lecture(int);
+void push_pkt_save(packet_t *, int);
+packet_t *pop_pkt_save(int);
+// void push_pkt_lecture(packet_t *, int);
+// packet_t *pop_pkt_lecture(int);
 
 
 #endif
