@@ -6,7 +6,7 @@
 #define FALSE 0
 
 /* important values to run Pyrkon */
-#define MAX_PEOPLE_ON_PYRKON 5
+#define MAX_PEOPLE_ON_PYRKON 10
 #define MAX_PEOPLE_ON_LECTURE 2
 #define LECTURE_COUNT 2
 

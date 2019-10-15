@@ -264,7 +264,7 @@ void mainLoop(void)
 				desired_lectures[i]=my_random_int(0,1);
 				chosen += desired_lectures[i];
 			}
-			println("STATUS: WANT_TO_LECTURE[%d] {pyrkon: %d}\n", chosen, get_pyrkon_number());
+			println("STATUS: WANT_TO_LECTURE ile:[%d] {pyrkon: %d}\n", chosen, get_pyrkon_number());
 			
 			/* When it's chosen its desired lectures it broadcasts that information to others. */
 			for (int i = 1; i <= LECTURE_COUNT; i++)
@@ -356,6 +356,7 @@ void mainLoop(void)
 			// }
 
 			println("STATUS: NEW_PYRKON {pyrkon %d}\n", get_pyrkon_number());
+			sleep(10);
 			break;
 		}
 		default:
@@ -601,9 +602,9 @@ void alright_enter_pyrkon_extension(packet_t *message)
 			pthread_mutex_unlock(&state_mutex);
 		}
 	}
-	else {
-		// println("Received agreement OLD to enter Pyrkon from [%d].\n ", message->src);
-	}
+	// else {
+	// 	// println("Received agreement OLD to enter Pyrkon from [%d].\n ", message->src);
+	// }
 }
 
 void alright_enter_lecture_extension(packet_t *message)
