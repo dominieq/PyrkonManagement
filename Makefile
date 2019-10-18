@@ -17,3 +17,6 @@ run:
 
 do:	clear pyrkon
 	mpirun -np 10 ./pyrkon.out
+
+run10:
+	mpirun -np 10 ./pyrkon.out
