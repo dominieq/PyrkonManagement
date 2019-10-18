@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.pl": "prolog",
-        "array": "c",
-        "string": "c",
-        "string_view": "c"
-    }
-}
