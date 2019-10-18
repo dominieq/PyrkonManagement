@@ -1,0 +1,89 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\selectlanguage{polish}
+
+\title{Przetwarzanie Rozproszone -- Obsługa Pyrkonu}
+\author{Wojciech Kulig (115881), Dominik Szmyt (132326)}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+
+\begin{document}
+
+\maketitle
+
+\section{Opis problemu}
+
+\subsection{Krótki opis}
+~~~~Proces realizujący program obsługi Pyrkonu może znajdować się w trzech stanach (poniżej tylko krótki opis):
+\begin{enumerate}
+\item Przed Pyrkonem (BEFORE\_PYRKON) - Proces ,,czeka w kolejce, żeby uczestniczyć w aktywnościach na Pyrkonie''.
+\item Na Pyrkonie (ON\_PYRKON) - Proces ,,jest już na Pyrkonie, może uczestniczyć w warsztatach''.
+\item Po Pyrkonie (AFTER\_PYRKON) - Proces ,,wyszedł z Pyrkonu i czeka na inne procesy żeby rozpocząć zabawę na nowo''.
+\end{enumerate}
+~~~~Procesy wymieniają między sobą następujące rodzaje komunikatów:
+\begin{enumerate}
+\item WANT\_TO\_ENTER - Proces informuje, że chce dostać się na Pyrkon (komunikat z argumentem 0) lub na któryś z ,,n'' warsztatów (liczby od 1 do n).
+\item ALRIGHT\_TO\_ENTER - Proces pozwala innemu procesowi na wejście na Pyrkon lub któryś z warsztatów.
+\item EXIT - Proces informuje inne procesy, że wyszedł już z Pyrkonu.
+\end{enumerate}
+
+\newpage
+
+\subsection{Długi Opis} 
+Proces chcąc dostać się na Pyrkon informuje o tym wszystkie pozostałe procesy, stając w ten sposób w kolejce. Otrzymujący zapytanie o zgodę na wejście na Pyrkon proces może wyrazić zgodę (jeśli sam się właśnie nie ubiega i nie uczestniczy lub znajduje się w kolejce za pytającym procesem) lub póki co nie odpowiadać. Kiedy proces uzyska odpowiednią liczbę zgód, gwarantującyh istnienie dla niego miejsca na Pyrkonie, wchodzi (warunek: liczba otrzymanych zgód >= liczba procesów - maksymalna liczba procesów na Pyrkonie).\\
+Kiedy proces wychodzi z Pyrkonu zwalnia miejsce, odpowiadając na wcześniejsze zapytania, na które nie udzielił jeszcze odpowiedzi.\\
+Sytacja jest analogiczna dla warsztatów.\\
+Wychodząc z Pyrkonu proces informuje o tym wszystkie pozostałe. Kiedy proces będzie po Pyrkonie i otrzyma łącznie n-1 (gdzie n to liczba procesów) informacji o wyjściu procesów z Pyrkonu, rozpoczyna się nowy festiwal.\\
+
+\section{Złożoność czasowa i komunikacyjna}
+\textbf{Złożoność czasowa} jest funkcją kosztu wykonania algorytmu rozproszonego, wyrażoną przez liczbę kroków algorytmu do jego zakończenia przy założeniu, że:
+\begin{itemize}
+\item czas wykonywania każdego kroku (operacji) jest stały
+\item kroki wykonywane są synchronicznie
+\item czas transmisji wiadomości jest stały
+\end{itemize}
+Przyjmuje się też na ogół, że:
+\begin{itemize}
+\item czas przetwarzania lokalnego (wykonania każdego kroku) jest pomijalny (zerowy)
+\item czas transmisji jest jednostkowy
+\end{itemize}
+\medskip 
+\textbf{Złożoność komunikacyjna} pakietowa jest funkcją kosztu wykonania algorytmu wyrażaną przez liczbę pakietów (wiadomości) przesyłanych w trakcie wykonywania algorytmu do jego zakończenia.
+
+\newpage
+
+Algorytm można podzielić na trzy części odpowiadające kolejnym zadaniom realizowanym przez zaproponowany algorytm:
+\begin{enumerate}
+\item wejście na Pyrkon - od podjęcia decyzji o wejściu na Pyrkon do faktycznego wejścia:
+\begin{itemize}
+\item Proces wysyła do wszystkich informację, że chce się dostać na Pyrkon. (czas: 1; komunikatów: n-1)
+\item Otrzymujący informację proces może wyrazić zgodę lub nie odpowiadać jeszcze, lecz w końcu to zrobi. (czas: 1; komunikatów: n-1)
+\item Po otrzymaniu odpowiedniej liczby zgód (liczba zgód gwarantująca, że jego wejście nie przekroczy maksymalnej ilości uczestników na Pyrkonie) proces wchodzi.\\
+Pozostałe odpowiedzi otrzymuje, nie wpływają one na przetwarzanie.
+\end{itemize}
+% TODO ??
+Szacowana złożoność to:
+\begin{itemize}
+\item czasowa: 2
+\item komunikacyjna: 2*(n-1)
+\end{itemize}
+\item wejście na Warsztat - analogiczne jak dla wejścia na Pyrkon
+\item nowy Pyrkon
+\begin{itemize}
+\item Proces wychodzący z Pyrkonu informuje o tym wszystkie pozostałe procesu. Nowy Pyrkon rozpocznie się w momencie, kiedy liczba zebranych informacji o wyjściu z Pyrkonu będzie równa liczbie procesów.
+\end{itemize}
+Szacowana złożoność to:
+\begin{itemize}
+\item czasowa: 1
+\item komunikacyjna: n-1
+\end{itemize}
+\end{enumerate}
+
+\end{document}

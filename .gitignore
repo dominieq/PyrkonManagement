@@ -30,3 +30,34 @@
 *.exe
 *.out
 *.app
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Out files
+others/projects/project_lab
+cmake-build-debug
+
+# IDE files
+.idea
+PyrkonManagement.iml
+
+# Other helpful files
+others/projects
